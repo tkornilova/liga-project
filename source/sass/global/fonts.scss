@@ -1,18 +1,44 @@
-// @font-face {
-//   font-style: normal;
-//   font-weight: 400;
-//   font-family: "Rouble";
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "ChakraPetch";
 
-//   font-display: swap;
-//   src:
-//     url("../fonts/rouble.woff2") format("woff2");
-// }
+  font-display: swap;
+  src: url("../fonts/ChakraPetch-Light.woff2") format("woff2"), url("../fonts/ChakraPetch-Light.woff") format("woff");
+}
 
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "ChakraPetch";
 
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+  src: url("../fonts/ChakraPetch-Regular.woff2") format("woff2"), url("../fonts/ChakraPetch-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "ChakraPetch";
+
+  font-display: swap;
+  src: url("../fonts/ChakraPetch-Medium.woff2") format("woff2"), url("../fonts/ChakraPetch-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "ChakraPetch";
+
+  font-display: swap;
+  src: url("../fonts/ChakraPetch-SemiBold.woff2") format("woff2"), url("../fonts/ChakraPetch-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "ChakraPetch";
+
+  font-display: swap;
+  src: url("../fonts/ChakraPetch-Bold.woff2") format("woff2"), url("../fonts/ChakraPetch-Bold.woff") format("woff");
 }
