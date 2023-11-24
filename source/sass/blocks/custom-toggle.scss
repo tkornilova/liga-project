@@ -118,7 +118,7 @@
 
   &.is-invalid {
     label span {
-      color: #ff1553;
+      color: $color-coral-red;
     }
   }
 
@@ -128,11 +128,11 @@
     bottom: -5px;
 
     &.is-invalid {
-      color: #ff0000;
+      color: $color-coral-red;
     }
 
     &.is-valid {
-      color: #15ab07;
+      color: $color-jade;
     }
   }
 }
