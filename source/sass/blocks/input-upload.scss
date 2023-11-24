@@ -267,7 +267,7 @@
 }
 
 .input-upload__preview-item.is-invalid .input-upload__preview-file-size {
-  color: #ff0000;
+  color: $color-coral-red;
 }
 
 .input-upload__preview.is-invalid {
@@ -278,5 +278,5 @@
   position: absolute;
   right: 0;
   bottom: -5px;
-  color: #ff0000;
+  color: $color-coral-red;
 }

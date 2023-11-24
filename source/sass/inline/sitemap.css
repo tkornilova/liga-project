@@ -1,10 +1,15 @@
 .sitemap {
-  color: #212121;
+  color: #ffffff;
   padding-bottom: 50px;
   padding-top: 50px;
 }
 .sitemap h1 {
+  width: max-content;
   color: #2c39f2;
+  background: linear-gradient(90deg, rgba(12, 186, 241, 1) 0%, rgba(233, 92, 233, 1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 22px;
   line-height: 30px;
 }
@@ -58,14 +63,14 @@
   margin: 0 5px 0 0;
 }
 .sitemap a {
-  color: inherit;
+  color: #fff;
   display: flex;
   font-size: 16px;
   line-height: 24px;
   position: relative;
 }
 .sitemap a::before {
-  background-color: #2c39f2;
+  background: linear-gradient(90deg, rgba(12, 186, 241, 1) 0%, rgba(233, 92, 233, 1) 100%);;
   bottom: 0;
   content: "";
   height: 2px;
@@ -100,7 +105,7 @@
   opacity: 0.6;
 }
 .sitemap label::after {
-  border: 1px solid #2c39f2;
+  border: 1px solid linear-gradient(90deg, rgba(12, 186, 241, 1) 0%, rgba(233, 92, 233, 1) 100%);;
   border-left: none;
   border-top: none;
   content: "";
