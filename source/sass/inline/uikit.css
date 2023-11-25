@@ -63,11 +63,11 @@
   position: absolute;
   top: 50%;
   left: 0;
-  width: 1px;
+  width: 2px;
   height: calc(100% - 40px);
   content: "";
   transform: translateY(-50%);
-  background-color: #2c39f2;
+  background-color: #e95ce9;
 }
 @media (max-width: 767px) {
   .uikit__component::before {
@@ -91,7 +91,8 @@
   counter-reset: sections;
   color: #fff;
   border-radius: 0 0 10px 10px;
-  background-color: #2c39f2;
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(12, 186, 241, 1) 0%, rgba(233, 92, 233, 1) 100%);
 }
 @media (max-width: 1023px) {
   .uikit__sections {
