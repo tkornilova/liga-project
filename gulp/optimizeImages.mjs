@@ -10,10 +10,17 @@ import rename from 'gulp-rename';
 
 const sprite = () =>
   gulp
-    .src('source/img/sprite/*.svg')
-        .pipe(svgstore({inlineSvg: true}))
-        .pipe(rename('sprite.svg'))
-        .pipe(gulp.dest('build/img'));
+      .src('source/img/sprite/*.svg')
+      .pipe(svgstore({inlineSvg: true}))
+      .pipe(rename('sprite.svg'))
+      .pipe(gulp.dest('build/img'));
+
+const spriteGradient = () =>
+  gulp
+      .src('source/img/sprite/gradient/*.svg')
+      .pipe(svgstore({inlineSvg: true}))
+      .pipe(rename('sprite-gradient.svg'))
+      .pipe(gulp.dest('build/img'));
 
 const optimizeSvg = () =>
   gulp
@@ -67,4 +74,4 @@ const createAvif = () => {
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
-export {sprite, createWebp, createAvif, optimizeSvg, optimizePng, optimizeJpg};
+export {sprite, spriteGradient, createWebp, createAvif, optimizeSvg, optimizePng, optimizeJpg};

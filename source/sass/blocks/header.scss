@@ -1,13 +1,124 @@
 .header {
-  padding: 28px 0;
+  width: 100%;
+  max-width: 1440px;
 
-  background-color: $color-deep-sky-blue;
+  background-color: $color-transparent;
+
+  padding: 31px 0;
+  margin: 0 auto;
 
   .container {
-    display: flex;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    gap: 30px;
+
+    @include vp-1023 {
+      grid-template-columns: auto auto;
+    }
   }
 
-  &__logo {
-    color: $color-default-white;
+  &__toggle {
+    display: none;
+
+    width: 32px;
+    height: 32px;
+
+    background-color: $color-transparent;
+    border: 1px solid $color-transparent;
+    border-image: $main-gradient;
+    border-image-slice: 1;
+
+    cursor: pointer;
+
+    outline: none;
+    transform: rotate(0deg);
+    transition: opacity $trans-default, transform $trans-default;
+
+    padding: 10px;
+    margin: 0 0 0 auto;
+
+    span {
+      width: calc(100% / 3 * 2);
+      height: 2px;
+
+      background-color: $color-default-white;
+
+      &:first-child {
+        width: calc(100% / 3 * 3);
+      }
+
+      &:last-child {
+        width: calc(100% / 3 * 1);
+      }
+    }
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include vp-1023 {
+      min-height: 0;
+      height: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      opacity: 0;
+      visibility: hidden;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 63px;
+
+      background-color: $color-black-russian;
+
+      transform: translateY(-110%);
+      padding: 20px 40px;
+
+      transition: opacity $trans-default, visibility $trans-default, height $trans-default, min-height  $trans-default, transform $trans-default;
+    }
+  }
+
+  &.is-open {
+    .container {
+      @include vp-1023 {
+        position: relative;
+      }
+    }
+
+    .header__toggle {
+      transform: rotate(90deg);
+    }
+
+    .header__wrapper {
+      @include vp-1023 {
+        border: 2px solid red;
+
+        min-height: calc(100vh - 94px);
+        height: auto;
+
+        visibility: visible;
+        opacity: 1;
+
+        transform: translateY(0);
+      }
+    }
   }
 }

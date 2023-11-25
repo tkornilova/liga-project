@@ -1,4 +1,4 @@
-mixin btn(options = {})
+mixin link(options = {})
   - const tag = options.href ? "a" : "button";
   - const href = options.href || false;
   - const text = options.text || "";
@@ -7,4 +7,4 @@ mixin btn(options = {})
   - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
   - const label = options.label || false;
 
-  #{tag}.btn(href=href, target=target, rel=rel, type=type, aria-label=label)&attributes(attributes)!= text
+  #{tag}.link(href=href, target=target, rel=rel, type=type, aria-label=label)&attributes(attributes)!= text

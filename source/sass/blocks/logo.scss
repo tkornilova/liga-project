@@ -1,0 +1,19 @@
+.logo {
+  width: 101px;
+  height: 30px;
+
+  display: inline-flex;
+
+  &__wrapper {
+    &[href] {
+      cursor: pointer;
+
+      outline: none;
+      transition: opacity $trans-default;
+
+      @include hover-focus {
+        opacity: 0.8;
+      }
+    }
+  }
+}

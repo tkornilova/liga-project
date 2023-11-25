@@ -22,12 +22,16 @@ block main
             li
               a(href="#buttons") Кнопки
             li
+              a(href="#links") Ссылки
+            li
+              a(href="#logo") Логотип
+            li
               a(href="#forms") Элементы форм
 
       //----------------------------------------------
       .container
         a.uikit__header-link(href="sitemap.html")
-          img(src="https://via.placeholder.com/300x150", width="300", alt="Логотип проекта")
+          img(src="../../img/sprite/icon-logo.svg", width="300", alt="Логотип проекта")
         h1.uikit__h1 Компоненты, используемые на проекте
 
         section.uikit__section
@@ -62,26 +66,62 @@ block main
         section.uikit__section(id="buttons")
           h2.uikit__h2 Кнопки
           .uikit__component
-            p.uikit__text.uikit__text--class .btn \ default \ button
+            p.uikit__text.uikit__text--class .btn
             +btn({text: "Кнопка"})
             pre
               |
               code(class="language-pug").
                 +btn({text: "Текст", href: "#"})
           .uikit__component
-            p.uikit__text.uikit__text--class .btn \ .btn--red \ link
-            +btn({text: "Текст", href: "#", isExternal: true}).btn--red(aria-label="Просто ссылка")
+            p.uikit__text.uikit__text--class .btn--transparent
+            +btn({text: "Текст", href: "#", isExternal: true, label: "Просто ссылка"}).btn--transparent
             pre
               |
               code(class="language-pug").
-                +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+                +btn({text: "Текст", href: "#", isExternal: true, label: "Просто ссылка"}).btn--transparent
           .uikit__component
-            p.uikit__text.uikit__text--class .btn \ disabled \ button
+            p.uikit__text.uikit__text--class .btn--header
+            +btn({text: "Кнопка"}).btn--header
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Кнопка"}).btn--header
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn (disabled)
             +btn({text: "Текст"})(disabled)
             pre
               |
               code(class="language-pug").
                 +btn({text: "Текст"})(disabled)
+
+        //- Ссылки
+        section.uikit__section(id="links")
+          h2.uikit__h2 Ссылки
+          .uikit__component
+            p.uikit__text.uikit__text--class .link
+            +link({text: "Ссылка", href: "#", label: "Обычная ссылка"})
+            pre
+              |
+              code(class="language-pug").
+                +link({text: "Ссылка", href: "#", label: "Обычная ссылка"})
+
+        //- Ссылки
+        section.uikit__section(id="logo")
+          h2.uikit__h2 Логотип
+          .uikit__component
+            p.uikit__text.uikit__text--class .logo (на главной странице)
+            +logo({isIndex: true})
+            pre
+              |
+              code(class="language-pug").
+                +logo({isIndex: true})
+          .uikit__component
+            p.uikit__text.uikit__text--class .logo (на любой другой странице)
+            +logo()
+            pre
+              |
+              code(class="language-pug").
+                +logo()
 
         //- Элементы форм
         section.uikit__section(id="forms")

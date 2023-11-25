@@ -1,0 +1,9 @@
+mixin logo(data = {})
+  - const isIndex = data.isIndex || false;
+  .logo
+    if (isIndex)
+      span.logo__wrapper
+        +icon("icon-logo", 101, 30, true)
+    else
+      a.logo__wrapper(href="index.html", aria-label="Перейти на Главную")
+        +icon("icon-logo", 101, 30, true)
