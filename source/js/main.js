@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
+import {initHeader} from './modules/header/init-header.js';
 
 // ---------------------------------
 
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   mobileVhFix();
+  initHeader();
 
   // Modules
   // ---------------------------------
