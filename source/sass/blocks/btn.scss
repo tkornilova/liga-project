@@ -1,17 +1,45 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
 
+  text-transform: uppercase;
   color: $color-default-white;
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 
-  background-color: $main-gradient;
+  background-image: $main-gradient;
   border: none;
+
   cursor: pointer;
-
   transition: opacity $trans-default;
+  outline: none;
 
-  &--red {
-    background-color: $color-coral-red;
+  padding: 18px 38px;
+
+  &--transparent {
+    background-image: none;
+    background-color: $color-default-white-6;
+
+    border: 1px solid $color-transparent;
+    border-image: $main-gradient;
+    border-image-slice: 1;
+  }
+
+  &--header {
+    text-transform: initial;
+    font-size: 16px;
+    line-height: 175%;
+    font-weight: 300;
+
+    background-image: none;
+    background-color: $color-transparent;
+
+    border: 1px solid $color-transparent;
+    border-image: $main-gradient;
+    border-image-slice: 1;
+
+    padding: 12px 24px;
   }
 
   &:disabled {

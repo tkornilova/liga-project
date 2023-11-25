@@ -62,21 +62,28 @@ block main
         section.uikit__section(id="buttons")
           h2.uikit__h2 Кнопки
           .uikit__component
-            p.uikit__text.uikit__text--class .btn \ default \ button
+            p.uikit__text.uikit__text--class .btn
             +btn({text: "Кнопка"})
             pre
               |
               code(class="language-pug").
                 +btn({text: "Текст", href: "#"})
           .uikit__component
-            p.uikit__text.uikit__text--class .btn \ .btn--red \ link
-            +btn({text: "Текст", href: "#", isExternal: true}).btn--red(aria-label="Просто ссылка")
+            p.uikit__text.uikit__text--class .btn--transparent
+            +btn({text: "Текст", href: "#", isExternal: true, label: "Просто ссылка"}).btn--transparent
             pre
               |
               code(class="language-pug").
-                +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+                +btn({text: "Текст", href: "#", isExternal: true, label: "Просто ссылка"}).btn--transparent
           .uikit__component
-            p.uikit__text.uikit__text--class .btn \ disabled \ button
+            p.uikit__text.uikit__text--class .btn--header
+            +btn({text: "Кнопка"}).btn--header
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Кнопка"}).btn--header
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn (disabled)
             +btn({text: "Текст"})(disabled)
             pre
               |
