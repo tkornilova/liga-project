@@ -4,7 +4,7 @@
   padding-top: 50px;
 }
 .sitemap h1 {
-  width: max-content;
+  width: fit-content;
   color: #2c39f2;
   background: linear-gradient(90deg, rgba(12, 186, 241, 1) 0%, rgba(233, 92, 233, 1) 100%);
   background-clip: text;
@@ -12,6 +12,7 @@
   -webkit-text-fill-color: transparent;
   font-size: 22px;
   line-height: 30px;
+  margin-top: 40px;
 }
 .sitemap ol, .sitemap ul {
   counter-reset: page;
