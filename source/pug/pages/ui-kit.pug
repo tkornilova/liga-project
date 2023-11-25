@@ -24,6 +24,8 @@ block main
             li
               a(href="#links") Ссылки
             li
+              a(href="#logo") Логотип
+            li
               a(href="#forms") Элементы форм
 
       //----------------------------------------------
@@ -102,6 +104,24 @@ block main
               |
               code(class="language-pug").
                 +link({text: "Ссылка", href: "#", label: "Обычная ссылка"})
+
+        //- Ссылки
+        section.uikit__section(id="logo")
+          h2.uikit__h2 Логотип
+          .uikit__component
+            p.uikit__text.uikit__text--class .logo (на главной странице)
+            +logo({isIndex: true})
+            pre
+              |
+              code(class="language-pug").
+                +logo({isIndex: true})
+          .uikit__component
+            p.uikit__text.uikit__text--class .logo (на любой другой странице)
+            +logo()
+            pre
+              |
+              code(class="language-pug").
+                +logo()
 
         //- Элементы форм
         section.uikit__section(id="forms")
