@@ -1,0 +1,79 @@
+.title {
+  font-size: 48px;
+  line-height: 120.8%;
+  font-weight: 600;
+  letter-spacing: -0.24px;
+  color: $color-default-white;
+
+  padding: 0;
+  margin: 0;
+
+  &--h1 {
+    font-size: 64px;
+    letter-spacing: -0.32px;
+  }
+
+  &--h3 {
+    font-size: 40px;
+    line-height: 145%;
+    letter-spacing: -0.2px;
+  }
+
+  &--h4 {
+    font-size: 36px;
+    line-height: 122.2%;
+    font-weight: 500;
+    letter-spacing: -0.72px;
+  }
+
+  &--h5 {
+    font-size: 32px;
+    letter-spacing: -0.16px;
+  }
+
+  &--h6 {
+    font-size: 28px;
+    letter-spacing: -0.14px;
+  }
+
+  &--h7 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &--h8 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &--h9 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &--h10 {
+    font-size: 16px;
+    line-height: 175%;
+  }
+
+  &--h11 {
+    font-size: 16px;
+  }
+
+  &--h12 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &--custom {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2.24px;
+    text-transform: uppercase;
+
+    background: $main-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

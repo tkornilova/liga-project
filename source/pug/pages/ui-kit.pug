@@ -24,6 +24,8 @@ block main
             li
               a(href="#links") Ссылки
             li
+              a(href="#titles") Заголовки
+            li
               a(href="#logo") Логотип
             li
               a(href="#forms") Элементы форм
@@ -122,6 +124,101 @@ block main
               |
               code(class="language-pug").
                 +logo()
+
+        //- Заголовки
+        section.uikit__section(id="titles")
+          h2.uikit__h2 Заголовки
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--custom
+            +title({text: "Кастомизированный заголовок"}).title--custom
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Кастомизированный заголовок"}).title--custom
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h1
+            +title({text: "Заголовок 1 уровня"}).title--h1
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 1 уровня"}).title--h1
+          .uikit__component
+            p.uikit__text.uikit__text--class .title
+            +title({text: "Заголовок 2 уровня"})
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 2 уровня"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h3
+            +title({text: "Заголовок 3 уровня"}).title--h3
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 3 уровня"}).title--h3
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h4
+            +title({text: "Заголовок 4 уровня"}).title--h4
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 4 уровня"}).title--h4
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h5
+            +title({text: "Заголовок 5 уровня"}).title--h5
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 5 уровня"}).title--h5
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h6
+            +title({text: "Заголовок 6 уровня"}).title--h6
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 6 уровня"}).title--h6
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h7
+            +title({text: "Заголовок 7 уровня"}).title--h7
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 7 уровня"}).title--h7
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h8
+            +title({text: "Заголовок 8 уровня"}).title--h8
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 8 уровня"}).title--h8
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h9
+            +title({text: "Заголовок 9 уровня"}).title--h9
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 9 уровня"}).title--h9
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h10
+            +title({text: "Заголовок 10 уровня"}).title--h10
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 10 уровня"}).title--h10
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h11
+            +title({text: "Заголовок 11 уровня"}).title--h11
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 11 уровня"}).title--h11
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h12
+            +title({text: "Заголовок 12 уровня"}).title--h12
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 12 уровня"}).title--h12
 
         //- Элементы форм
         section.uikit__section(id="forms")
