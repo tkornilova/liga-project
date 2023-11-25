@@ -22,6 +22,8 @@ block main
             li
               a(href="#buttons") Кнопки
             li
+              a(href="#links") Ссылки
+            li
               a(href="#forms") Элементы форм
 
       //----------------------------------------------
@@ -89,6 +91,17 @@ block main
               |
               code(class="language-pug").
                 +btn({text: "Текст"})(disabled)
+
+        //- Ссылки
+        section.uikit__section(id="links")
+          h2.uikit__h2 Ссылки
+          .uikit__component
+            p.uikit__text.uikit__text--class .link
+            +link({text: "Ссылка", href: "#", label: "Обычная ссылка"})
+            pre
+              |
+              code(class="language-pug").
+                +link({text: "Ссылка", href: "#", label: "Обычная ссылка"})
 
         //- Элементы форм
         section.uikit__section(id="forms")
