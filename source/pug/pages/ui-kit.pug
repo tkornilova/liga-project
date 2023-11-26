@@ -2,6 +2,12 @@ extends ../components/base/layout
 
 block variables
   - const title = "UI-kit"
+  -
+    const serviceCard = {
+      icon: "icon-service-1",
+      title: "VR Development",
+      text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+    }
 
 block main
   style
@@ -29,6 +35,8 @@ block main
               a(href="#logo") Логотип
             li
               a(href="#forms") Элементы форм
+            li
+              a(href="#service-card") Service card
 
       //----------------------------------------------
       .container
@@ -315,6 +323,22 @@ block main
                   optionsList: [{text: "Тема 1", value: "id-1"}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]
                 })(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-1").custom-select
 
+        //- Service card
+        section.uikit__section(id="service-card")
+          h2.uikit__h2 Service card
+          .uikit__component
+            p.uikit__text.uikit__text--class .service-card
+            +service-card(serviceCard)
+            pre
+              |
+              code(class="language-pug").
+                +service-card(
+                  {
+                    icon: "service-card-1",
+                    title: "VR Development",
+                    text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+                  }
+                )
 
   script
     include ../../js/inline/ui-kit.js
