@@ -1,0 +1,190 @@
+.service-card {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+
+    width: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+  }
+
+  &::before {
+    background-color: transparent;
+    border: 1px solid $color-transparent;
+    border-image: $main-gradient;
+    border-image-slice: 1;
+
+    z-index: -2;
+  }
+
+  &::after {
+    border: 1px solid $color-default-white;
+
+    opacity: 1;
+    transition: opacity $trans-default;
+
+    z-index: -1;
+  }
+
+  &:focus-within {
+    &::after {
+      opacity: 0;
+    }
+
+    .service-card__btn-wrapper {
+      opacity: 1;
+    }
+  }
+
+  @include hover-focus {
+    &::after {
+      opacity: 0;
+    }
+
+    .service-card__btn-wrapper {
+      opacity: 1;
+    }
+  }
+
+  @include active {
+    &::after {
+      opacity: 0;
+    }
+
+    .service-card__btn-wrapper {
+      opacity: 1;
+    }
+  }
+
+  &__wrapper {
+    width: calc(100% - 2px);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background-color: $color-aguar-60;
+
+    padding: 38px 32px 25px;
+
+    @include vp-374 {
+      padding: 30px 25px 25px;
+    }
+  }
+
+  svg {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 0 60px;
+  }
+
+  .title {
+    margin: 0 0 12px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 200%;
+    font-weight: 400;
+    color: $color-default-white;
+
+    margin: 0;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $gray-gradient;
+
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    right: 2px;
+
+    opacity: 0;
+    transition: opacity $trans-default;
+
+    padding: 74px 0 28px;
+  }
+
+  &--catalog {
+    cursor: initial;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    .service-card__wrapper {
+      background-color: $color-transparent;
+
+      padding: 0;
+
+      @include vp-374 {
+        padding: 0;
+      }
+    }
+
+    svg {
+      width: 70px;
+      height: 70px;
+
+      margin: 0 0 42px;
+    }
+
+    .service-card__btn-wrapper {
+      display: none;
+    }
+  }
+}
+
+.service-list--catalog {
+  .service-card {
+    cursor: initial;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    .service-card__wrapper {
+      background-color: $color-transparent;
+
+      padding: 0;
+
+      @include vp-374 {
+        padding: 0;
+      }
+    }
+
+    svg {
+      width: 70px;
+      height: 70px;
+
+      margin: 0 0 42px;
+    }
+
+    .service-card__btn-wrapper {
+      display: none;
+    }
+  }
+}
