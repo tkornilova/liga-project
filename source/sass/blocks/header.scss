@@ -21,6 +21,10 @@
     }
   }
 
+  .logo {
+    z-index: 5;
+  }
+
   &__toggle {
     display: none;
 
@@ -74,9 +78,6 @@
     align-items: center;
 
     @include vp-1023 {
-      min-height: 0;
-      height: 0;
-
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -88,14 +89,14 @@
       position: absolute;
       left: 0;
       right: 0;
-      top: 63px;
+      top: 0;
+
+      opacity: 0;
+      transition: opacity $trans-default, top $trans-default, $trans-default;
 
       background-color: $color-black-russian;
 
-      transform: translateY(-110%);
       padding: 20px 40px;
-
-      transition: opacity $trans-default, visibility $trans-default, height $trans-default, min-height  $trans-default, transform $trans-default;
     }
   }
 
@@ -112,15 +113,13 @@
 
     .header__wrapper {
       @include vp-1023 {
-        border: 2px solid red;
-
         min-height: calc(100vh - 94px);
         height: auto;
 
+        top: 62px;
+
         visibility: visible;
         opacity: 1;
-
-        transform: translateY(0);
       }
     }
   }
