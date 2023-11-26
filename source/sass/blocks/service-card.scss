@@ -89,6 +89,9 @@
   }
 
   svg {
+    width: 48px;
+    height: 48px;
+
     margin: 0 0 60px;
   }
 
@@ -121,5 +124,67 @@
     transition: opacity $trans-default;
 
     padding: 74px 0 28px;
+  }
+
+  &--catalog {
+    cursor: initial;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    .service-card__wrapper {
+      background-color: $color-transparent;
+
+      padding: 0;
+
+      @include vp-374 {
+        padding: 0;
+      }
+    }
+
+    svg {
+      width: 70px;
+      height: 70px;
+
+      margin: 0 0 42px;
+    }
+
+    .service-card__btn-wrapper {
+      display: none;
+    }
+  }
+}
+
+.service-list--catalog {
+  .service-card {
+    cursor: initial;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    .service-card__wrapper {
+      background-color: $color-transparent;
+
+      padding: 0;
+
+      @include vp-374 {
+        padding: 0;
+      }
+    }
+
+    svg {
+      width: 70px;
+      height: 70px;
+
+      margin: 0 0 42px;
+    }
+
+    .service-card__btn-wrapper {
+      display: none;
+    }
   }
 }

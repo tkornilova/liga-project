@@ -52,4 +52,44 @@
       }
     }
   }
+
+  &--catalog {
+    gap: 50px;
+
+    background-color: $color-aguar-60;
+
+    padding: 42px 64px 53px;
+
+    @include vp-1279 {
+      gap: 30px;
+
+      padding: 42px 44px 53px;
+    }
+
+    @include vp-767 {
+      gap: 50px;
+
+      padding: 36px;
+    }
+
+    .service-list__item {
+      max-height: unset;
+
+      &:nth-child(3n + 2) {
+        transform: translateY(0);
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      &:nth-child(3n) {
+        transform: translateY(0);
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
 }

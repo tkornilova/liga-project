@@ -359,6 +359,30 @@ block main
                     text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
                   }
                 )
+          .uikit__component
+            p.uikit__text.uikit__text--class .service-card--catalog
+            +service-card(serviceCard).service-card--catalog
+            pre
+              |
+              code(class="language-pug").
+                +service-card(
+                  {
+                    icon: "service-card-1",
+                    title: "VR Development",
+                    text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+                  }
+                ).service-card--catalog
+            p.uikit__text.uikit__text--class Или вложить .service-card в .service-list--catalog:
+            pre
+              |
+              code(class="language-pug").
+                +service-list(
+                  {
+                    icon: "service-card-1",
+                    title: "VR Development",
+                    text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+                  }
+                ).service-list--catalog
 
         //- Service list
         section.uikit__section(id="service-list")
@@ -370,6 +394,13 @@ block main
               |
               code(class="language-pug").
                 +service-list(serviceCards)
+          .uikit__component
+            p.uikit__text.uikit__text--class .service-list--catalog
+            +service-list(serviceCards).service-list--catalog
+            pre
+              |
+              code(class="language-pug").
+                +service-list(serviceCards).service-list--catalog
 
   script
     include ../../js/inline/ui-kit.js
