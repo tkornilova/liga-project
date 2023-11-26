@@ -1,0 +1,5 @@
+mixin service-list(cards = [])
+  ul.service-list
+    each card in cards
+      li.service-list__item
+        +service-card(card)

@@ -8,6 +8,24 @@ block variables
       title: "VR Development",
       text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
     }
+  -
+    const serviceCards = [
+      {
+        icon: "icon-service-1",
+        title: "VR Development",
+        text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+      },
+      {
+        icon: "icon-service-2",
+        title: "VR Design",
+        text: "Our talented&nbsp;VR designers will create immersive and engaging environments that will captivate your audience.",
+      },
+      {
+        icon: "icon-service-3",
+        title: "VR Consulting",
+        text: "Our VR&nbsp;consultants will work with you to&nbsp;ensure that your&nbsp;VR experience meets your goals and exceeds your expectations.",
+      },
+    ]
 
 block main
   style
@@ -37,6 +55,8 @@ block main
               a(href="#forms") Элементы форм
             li
               a(href="#service-card") Service card
+            li
+              a(href="#service-list") Service list
 
       //----------------------------------------------
       .container
@@ -339,6 +359,17 @@ block main
                     text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
                   }
                 )
+
+        //- Service list
+        section.uikit__section(id="service-list")
+          h2.uikit__h2 Service list
+          .uikit__component
+            p.uikit__text.uikit__text--class .service-list
+            +service-list(serviceCards)
+            pre
+              |
+              code(class="language-pug").
+                +service-list(serviceCards)
 
   script
     include ../../js/inline/ui-kit.js
