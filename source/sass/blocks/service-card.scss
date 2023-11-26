@@ -1,5 +1,4 @@
 .service-card {
-  max-width: 380px;
   width: 100%;
 
   display: flex;
@@ -72,8 +71,7 @@
 
 
   &__wrapper {
-    max-width: 378px;
-    width: 100%;
+    width: calc(100% - 2px);
 
     display: flex;
     flex-direction: column;
