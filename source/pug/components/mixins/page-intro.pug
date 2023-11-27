@@ -5,7 +5,7 @@ mixin page-intro(data = {})
         if (data.customText)
           +title({text: data.customText.text}).title--custom
         if (data.title)
-          +title({tag: data.title.tag, text: data.title.text})(class=data.title.class).page-intro__title
+          +title({tag: data.title.tag, text: data.title.text}).page-intro__title(class=data.title.class)
       .page-intro__right
         block
   else
@@ -13,5 +13,5 @@ mixin page-intro(data = {})
       if (data.customText)
         +title({text: data.customText.text}).title--custom
       if (data.title)
-        +title({tag: data.title.tag, text: data.title.text})(class=data.title.class).page-intro__title
+        +title({tag: data.title.tag, text: data.title.text}).page-intro__title(class=data.title.class)
       block
