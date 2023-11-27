@@ -1,0 +1,54 @@
+.text-content {
+  font-size: 16px;
+  line-height: 175%;
+  font-weight: 300;
+
+  &:not(:last-child) {
+    margin: 0 0 32px;
+  }
+
+  p {
+    color: $color-light-grey;
+
+    margin: 0;
+
+    &:not(:last-child) {
+      margin: 0 0 24px;
+    }
+  }
+
+  ul {
+    padding: 0 0 0 28px;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin: 0 0 24px;
+    }
+
+    li {
+      position: relative;
+
+      list-style: none;
+
+      &:not(:last-child) {
+        margin: 0 0 14px;
+      }
+
+      &::before {
+        content: url("../../img/sprite/gradient/icon-check-box.svg");
+
+        width: 16px;
+        height: 16px;
+
+        position: absolute;
+        top: 2px;
+        left: -28px;
+
+      }
+    }
+
+    p {
+      color: $color-default-white;
+    }
+  }
+}

@@ -85,6 +85,8 @@ block main
             li
               a(href="#logo") Логотип
             li
+              a(href="#text-content") Text-content
+            li
               a(href="#forms") Элементы форм
             li
               a(href="#page-intro") Page intro
@@ -170,7 +172,7 @@ block main
               code(class="language-pug").
                 +link({text: "Ссылка", href: "#", label: "Обычная ссылка"})
 
-        //- Ссылки
+        //- Логотип
         section.uikit__section(id="logo")
           h2.uikit__h2 Логотип
           .uikit__component
@@ -282,6 +284,40 @@ block main
               |
               code(class="language-pug").
                 +title({text: "Заголовок 12 уровня"}).title--h12
+
+        //- Text-content
+        section.uikit__section(id="text-content")
+          h2.uikit__h2 Text-content
+          .uikit__component
+            p.uikit__text.uikit__text--class .text-content p
+            +text-content()
+              p VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light.
+            pre
+              |
+              code(class="language-pug").
+                +text-content()
+                  p VRNas is a leading provider of VR services for education, entertainment, architecture, and events. Our mission is to bring the power of virtual reality to everyone, allowing them to explore new worlds, learn in new ways, and experience events in a whole new light.
+          .uikit__component
+            p.uikit__text.uikit__text--class .text-content ul > li > p
+            +text-content()
+              ul
+                li
+                  p Cutting-edge technology
+                li
+                  p Versatile applications
+                li
+                  p Affordable and accessible
+            pre
+              |
+              code(class="language-pug").
+                +text-content()
+                  ul
+                    li
+                      p Cutting-edge technology
+                    li
+                      p Versatile applications
+                    li
+                      p Affordable and accessible
 
         //- Элементы форм
         section.uikit__section(id="forms")
@@ -421,7 +457,8 @@ block main
           .uikit__component
             p.uikit__text.uikit__text--class .page-intro (грид 1/1 - по умолчанию)
             +page-intro(intro2)
-              p(style="margin: 0") We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create high-quality VR&nbsp;experiences that are accessible and affordable. Our goal is&nbsp;to&nbsp;provide exceptional customer service and support, and our team is&nbsp;always available to&nbsp;answer any questions and address any concerns you may have.
+              +text-content()
+                We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create high-quality VR&nbsp;experiences that are accessible and affordable. Our goal is&nbsp;to&nbsp;provide exceptional customer service and support, and our team is&nbsp;always available to&nbsp;answer any questions and address any concerns you may have.
             pre
               |
               code(class="language-pug").
