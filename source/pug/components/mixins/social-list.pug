@@ -1,0 +1,8 @@
+mixin social-list(items = [])
+  ul.social-list&attributes(attributes)
+    each item in items
+      li.social-list__item
+        if (item.isCustom)
+          +social-item(item).social-item--custom
+        else
+          +social-item(item)

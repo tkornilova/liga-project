@@ -1,3 +1,78 @@
-mixin footer(footerMods)
+mixin footer(footerMods, currentUrl)
   footer.footer(class=footerMods)
     .container
+      .footer__wrapper
+        .footer__navigation
+          if(currentUrl === "index.html")
+            +logo({isIndex: true})
+          else
+            +logo()
+          +social-list(
+            [
+              {
+                href: "#",
+                icon: "icon-twitter",
+                width: 18,
+                height: 14,
+                isCustom: true,
+              },
+              {
+                href: "#",
+                icon: "icon-fb",
+                width: 10,
+                height: 20,
+                isCustom: true,
+              },
+              {
+                href: "#",
+                icon: "icon-instagram",
+                width: 22,
+                height: 22,
+                isCustom: true,
+              },
+              {
+                href: "#",
+                icon: "icon-github",
+                width: 21,
+                height: 20,
+                isCustom: true,
+              },
+            ]
+          ).social-list--custom
+        .footer__links
+          .footer__group
+            +title({text: "Quicklinks"}).title--h7
+            ul.footer__links-list
+              li.footer__links-item
+                +link({text: "Home", href: "#", label: "Перейти к разделу"})
+              li.footer__links-item
+                +link({text: "Pricing plan", href: "#", label: "Перейти к разделу"})
+              li.footer__links-item
+                +link({text: "Service", href: "#", label: "Перейти к разделу"})
+              li.footer__links-item
+                +link({text: "Blog", href: "#", label: "Перейти к разделу"})
+              li.footer__links-item
+                +link({text: "Our team", href: "#", label: "Перейти к разделу"})
+          .footer__group
+            +title({text: "Support"}).title--h7
+            ul.footer__links-list
+              li.footer__links-item
+                +link({text: "About us", href: "#", label: "Перейти к разделу"})
+              li.footer__links-item
+                +link({text: "Contact us", href: "#", label: "Перейти к разделу"})
+              li.footer__links-item
+                +link({text: "FAQ", href: "#", label: "Перейти к разделу"})
+              li.footer__links-item
+                +link({text: "Tems & Conditions", href: "#", label: "Перейти к разделу"})
+              li.footer__links-item
+                +link({text: "Privacy policy", href: "#", label: "Перейти к разделу"})
+        .footer__contacts
+          +title({text: "Need Help?"}).title--h7
+          ul.footer__contacts-list
+            li.footer__contacts-item.footer__contacts-item--adress
+              p.footer__contacts-text Tanjung Sari Street no.48, Pontianak City
+            li.footer__contacts-item.footer__contacts-item--email
+              +link({text: "Support@VRNas.com", href: "mailto:support@VRNas.com", label: "Напишите нам"})
+            li.footer__contacts-item.footer__contacts-item--phone
+              +link({text: "+123 456 7890", href: "tel:+1234567890", label: "Перейти к разделу"})
+      p.footer__copyright © Copyright 2023, All Rights Reserved
