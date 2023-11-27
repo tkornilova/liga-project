@@ -43,11 +43,19 @@
 
     padding: 14px 61px 14px 46px;
 
+    @include vp-374 {
+      font-size: 12px;
+    }
+
     &::placeholder {
       font-size: 16px;
       line-height: 175%;
       font-weight: 400;
       color: $color-default-white;
+
+      @include vp-374 {
+        font-size: 12px;
+      }
     }
   }
 
