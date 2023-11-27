@@ -59,6 +59,24 @@ block variables
         text: "Our professionals team",
       }
     }
+  -
+    const accordionData = [
+      {
+        isActive: true,
+        title: "Passionate and experienced team",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+      {
+        title: "Customized solutions",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+    ]
 
 block main
   style
@@ -98,6 +116,8 @@ block main
               a(href="#service-list") Service list
             li
               a(href="#subscription") Subscription
+            li
+              a(href="#accordion") Accordion
 
       //----------------------------------------------
       .container
@@ -469,6 +489,35 @@ block main
               |
               code(class="language-pug").
                 +subscription()
+
+        Accordion
+        section.uikit__section(id="accordion")
+          h2.uikit__h2 Accordion
+          .uikit__component
+            p.uikit__text.uikit__text--class .accordion
+            +accordion(accordionData)
+            pre
+              |
+              code(class="language-pug").
+                +accordion(
+                  [
+                    {
+                      isActive: true,
+                      title: "Passionate and experienced team",
+                      titleTag: "h3",
+                      texts: [
+                        "We are proud of our team of VR experts who are passionate about VR and dedicated to delivering the highest quality work. Our team consists of experienced VR developers, designers, and technicians who have a proven track record of creating immersive and engaging VR experiences.",
+                      ],
+                    },
+                    {
+                      title: "Customized solutions",
+                      titleTag: "h3",
+                      texts: [
+                        "We are proud of our team of VR experts who are passionate about VR and dedicated to delivering the highest quality work. Our team consists of experienced VR developers, designers, and technicians who have a proven track record of creating immersive and engaging VR experiences.",
+                      ],
+                    },
+                  ]
+                )
 
   script
     include ../../js/inline/ui-kit.js
