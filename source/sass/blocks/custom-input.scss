@@ -1,111 +1,73 @@
-.custom-input,
-.custom-textarea {
+.custom-input {
+  width: 100%;
+
   position: relative;
 
-  display: flex;
-  width: 530px;
-  padding: 14px 0 28px 0;
+  opacity: 1;
+  transition: opacity $trans-default;
 
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px 0;
-    width: 100%;
+  &:focus-within {
+    opacity: 0.8;
   }
 
-  label {
-    display: flex;
-    align-items: center;
-    width: 100%;
-
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
-
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
-    }
+  @include hover-focus {
+    opacity: 0.8;
   }
 
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
-    }
-  }
+  &::before {
+    content: url("../../img/sprite/icon-input.svg");
 
-  &__error {
+    width: 24px;
+    height: 24px;
+
     position: absolute;
-    right: 0;
-    bottom: 35px;
+    top: 0;
+    bottom: 0;
+    left: 14px;
 
-    color: $color-coral-red;
+    margin: auto 0;
+  }
 
-    opacity: 0;
+  input {
+    width: 100%;
 
-    transition: opacity 0.3s ease;
+    font-size: 16px;
+    line-height: 175%;
+    font-weight: 400;
+    color: $color-default-white;
 
-    @media screen and (max-width: 767px) {
-      bottom: 20px;
+    background-color: $color-default-white-7;
+    border: 2px solid $color-transparent;
+
+    outline: none;
+
+    padding: 14px 61px 14px 46px;
+
+    @include vp-374 {
+      font-size: 12px;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 175%;
+      font-weight: 400;
+      color: $color-default-white;
+
+      @include vp-374 {
+        font-size: 12px;
+      }
     }
   }
 
   &.is-invalid {
-    input,
-    textarea {
+    input {
       border: 2px solid $color-coral-red;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-coral-red, 0.5);
-      }
     }
   }
 
   &.is-valid {
     input {
       border: 2px solid $color-jade;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-jade, 0.5);
-      }
-    }
-  }
-
-  .input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
-
-    &.is-invalid {
-      color: $color-coral-red;
-    }
-
-    &.is-valid {
-      color: $color-jade;
     }
   }
 }
