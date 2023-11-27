@@ -1,0 +1,41 @@
+.subscription {
+  display: grid;
+  grid-template-columns: 1fr 365px;
+  gap: 160px;
+  align-items: center;
+
+  border-radius: 4px;
+  background-image: $main-gradient;
+
+  padding: 38px 74px 31px;
+
+  @include vp-1439 {
+    gap: 90px;
+
+    padding: 38px 60px 31px;
+  }
+
+  @include vp-1279 {
+    grid-template-columns: 1fr 300px;
+    gap: 80px;
+
+    padding: 38px 40px 31px;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    padding: 31px 20px;
+
+    .title {
+      text-align: center;
+    }
+  }
+
+  @include vp-767 {
+    gap: 8px;
+
+    padding: 31px 16px;
+  }
+}

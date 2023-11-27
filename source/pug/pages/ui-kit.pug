@@ -96,6 +96,8 @@ block main
               a(href="#service-card") Service card
             li
               a(href="#service-list") Service list
+            li
+              a(href="#subscription") Subscription
 
       //----------------------------------------------
       .container
@@ -491,6 +493,17 @@ block main
               |
               code(class="language-pug").
                 +service-list(serviceCards).service-list--catalog
+
+        //- Subscription
+        section.uikit__section(id="subscription")
+          h2.uikit__h2 Subscription
+          .uikit__component
+            p.uikit__text.uikit__text--class .subscription
+            +subscription()
+            pre
+              |
+              code(class="language-pug").
+                +subscription()
 
   script
     include ../../js/inline/ui-kit.js
