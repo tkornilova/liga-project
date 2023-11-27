@@ -26,6 +26,39 @@ block variables
         text: "Our VR&nbsp;consultants will work with you to&nbsp;ensure that your&nbsp;VR experience meets your goals and exceeds your expectations.",
       },
     ]
+  -
+    const intro1 = {
+      customText: {
+        text: "Why choose us",
+      },
+      title: {
+        tag: "h2",
+        text: "Why choose us for your VR needs",
+        class: "title--h3",
+      }
+    }
+  -
+    const intro2 = {
+      grid: true,
+      customText: {
+        text: "Our service",
+      },
+      title: {
+        tag: "h2",
+        text: "Our service",
+      }
+    }
+  -
+    const intro3 = {
+      grid: true,
+      customText: {
+        text: "Our team",
+      },
+      title: {
+        tag: "h2",
+        text: "Our professionals team",
+      }
+    }
 
 block main
   style
@@ -53,6 +86,8 @@ block main
               a(href="#logo") Логотип
             li
               a(href="#forms") Элементы форм
+            li
+              a(href="#page-intro") Page intro
             li
               a(href="#service-card") Service card
             li
@@ -342,6 +377,87 @@ block main
                   error: "Выберите тему обращения",
                   optionsList: [{text: "Тема 1", value: "id-1"}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]
                 })(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-1").custom-select
+
+        //- Page intro
+        section.uikit__section(id="page-intro")
+          h2.uikit__h2 Page intro
+          .uikit__component
+            p.uikit__text.uikit__text--class .page-intro
+            +page-intro(intro1)
+            pre
+              |
+              code(class="language-pug").
+                +page-intro(
+                  {
+                    customText: {
+                      text: "Why choose us",
+                    },
+                    title: {
+                      tag: "h2",
+                      text: "Why choose us for your VR needs",
+                      class: "title--h3"
+                    }
+                  }
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .page-intro--center
+            +page-intro(intro1).page-intro--center
+            pre
+              |
+              code(class="language-pug").
+                +page-intro(
+                  {
+                    customText: {
+                      text: "Why choose us",
+                    },
+                    title: {
+                      tag: "h2",
+                      text: "Why choose us for your VR needs",
+                      class: "title--h3"
+                    }
+                  }
+                ).page-intro--center
+          h2.uikit__h2 Page intro с гридом
+          .uikit__component
+            p.uikit__text.uikit__text--class .page-intro (грид 1/1 - по умолчанию)
+            +page-intro(intro2)
+              p(style="margin: 0") We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create high-quality VR&nbsp;experiences that are accessible and affordable. Our goal is&nbsp;to&nbsp;provide exceptional customer service and support, and our team is&nbsp;always available to&nbsp;answer any questions and address any concerns you may have.
+            pre
+              |
+              code(class="language-pug").
+                +page-intro(
+                  {
+                    grid: true,
+                    customText: {
+                      text: "Our service",
+                    },
+                    title: {
+                      tag: "h2",
+                      text: "Our service",
+                    }
+                  }
+                )
+                  +Текст()
+          .uikit__component
+            p.uikit__text.uikit__text--class .page-intro (грид 3/1)
+            +page-intro(intro3).page-intro--grid-3-1
+              +btn({text: "See all"}).btn--transparent
+            pre
+              |
+              code(class="language-pug").
+                +page-intro(
+                  {
+                    grid: true,
+                    customText: {
+                      text: "Our team",
+                    },
+                    title: {
+                      tag: "h2",
+                      text: "Our professionals team",
+                    }
+                  }
+                ).page-intro--grid-3-1
+                  +Кнопка()
 
         //- Service card
         section.uikit__section(id="service-card")
