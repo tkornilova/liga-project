@@ -89,6 +89,8 @@ block main
             li
               a(href="#forms") Элементы форм
             li
+              a(href="#form") Форма
+            li
               a(href="#page-intro") Page intro
             li
               a(href="#service-card") Service card
@@ -326,17 +328,28 @@ block main
             p.uikit__text.uikit__text--class .custom-input \ type="email"
             +custom-input({
               inputType: "email",
-              inputLabel: "Введите вашу почту",
-              inputName: "user-mail",
+              inputPlaceholder: "Enter your email address",
+              inputName: "user-email",
             })
             pre
               |
               code(class="language-pug").
                 +custom-input({
                   inputType: "email",
-                  inputLabel: "Введите вашу почту",
-                  inputName: "user-mail",
+                  inputPlaceholder: "Enter your email address",
+                  inputName: "user-email",
                 })
+
+        //- Форма
+        section.uikit__section(id="form")
+          h2.uikit__h2 Форма
+          .uikit__component
+            p.uikit__text.uikit__text--class .form
+            +form()
+            pre
+              |
+              code(class="language-pug").
+                +form()
 
         //- Page intro
         section.uikit__section(id="page-intro")

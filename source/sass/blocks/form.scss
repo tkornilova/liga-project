@@ -1,0 +1,35 @@
+.form {
+  width: 100%;
+
+  position: relative;
+
+  &__btn {
+    width: 49px;
+    height: 49px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $color-default-white-21;
+    border: none;
+    outline: none;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 4px;
+
+    z-index: 2;
+    cursor: pointer;
+
+    opacity: 1;
+    transition: opacity $trans-default;
+
+    margin: auto 0;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+}
