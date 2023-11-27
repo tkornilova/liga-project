@@ -84,6 +84,59 @@ block variables
       width: 22,
       height: 22,
     }
+  -
+    const iconCustom = {
+      href: "#",
+      icon: "icon-instagram",
+      width: 22,
+      height: 22,
+      isCustom: true,
+    }
+  -
+    const icons = [
+      {
+        href: "#",
+        icon: "icon-instagram",
+        width: 22,
+        height: 22,
+      },
+      {
+        href: "#",
+        icon: "icon-fb",
+        width: 10,
+        height: 20,
+      },
+      {
+        href: "#",
+        icon: "icon-twitter",
+        width: 18,
+        height: 14,
+      },
+    ]
+  -
+    const iconsCustom = [
+      {
+        href: "#",
+        icon: "icon-instagram",
+        width: 22,
+        height: 22,
+        isCustom: true,
+      },
+      {
+        href: "#",
+        icon: "icon-fb",
+        width: 10,
+        height: 20,
+        isCustom: true,
+      },
+      {
+        href: "#",
+        icon: "icon-twitter",
+        width: 18,
+        height: 14,
+        isCustom: true,
+      },
+    ]
 
 block main
   style
@@ -127,6 +180,8 @@ block main
               a(href="#accordion") Accordion
             li
               a(href="#social-item") Social item
+            li
+              a(href="#social-list") Social list
 
       //----------------------------------------------
       .container
@@ -547,7 +602,7 @@ block main
                 )
           .uikit__component
             p.uikit__text.uikit__text--class .social-item--custom
-            +social-item(icon).social-item--custom
+            +social-item(iconCustom)
             pre
               |
               code(class="language-pug").
@@ -557,8 +612,72 @@ block main
                     icon: "icon-instagram",
                     width: 22,
                     height: 22,
+                    isCustom: true,
                   }
-                ).social-item--custom
+                )
+
+        //- Social list
+        section.uikit__section(id="social-list")
+          h2.uikit__h2 Social list
+          .uikit__component
+            p.uikit__text.uikit__text--class .social-list
+            +social-list(icons)
+            pre
+              |
+              code(class="language-pug").
+                +social-item(
+                  [
+                    {
+                      href: "#",
+                      icon: "icon-instagram",
+                      width: 22,
+                      height: 22,
+                    },
+                    {
+                      href: "#",
+                      icon: "icon-fb",
+                      width: 10,
+                      height: 20,
+                    },
+                    {
+                      href: "#",
+                      icon: "icon-twitter",
+                      width: 18,
+                      height: 14,
+                    },
+                  ]
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .social-list--custom
+            +social-list(iconsCustom).social-list--custom
+            pre
+              |
+              code(class="language-pug").
+                +social-item(
+                  [
+                    {
+                      href: "#",
+                      icon: "icon-instagram",
+                      width: 22,
+                      height: 22,
+                      isCustom: true,
+                    },
+                    {
+                      href: "#",
+                      icon: "icon-fb",
+                      width: 10,
+                      height: 20,
+                      isCustom: true,
+                    },
+                    {
+                      href: "#",
+                      icon: "icon-twitter",
+                      width: 18,
+                      height: 14,
+                      isCustom: true,
+                    },
+                  ]
+                ).social-list--custom
   script
     include ../../js/inline/ui-kit.js
 
