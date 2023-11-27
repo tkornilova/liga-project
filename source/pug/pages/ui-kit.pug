@@ -77,6 +77,13 @@ block variables
         ],
       },
     ]
+  -
+    const icon = {
+      href: "#",
+      icon: "icon-instagram",
+      width: 22,
+      height: 22,
+    }
 
 block main
   style
@@ -118,6 +125,8 @@ block main
               a(href="#subscription") Subscription
             li
               a(href="#accordion") Accordion
+            li
+              a(href="#social-item") Social item
 
       //----------------------------------------------
       .container
@@ -519,6 +528,37 @@ block main
                   ]
                 )
 
+        //- Social item
+        section.uikit__section(id="social-item")
+          h2.uikit__h2 Social item
+          .uikit__component
+            p.uikit__text.uikit__text--class .social-item
+            +social-item(icon)
+            pre
+              |
+              code(class="language-pug").
+                +social-item(
+                  {
+                    href: "#",
+                    icon: "icon-instagram",
+                    width: 22,
+                    height: 22,
+                  }
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .social-item--custom
+            +social-item(icon).social-item--custom
+            pre
+              |
+              code(class="language-pug").
+                +social-item(
+                  {
+                    href: "#",
+                    icon: "icon-instagram",
+                    width: 22,
+                    height: 22,
+                  }
+                ).social-item--custom
   script
     include ../../js/inline/ui-kit.js
 
