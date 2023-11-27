@@ -1,5 +1,5 @@
 mixin form(options = {})
   form.form&attributes(attributes)
     +custom-input({inputType: "email", inputPlaceholder: "Enter your email address", inputName: "user-email"})
-    button(type="submit").form__btn
+    button.form__btn(type="submit")
       +icon("icon-send", 16, 16)

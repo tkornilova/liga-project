@@ -83,16 +83,14 @@
       justify-content: flex-start;
       align-items: center;
 
-      opacity: 0;
-      visibility: hidden;
-
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
 
+      visibility: hidden;
       opacity: 0;
-      transition: opacity $trans-default, top $trans-default, $trans-default;
+      transition: opacity $trans-default, top $trans-default, visibility $trans-default;
 
       background-color: $color-black-russian;
 
