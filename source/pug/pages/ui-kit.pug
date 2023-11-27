@@ -323,34 +323,6 @@ block main
         section.uikit__section(id="forms")
           h2.uikit__h2 Элементы форм
           .uikit__component
-            p.uikit__text.uikit__text--class .custom-input \ type="text"
-            +custom-input({
-              inputLabel: "Введите ваше имя",
-              inputName: "user-name-1",
-            })
-            pre
-              |
-              code(class="language-pug").
-                +custom-input({
-                  inputLabel: "Введите ваше имя",
-                  inputName: "user-name-1",
-                })
-          .uikit__component
-            p.uikit__text.uikit__text--class .custom-input \ type="tel"
-            +custom-input({
-              inputType: "tel",
-              inputLabel: "Введите номер телефона",
-              inputName: "user-phone",
-            })
-            pre
-              |
-              code(class="language-pug").
-                +custom-input({
-                  inputType: "tel",
-                  inputLabel: "Введите номер телефона",
-                  inputName: "user-phone",
-                })
-          .uikit__component
             p.uikit__text.uikit__text--class .custom-input \ type="email"
             +custom-input({
               inputType: "email",
@@ -365,54 +337,6 @@ block main
                   inputLabel: "Введите вашу почту",
                   inputName: "user-mail",
                 })
-          .uikit__component
-            p.uikit__text.uikit__text--class +custom-textarea \ default
-            +custom-textarea({
-              inputLabel: "Расскажите о себе",
-              inputName: "user-info"
-            })
-            pre
-              |
-              code(class="language-pug").
-                +custom-textarea({
-                  inputLabel: "Расскажите о себе",
-                  inputName: "user-info"
-                })
-          .uikit__component
-            p.uikit__text.uikit__text--class +custom-toggle \ default
-            +custom-toggle({
-              inputLabel: "Чекбокс",
-              inputName: "user-agreement",
-              inputValue: "user-agreement-1",
-              inputChecked: false
-            }).custom-toggle--checkbox
-            pre
-              |
-              code(class="language-pug").
-                +custom-toggle({
-                  inputLabel: "Чекбокс",
-                  inputName: "user-agreement",
-                  inputValue: "user-agreement-1",
-                  inputChecked: false
-                }).custom-toggle--checkbox
-
-
-          .uikit__component
-            p.uikit__text Базовый селект c placeholder
-            p.uikit__text.uikit__text--class +custom-select \ default
-            +custom-select({
-              placeholder: "Выберите одну из опций",
-              error: "Выберите тему обращения",
-              optionsList: [{text: "Тема 1", value: "id-1"}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]
-            })(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-1").custom-select
-            pre
-              |
-              code(class="language-pug").
-                +custom-select({
-                  placeholder: "Выберите одну из опций",
-                  error: "Выберите тему обращения",
-                  optionsList: [{text: "Тема 1", value: "id-1"}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]
-                })(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-1").custom-select
 
         //- Page intro
         section.uikit__section(id="page-intro")
@@ -458,7 +382,7 @@ block main
             p.uikit__text.uikit__text--class .page-intro (грид 1/1 - по умолчанию)
             +page-intro(intro2)
               +text-content()
-                We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create high-quality VR&nbsp;experiences that are accessible and affordable. Our goal is&nbsp;to&nbsp;provide exceptional customer service and support, and our team is&nbsp;always available to&nbsp;answer any questions and address any concerns you may have.
+                We use the latest VR hardware and software to create high-quality VR experiences that are accessible and affordable. Our goal is to provide exceptional customer service and support, and our team is always available to answer any questions and address any concerns you may have.
             pre
               |
               code(class="language-pug").
