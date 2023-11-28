@@ -72,7 +72,7 @@
 
   &__wrapper {
     width: calc(100% - 2px);
-    height: 100%;
+    height: calc(100% - 4px);
 
     display: flex;
     flex-direction: column;
@@ -82,6 +82,10 @@
     background-color: $color-aguar-60;
 
     padding: 38px 32px 25px;
+
+    @include vp-1023 {
+      min-height: 291px;
+    }
 
     @include vp-374 {
       padding: 30px 25px 25px;
@@ -116,7 +120,7 @@
     background: $gray-gradient;
 
     position: absolute;
-    bottom: 1px;
+    bottom: 2px;
     left: 1px;
     right: 2px;
 
