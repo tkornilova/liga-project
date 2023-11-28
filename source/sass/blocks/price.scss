@@ -1,0 +1,22 @@
+.price {
+  .page-intro {
+    margin: 0 0 40px;
+
+    @include vp-1279 {
+      margin: 0 0 50px;
+    }
+
+    .title {
+      margin: 0 0 17px;
+    }
+  }
+
+  .text-content {
+    max-width: 50%;
+    width: 100%;
+
+    @include vp-1279 {
+      max-width: 100%;
+    }
+  }
+}
