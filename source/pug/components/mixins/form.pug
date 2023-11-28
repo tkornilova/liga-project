@@ -1,5 +1,7 @@
 mixin form(options = {})
-  form.form&attributes(attributes)
-    +custom-input({inputType: "email", inputPlaceholder: "Enter your email address", inputName: "user-email"})
-    button.form__btn(type="submit")
-      +icon("icon-send", 16, 16)
+  form.form&attributes(attributes)(data-form)
+    .form__wrapper
+      +custom-input({inputType: "email", inputPlaceholder: "Enter your email address", inputName: "user-email", isRequired: true})
+      button.form__btn(type="submit")
+        +icon("icon-send", 16, 16)
+    p.form__message Your message has sent
