@@ -1,0 +1,17 @@
+mixin price-card(data = {})
+  .container
+    .price-card&attributes(attributes)
+      .price-card__wrapper
+        each item in data.items
+          .price-card__item
+            +title({tag: "h3", text: item.title}).title--h5
+            .price-card__texts
+              each text in item.texts
+                p.price-card__text!= text
+      .price-card__img-wrapper
+        +picture("content", data.img.path, data.img.format, 360, 520, data.img.alt)
+      .price-card__price
+        p.price-card__caption Start from
+        span.price-card__number!= data.price
+        +btn({text: "Get started"})
+        p.price-card__guarantee 30 Days moneyback guarantee
