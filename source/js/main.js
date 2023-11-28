@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initHeader} from './modules/header/init-header.js';
 import {initAccordions} from './modules/accordion/init-accordion.js';
+import {showMessage} from './modules/init-subscription.js';
 
 // ---------------------------------
 
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   mobileVhFix();
   initHeader();
   initAccordions();
+  showMessage();
 
   // Modules
   // ---------------------------------

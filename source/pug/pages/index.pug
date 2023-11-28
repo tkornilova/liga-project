@@ -8,11 +8,43 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  -
+    const priceCardData = {
+      items: [
+        {
+          title: "Customizable packages",
+          texts: [
+            "We&nbsp;understand that each project is&nbsp;unique, so&nbsp;we&nbsp;offer customizable packages to&nbsp;ensure that you get the services you need at&nbsp;a&nbsp;price that works for you. Our team will work with you to&nbsp;create a&nbsp;package that meets your specific goals and budget.",
+          ],
+        },
+        {
+          title: "Flexible payment options",
+          texts: [
+            "We&nbsp;offer flexible payment options to&nbsp;make it&nbsp;easy for you to&nbsp;get started with our services. We&nbsp;accept various payment methods, including credit cards, bank transfers, and PayPal, and we&nbsp;can also work with you to&nbsp;create a&nbsp;payment plan that suits your needs.",
+          ],
+        },
+        {
+          title: "Satisfaction guarantee",
+          texts: [
+            "We&nbsp;stand behind our services and are committed to&nbsp;ensuring that you are completely satisfied with the final product. If&nbsp;for any reason you are not happy with our services, we&nbsp;will work with you to&nbsp;make it&nbsp;right or&nbsp;provide a&nbsp;full refund.",
+          ],
+        },
+      ],
+      img: {
+        path: "price-card-1",
+        format: "png",
+        alt: "Картинка мужчины",
+      },
+      price: "$99",
+    }
 
 block main
   main
     +page-content()
       +page-section().page-section--no-padding-top
-        +intro()
+       +price(priceCardData)
+      +page-section()
+        .container
+          +subscription()
 
 block modals

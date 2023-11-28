@@ -1,12 +1,9 @@
-mixin footer(footerMods, currentUrl)
+mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
       .footer__wrapper
         .footer__navigation
-          if(currentUrl === "index.html")
-            +logo({isIndex: true})
-          else
-            +logo()
+          +logo()
           +social-list(
             [
               {

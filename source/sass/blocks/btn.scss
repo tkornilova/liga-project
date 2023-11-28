@@ -1,5 +1,7 @@
 .btn {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   text-transform: uppercase;
   color: $color-default-white;
@@ -15,7 +17,7 @@
   transition: opacity $trans-default;
   outline: none;
 
-  padding: 18px 38px;
+  padding: 18px 20px;
 
   &--transparent {
     background-image: none;

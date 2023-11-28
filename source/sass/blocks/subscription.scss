@@ -38,4 +38,15 @@
 
     padding: 31px 16px;
   }
+
+  .title {
+    font-size: 40px;
+    line-height: 145%;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+
+    @include vp-1023 {
+      font-size: 28px;
+    }
+  }
 }
