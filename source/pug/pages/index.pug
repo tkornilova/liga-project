@@ -11,8 +11,8 @@ block variables
 
 block main
   main
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
-    +intro()
+    +page-content()
+      +page-section().page-section--no-padding-top
+        +intro()
 
 block modals

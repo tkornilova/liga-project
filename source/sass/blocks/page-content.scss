@@ -1,0 +1,7 @@
+.page-content {
+  padding: 127px 0 184px;
+
+  @include vp-1023 {
+    padding: 154px 0 92px;
+  }
+}
