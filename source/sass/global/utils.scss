@@ -7,6 +7,33 @@
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
 
+  &::before {
+    content: url("../../img/content/main-bg-top.png");
+
+    top: 0;
+    right: 0;
+  }
+
+  &::after {
+    content: url("../../img/content/main-bg-bottom.png");
+
+    bottom: -6px;
+    left: 0;
+  }
+
+  &::before,
+  &::after {
+    width: auto;
+    height: auto;
+
+    position: absolute;
+    z-index: -3;
+
+    @include vp-1023 {
+      content: "";
+    }
+  }
+
   .header,
   .footer {
     flex-shrink: 0;
