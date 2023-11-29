@@ -24,17 +24,24 @@
 
   .container {
     display: grid;
-    align-items: center;
-    grid-template-columns: auto 1fr auto;
+    align-items: flex-start;
+    grid-template-columns: auto 1fr;
     gap: 30px;
+
+    @include vp-1279 {
+      gap: 20px;
+    }
 
     @include vp-1023 {
       grid-template-columns: auto auto;
+      gap: 30px;
     }
   }
 
   .logo {
     z-index: 5;
+
+    margin: 10px 0 0;
   }
 
   &__toggle {
@@ -85,11 +92,25 @@
   }
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+
+    align-items: flex-start;
+
+    margin: 0 0 0 auto;
+
+    @include vp-1279 {
+      width: 95%;
+
+      gap: 20px;
+    }
 
     @include vp-1023 {
+      width: 100%;
+
       min-height: 0;
       height: 0;
 
@@ -112,6 +133,12 @@
     }
   }
 
+  .main-nav {
+    max-width: 90%;
+
+    margin: 10px auto 0;
+  }
+
   &.is-open {
     background-color: $color-black-russian;
 
@@ -127,12 +154,21 @@
 
     .header__wrapper {
       @include vp-1023 {
-        min-height: calc(100vh - 94px);
-        height: auto;
+        min-height: calc(100vh - 92px);
+        height: 100%;
 
         top: 62px;
 
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
         padding: 20px 40px;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
       }
     }
   }

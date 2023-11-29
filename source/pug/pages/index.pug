@@ -74,9 +74,9 @@ block variables
 block main
   main
     +page-content()
-      +page-section().page-section--no-padding-top
+      +page-section().page-section--no-padding-top(id="service")
         +service(serviceCards)
-      +page-section()
+      +page-section()(id="price")
        +price(priceCardData)
       +page-section()
         .container
