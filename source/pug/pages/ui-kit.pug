@@ -137,6 +137,21 @@ block variables
         isCustom: true,
       },
     ]
+  -
+    const users = [
+      {
+        image: "user-3",
+        format: "png",
+      },
+      {
+        image: "user-2",
+        format: "png",
+      },
+      {
+        image: "user-1",
+        format: "png",
+      },
+    ]
 
 block main
   style
@@ -182,6 +197,8 @@ block main
               a(href="#social-item") Social item
             li
               a(href="#social-list") Social list
+            li
+              a(href="#users") Users
 
       //----------------------------------------------
       .container
@@ -678,6 +695,31 @@ block main
                     },
                   ]
                 ).social-list--custom
+
+        //- Users
+        section.uikit__section(id="users")
+          h2.uikit__h2 Users
+          .uikit__component
+            p.uikit__text.uikit__text--class .users
+            +users(users)(style="max-width: 300px")
+            pre
+              |
+              code(class="language-pug").
+                +users(
+                  {
+                    image: "user-1",
+                    format: "png",
+                  },
+                  {
+                    image: "user-2",
+                    format: "png",
+                  },
+                  {
+                    image: "user-3",
+                    format: "png",
+                  },
+                )
+
   script
     include ../../js/inline/ui-kit.js
 
