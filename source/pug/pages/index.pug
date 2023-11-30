@@ -70,11 +70,28 @@ block variables
         text: "Create a&nbsp;VR escape room, or&nbsp;offer&nbsp;VR experiences at&nbsp;a&nbsp;theme park, we&nbsp;have the expertise and experience to&nbsp;make it&nbsp;happen.",
       },
     ]
+  -
+    const users = [
+      {
+        image: "user-3",
+        format: "png",
+      },
+      {
+        image: "user-2",
+        format: "png",
+      },
+      {
+        image: "user-1",
+        format: "png",
+      },
+    ]
 
 block main
   main
     +page-content()
-      +page-section().page-section--no-padding-top(id="service")
+      +page-section().page-section--no-padding-top
+        +intro(users)
+      +page-section()(id="service")
         +service(serviceCards)
       +page-section()(id="price")
        +price(priceCardData)
