@@ -12,6 +12,9 @@ export class Burger {
     this._onBurgerClick = this._onBurgerClick.bind(this);
     this._onDocumentKeydown = this._onDocumentKeydown.bind(this);
     this._onDocumentClick = this._onDocumentClick.bind(this);
+
+    this._window = window;
+    this._breakpointDesktop = this._window.matchMedia('(min-width:1024px)');
   }
 
   init() {
@@ -20,6 +23,11 @@ export class Burger {
     }
 
     this._burger.addEventListener('click', this._onBurgerClick);
+    this._window.addEventListener('resize', () => {
+      if (this._breakpointDesktop.matches) {
+        this._closeMenu();
+      }
+    });
   }
 
   _openMenu() {

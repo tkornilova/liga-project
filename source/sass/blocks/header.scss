@@ -1,29 +1,47 @@
 .header {
   width: 100%;
 
-  //background-color: $color-black-russian;
-
   z-index: 20;
 
   position: fixed;
   top: 0;
 
+  background-color: $color-transparent;
+  filter: blur(0);
+
+  transition: background-colot $trans-default, filter $trans-default;
+
   padding: 31px 0;
   margin: 0 auto;
 
+  &--bg {
+    background-color: $color-black-russian-50;
+  }
+
+  &--scroll {
+    filter: blur(5px);
+  }
+
   .container {
     display: grid;
-    align-items: center;
-    grid-template-columns: auto 1fr auto;
+    align-items: flex-start;
+    grid-template-columns: auto 1fr;
     gap: 30px;
+
+    @include vp-1279 {
+      gap: 20px;
+    }
 
     @include vp-1023 {
       grid-template-columns: auto auto;
+      gap: 30px;
     }
   }
 
   .logo {
     z-index: 5;
+
+    margin: 10px 0 0;
   }
 
   &__toggle {
@@ -74,32 +92,56 @@
   }
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+
+    align-items: flex-start;
+
+    margin: 0 0 0 auto;
+
+    @include vp-1279 {
+      width: 95%;
+
+      gap: 20px;
+    }
 
     @include vp-1023 {
+      width: 100%;
+
+      min-height: 0;
+      height: 0;
+
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
+
+      background-color: $color-black-russian;
 
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
 
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity $trans-default, top $trans-default, visibility $trans-default;
+      overflow: hidden;
+      transition: top $trans-default, min-height $trans-default, height $trans-default, padding $trans-default, background-color $trans-default;
 
-      background-color: $color-black-russian;
-
-      padding: 20px 40px;
+      padding: 0;
     }
   }
 
+  .main-nav {
+    max-width: 90%;
+
+    margin: 10px auto 0;
+  }
+
   &.is-open {
+    background-color: $color-black-russian;
+
     .container {
       @include vp-1023 {
         position: relative;
@@ -112,13 +154,21 @@
 
     .header__wrapper {
       @include vp-1023 {
-        min-height: calc(100vh - 94px);
-        height: auto;
+        min-height: calc(100vh - 92px);
+        height: 100%;
 
         top: 62px;
 
-        visibility: visible;
-        opacity: 1;
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        padding: 20px 40px;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
       }
     }
   }

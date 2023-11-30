@@ -37,11 +37,46 @@ block variables
       },
       price: "$99",
     }
+  -
+    const serviceCards = [
+      {
+        icon: "icon-service-1",
+        title: "VR Development",
+        text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+      },
+      {
+        icon: "icon-service-2",
+        title: "VR Design",
+        text: "Our talented&nbsp;VR designers will create immersive and engaging environments that will captivate your audience.",
+      },
+      {
+        icon: "icon-service-3",
+        title: "VR Consulting",
+        text: "Our VR&nbsp;consultants will work with you to&nbsp;ensure that your&nbsp;VR experience meets your goals and exceeds your expectations.",
+      },
+      {
+        icon: "icon-service-4",
+        title: "VR Games",
+        text: "We&nbsp;offer a&nbsp;wide selection of&nbsp;VR games that are suitable for players of&nbsp;all ages and skill levels.",
+      },
+      {
+        icon: "icon-service-5",
+        title: "VR Events",
+        text: "Make your next event unforgettable with our&nbsp;VR event services.",
+      },
+      {
+        icon: "icon-service-6",
+        title: "VR Entertainment",
+        text: "Create a&nbsp;VR escape room, or&nbsp;offer&nbsp;VR experiences at&nbsp;a&nbsp;theme park, we&nbsp;have the expertise and experience to&nbsp;make it&nbsp;happen.",
+      },
+    ]
 
 block main
   main
     +page-content()
-      +page-section().page-section--no-padding-top
+      +page-section().page-section--no-padding-top(id="service")
+        +service(serviceCards)
+      +page-section()(id="price")
        +price(priceCardData)
       +page-section()
         .container
