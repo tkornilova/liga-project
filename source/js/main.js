@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {initHeader} from './modules/header/init-header.js';
 import {initAccordions} from './modules/accordion/init-accordion.js';
 import {showMessage} from './modules/init-subscription.js';
+import {Animations} from './modules/init-animation.js';
 
 // ---------------------------------
 
@@ -16,6 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initAccordions();
   showMessage();
+  const animations = new Animations();
+  animations.init();
 
   // Modules
   // ---------------------------------

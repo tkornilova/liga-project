@@ -107,16 +107,16 @@ block variables
 block main
   main
     +page-content()
-      +page-section().page-section--no-padding-top
+      +page-section().page-section--no-padding-top(data-animation-fade)
         +intro(users)
-      +page-section().page-section--no-padding-top
+      +page-section().page-section--no-padding-top(data-animation-fade)
         .container
           +service-list(serviceCustomCards).service-list--catalog
-      +page-section()(id="service")
+      +page-section()(id="service", data-animation-fade)
         +service(serviceCards)
-      +page-section()(id="price")
+      +page-section()(id="price", data-animation-fade)
        +price(priceCardData)
-      +page-section()
+      +page-section()(data-animation-fade)
         .container
           +subscription()
 

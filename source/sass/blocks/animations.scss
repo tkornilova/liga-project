@@ -1,0 +1,6 @@
+[data-animation-fade] {
+  opacity: 0;
+  transform: translate3d(0, 20%, 0);
+
+  transition: opacity $trans-default, transform $trans-default;
+}
