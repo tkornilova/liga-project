@@ -1,0 +1,18 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Блог - VRNas"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "blog.html"
+
+block main
+  main
+    +page-content()
+      +page-section().page-section--no-padding-top(data-animation-fade)
+
+
+block modals

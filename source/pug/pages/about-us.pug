@@ -1,0 +1,17 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "О нас - VRNas"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "about-us.html"
+
+block main
+  main
+    +page-content()
+      +page-section().page-section--no-padding-top(data-animation-fade)
+
+block modals
