@@ -1,0 +1,14 @@
+.grid {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  gap: 80px;
+
+  @include vp-1279 {
+    grid-template-columns: 32% 1fr;
+    gap: 40px;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+  }
+}

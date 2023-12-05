@@ -103,6 +103,21 @@ block variables
         format: "png",
       },
     ]
+  -
+    const imgSet1 = {
+      main: {
+        path: "content",
+        image: "imgSet-1-main",
+        format: "png",
+        alt: "",
+      },
+      additional: {
+        path: "content",
+        image: "imgSet-1-additional",
+        format: "png",
+        alt: "",
+      },
+    }
 
 block main
   main
@@ -119,5 +134,20 @@ block main
       +page-section()(data-animation-fade)
         .container
           +subscription()
+      +page-section()(data-animation-fade)
+        .container
+          .grid
+            +img-set(imgSet1)
+            +page-intro(
+              {
+                customText: {
+                  text: "Why choose us",
+                },
+                title: {
+                  tag: "h2",
+                  text: "Why choose us for your VR needs",
+                }
+              }
+            )
 
 block modals
