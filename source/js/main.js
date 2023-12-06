@@ -4,6 +4,7 @@ import {initHeader} from './modules/header/init-header.js';
 import {initAccordions} from './modules/accordion/init-accordion.js';
 import {showMessage} from './modules/init-subscription.js';
 import {Animations} from './modules/init-animation.js';
+import {gsap} from './utils/gsap.min';
 
 // ---------------------------------
 
@@ -16,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initAccordions();
   showMessage();
+  // Подключает анимацию (паралакс, проявление блоков)
   const animations = new Animations();
   animations.init();
 
