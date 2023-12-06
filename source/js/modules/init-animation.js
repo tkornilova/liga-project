@@ -9,6 +9,7 @@ export class Animations {
     this._blocks = document.querySelectorAll('[data-animation-fade]');
     this._batchArray = [];
 
+    this._parallaxContainer = document.querySelectorAll('.img-set');
     this._parallaxItems = document.querySelectorAll('[data-parallax-mouse]');
     this._mouseCords = {x: 0, y: 0};
     this._handleMouseMove = this._handleMouseMove.bind(this);
@@ -26,7 +27,9 @@ export class Animations {
       return;
     }
 
-    this.window.addEventListener('mousemove', this._handleMouseMove);
+    this._parallaxContainer.forEach((container) => {
+      container.addEventListener('mousemove', this._handleMouseMove);
+    });
     gsap.ticker.add(this._updateParallax);
   }
 
