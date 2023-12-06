@@ -7,19 +7,16 @@
   top: 0;
 
   background-color: $color-transparent;
-  filter: blur(0);
+  backdrop-filter: blur(0);
 
-  transition: background-colot $trans-default, filter $trans-default;
+  transition: background-colot $trans-default, backdrop-filter $trans-default;
 
   padding: 31px 0;
   margin: 0 auto;
 
-  &--bg {
-    background-color: $color-black-russian-50;
-  }
-
   &--scroll {
-    filter: blur(5px);
+    background-color: $color-black-russian-50;
+    backdrop-filter: blur(5px);
   }
 
   .container {
