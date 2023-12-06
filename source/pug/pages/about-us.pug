@@ -8,10 +8,97 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "about-us.html"
+  -
+    const imgBlock3 = {
+      isReverse: true,
+      pictures: {
+        main: {
+          path: "content",
+          image: "imgBlock3-1",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+        additional: {
+          path: "content",
+          image: "imgBlock3-2",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+      },
+      text: {
+        customText: {
+          text: "About us",
+        },
+        title: {
+          tag: "h2",
+          text: "Bringing your vision to life: learn about VRNas",
+        }
+      }
+    }
+  -
+    const imgBlock4 = {
+      pictures: {
+        main: {
+          path: "content",
+          image: "imgBlock4-1",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+        additional: {
+          path: "content",
+          image: "imgBlock4-2",
+          format: "png",
+          alt: "VR очки",
+        },
+      },
+      text: {
+        customText: {
+          text: "Why choose us",
+        },
+        title: {
+          tag: "h2",
+          text: "Why choose us for your VR needs",
+        }
+      }
+    }
+  -
+    const accordion = [
+      {
+        isActive: true,
+        title: "Passionate and experienced team",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+      {
+        title: "Customized solutions",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+      {
+        title: "Exceptional сustomer service",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+    ]
 
 block main
   main
     +page-content()
       +page-section().page-section--no-padding-top(data-animation-fade)
+        +img-block(imgBlock3)
+          +text-content()
+            p VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light.<br>Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create immersive, interactive experiences that are tailored to&nbsp;your specific needs.<br>From initial consultation to&nbsp;final delivery, we&nbsp;are committed to&nbsp;providing exceptional customer service. Our goal is&nbsp;to&nbsp;ensure that you are completely satisfied with every aspect of&nbsp;your&nbsp;VR experience.
+      +page-section()(data-animation-fade)
+        +img-block(imgBlock4)
+          +accordion(accordion)
+      +page-section()(data-animation-fade)
+        .container
+          +subscription()
 
 block modals
