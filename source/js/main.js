@@ -12,9 +12,13 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
+  // Чинит высоту на мобильных устройствах
   mobileVhFix();
+  // Инициализирует header
   initHeader();
+  // Инициализирует аккордионы
   initAccordions();
+  // Показывает сообщение в форме
   showMessage();
   // Подключает анимацию (паралакс, проявление блоков)
   const animations = new Animations();
@@ -24,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   window.addEventListener('load', () => {
+    // Инициализирует форму
     const form = new Form();
     window.form = form;
     form.init();
