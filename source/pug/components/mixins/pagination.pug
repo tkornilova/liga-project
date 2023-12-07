@@ -1,0 +1,9 @@
+mixin pagination(links = {})
+  .pagination&attributes(attributes)
+    ul.pagination__list
+      each link in links
+        li.pagination__item
+          if (link.isCurrent)
+            span.pagination__link!= link.text
+          else
+            +link({href: link.href, text: link.text})

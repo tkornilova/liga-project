@@ -152,6 +152,21 @@ block variables
         format: "png",
       },
     ]
+  -
+    pagination = [
+      {
+        href: "#",
+        text: "Home",
+      },
+      {
+        href: "#",
+        text: "Blog",
+      },
+      {
+        text: "Bringing designs to life: how VR is changing architecture",
+        isCurrent: true,
+      },
+    ]
 
 block main
   style
@@ -197,6 +212,8 @@ block main
               a(href="#social-list") Social list
             li
               a(href="#users") Users
+            li
+              a(href="#pagination") Pagination
 
       //----------------------------------------------
       .container
@@ -690,5 +707,28 @@ block main
                   },
                 )
 
+        //- Pagination
+        section.uikit__section(id="pagination")
+          h2.uikit__h2 Pagination
+          .uikit__component
+            p.uikit__text.uikit__text--class .pagination
+            +pagination(pagination)
+            pre
+              |
+              code(class="language-pug").
+                +pagination(
+                  {
+                    href: "#",
+                    text: "Home",
+                  },
+                  {
+                    href: "#",
+                    text: "Blog",
+                  },
+                  {
+                    text: "Bringing designs to life: how VR is changing architecture",
+                    isCurrent: true,
+                  },
+                )
   script
     include ../../js/inline/ui-kit.js

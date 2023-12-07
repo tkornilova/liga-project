@@ -1,0 +1,47 @@
+.pagination {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      position: relative;
+
+      padding: 0 4px 0 0;
+      margin: 0 22px 0 0;
+
+      & [href] {
+        font-weight: 600;
+      }
+
+      &::after {
+        content: url("../../img/sprite/icon-pagination.svg");
+
+        width: 18px;
+        height: 18px;
+
+        position: absolute;
+        right: -16px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+
+    font-size: 16px;
+    line-height: 175%;
+    font-weight: 300;
+    color: $color-default-white;
+  }
+}
