@@ -204,6 +204,12 @@ block variables
         ]
       },
     ]
+  -
+    const publicationInfo = {
+      name: "Nasyiya Ulfa",
+      date: "25 Nov 2022",
+      dataTime: "2022-11-25",
+    }
 
 block main
   style
@@ -255,6 +261,8 @@ block main
               a(href="#hashtags") Hashtags
             li
               a(href="#articles") Article list
+            li
+              a(href="#publication-info") Publication info
 
       //----------------------------------------------
       .container
@@ -838,5 +846,23 @@ block main
                     ]
                   },
                 )
+
+        //- Publication info
+        section.uikit__section(id="publication-info")
+          h2.uikit__h2 Publication info
+          .uikit__component
+            p.uikit__text.uikit__text--class .publication-info
+            +publication-info(publicationInfo)
+            pre
+              |
+              code(class="language-pug").
+                +publication-info(
+                  {
+                    name: "Nasyiya Ulfa",
+                    date: "25 Nov 2022",
+                    dataTime: "2022-11-25",
+                  }
+                )
+
   script
     include ../../js/inline/ui-kit.js
