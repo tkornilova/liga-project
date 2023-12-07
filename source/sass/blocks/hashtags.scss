@@ -1,0 +1,21 @@
+.hashtags {
+  margin: 0 -12px -12px 0;
+
+  .hashtag {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+    font-size: 10px;
+    line-height: 140%;
+    font-weight: 500;
+    word-break: break-word;
+
+    background-color: $color-default-white-30;
+    border-radius: 11.5px;
+
+    padding: 2px 7px;
+    margin: 0 12px 12px 0;
+  }
+}

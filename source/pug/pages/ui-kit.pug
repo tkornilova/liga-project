@@ -153,7 +153,7 @@ block variables
       },
     ]
   -
-    pagination = [
+    const pagination = [
       {
         href: "#",
         text: "Home",
@@ -166,6 +166,18 @@ block variables
         text: "Bringing designs to life: how VR is changing architecture",
         isCurrent: true,
       },
+    ]
+  -
+    const hashtags = [
+      "VRDesign",
+      "ArchitectureInnovation",
+      "DesignThinking",
+      "VirtualRealityArchitecture",
+      "BringingDesignsToLife",
+      "DesignVisualization",
+      "ArchitecturalVisualization",
+      "RevolutionizingArchitecture",
+      "BuildingInVR",
     ]
 
 block main
@@ -214,6 +226,8 @@ block main
               a(href="#users") Users
             li
               a(href="#pagination") Pagination
+            li
+              a(href="#hashtags") Hashtags
 
       //----------------------------------------------
       .container
@@ -713,6 +727,30 @@ block main
           .uikit__component
             p.uikit__text.uikit__text--class .pagination
             +pagination(pagination)
+            pre
+              |
+              code(class="language-pug").
+                +pagination(
+                  {
+                    href: "#",
+                    text: "Home",
+                  },
+                  {
+                    href: "#",
+                    text: "Blog",
+                  },
+                  {
+                    text: "Bringing designs to life: how VR is changing architecture",
+                    isCurrent: true,
+                  },
+                )
+
+        //- Hashtags
+        section.uikit__section(id="hashtags")
+          h2.uikit__h2 Hashtags
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtags
+            +hashtags(hashtags)
             pre
               |
               code(class="language-pug").
