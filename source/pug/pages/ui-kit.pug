@@ -179,6 +179,31 @@ block variables
       "RevolutionizingArchitecture",
       "BuildingInVR",
     ]
+  -
+    const articleCards = [
+      {
+        href: "#",
+        text: "The future of education: how VR is revolutionizing the classroom",
+        img: {
+          name: "article-1",
+          format: "jpg",
+        },
+        hashtags: [
+          "VR Education",
+        ]
+      },
+      {
+        href: "#",
+        text: "Bringing designs to life: how VR is changing architecture",
+        img: {
+          name: "article-2",
+          format: "jpg",
+        },
+        hashtags: [
+          "VR Architecture",
+        ]
+      },
+    ]
 
 block main
   style
@@ -228,6 +253,8 @@ block main
               a(href="#pagination") Pagination
             li
               a(href="#hashtags") Hashtags
+            li
+              a(href="#articles") Article list
 
       //----------------------------------------------
       .container
@@ -766,6 +793,29 @@ block main
                   {
                     text: "Bringing designs to life: how VR is changing architecture",
                     isCurrent: true,
+                  },
+                )
+
+        //- Articles
+        section.uikit__section(id="articles")
+          h2.uikit__h2 Article list
+          .uikit__component
+            p.uikit__text.uikit__text--class .articles
+            +articles(articleCards)(style="max-width: 406px;")
+            pre
+              |
+              code(class="language-pug").
+                +articles(
+                  {
+                    href: "#",
+                    text: "The future of education: how VR is revolutionizing the classroom",
+                    img: {
+                      name: "article-1",
+                      format: "jpg",
+                    },
+                    hashtags: [
+                      "VR Education",
+                    ]
                   },
                 )
   script
