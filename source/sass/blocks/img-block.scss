@@ -1,9 +1,21 @@
 .img-block {
   .page-intro {
     margin: 80px 0 32px;
+
+    @include vp-1279 {
+      margin: 30px 0 32px;
+    }
+
+    @include vp-1023 {
+      margin: 0 0 32px;
+    }
   }
 
   &__wrapper {
+    @include vp-1023 {
+      order: 1;
+    }
+
     .btn {
       min-width: 165px;
     }
