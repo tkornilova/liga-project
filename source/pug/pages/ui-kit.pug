@@ -153,7 +153,7 @@ block variables
       },
     ]
   -
-    const pagination = [
+    const breadcrumbs = [
       {
         href: "#",
         text: "Home",
@@ -256,7 +256,7 @@ block main
             li
               a(href="#users") Users
             li
-              a(href="#pagination") Pagination
+              a(href="#breadcrumbs") Breadcrumbs
             li
               a(href="#hashtags") Hashtags
             li
@@ -756,16 +756,16 @@ block main
                   },
                 )
 
-        //- Pagination
-        section.uikit__section(id="pagination")
-          h2.uikit__h2 Pagination
+        //- Breadcrumbs
+        section.uikit__section(id="breadcrumbs")
+          h2.uikit__h2 Breadcrumbs
           .uikit__component
-            p.uikit__text.uikit__text--class .pagination
-            +pagination(pagination)
+            p.uikit__text.uikit__text--class .breadcrumbs
+            +breadcrumbs(breadcrumbs)
             pre
               |
               code(class="language-pug").
-                +pagination(
+                +breadcrumbs(
                   {
                     href: "#",
                     text: "Home",
