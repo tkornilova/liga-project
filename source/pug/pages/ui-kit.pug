@@ -795,6 +795,26 @@ block main
                     isCurrent: true,
                   },
                 )
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtags--custom
+            +hashtags(hashtags).hashtags--custom
+            pre
+              |
+              code(class="language-pug").
+                +pagination(
+                  {
+                    href: "#",
+                    text: "Home",
+                  },
+                  {
+                    href: "#",
+                    text: "Blog",
+                  },
+                  {
+                    text: "Bringing designs to life: how VR is changing architecture",
+                    isCurrent: true,
+                  },
+                ).hashtags--custom
 
         //- Articles
         section.uikit__section(id="articles")
