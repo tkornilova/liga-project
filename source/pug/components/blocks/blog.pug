@@ -3,7 +3,7 @@ mixin blog()
     .container
       .grid.grid--aside
         .blog__wrapper
-          +hashtags(["VR Architecture"]).hashtags--big
+          +hashtags(["VR Architecture"], true).hashtags--big
           +title({tag: "h1", text: "Bringing designs to life: how VR is changing architecture"}).title--h3
           +publication-info(
             {
