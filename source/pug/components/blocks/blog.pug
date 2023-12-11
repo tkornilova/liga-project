@@ -22,10 +22,10 @@ mixin blog()
             p The benefits of&nbsp;VR design in&nbsp;architecture are clear, and the technology is&nbsp;becoming increasingly accessible and affordable. More and more architects and firms are incorporating&nbsp;VR design into their workflows, and the industry is&nbsp;poised for a&nbsp;major transformation.
             p In&nbsp;conclusion, VR&nbsp;design is&nbsp;changing the way architects design and bring their projects to&nbsp;life. It&nbsp;is&nbsp;a&nbsp;powerful tool that offers a&nbsp;range of&nbsp;benefits, from increased precision and efficiency in&nbsp;the design phase to&nbsp;better communication and understanding with clients. As&nbsp;the technology becomes more advanced and widespread, we&nbsp;can expect to&nbsp;see more innovative designs and better-designed buildings in&nbsp;the future.
           .blog__tags
-            +title({tag: "h2", text: "Post Tags :"}).title--h3
+            +title({tag: "h2", text: "Post Tags :"}).title--h10
             +hashtags(["VRDesign", "ArchitectureInnovation", "VirtualRealityArchitecture", "BringingDesignsToLife", "DesignVisualization", "ArchitecturalVisualization", "RevolutionizingArchitecture", "BuildingInVR", "DesignThinking", "VRInArchitecture",]).hashtags--custom
           .blog__socials
-            +title({tag: "h2", text: "Share :"}).title--h3
+            +title({tag: "h2", text: "Share :"}).title--h10
             +social-list(
               [
                 {
@@ -49,7 +49,7 @@ mixin blog()
               ]
             )
         .grid__aside
-          +title({tag: "h2", text: "Recent article"}).title--h3
+          +title({tag: "h2", text: "Recent article"}).title--h8
           +articles(
             [{
               href: "#",
