@@ -17,8 +17,7 @@
   }
 
   &__item {
-    max-height: 291px;
-    height: 100%;
+    height: 291px;
 
     &:nth-child(3n + 2) {
       transform: translateY(calc(57px * 1));
@@ -68,7 +67,7 @@
     }
 
     @include vp-767 {
-      gap: 50px;
+      gap: 53px;
 
       padding: 36px;
     }
@@ -90,6 +89,12 @@
         &:last-child {
           margin: 0;
         }
+      }
+    }
+
+    .service-card__wrapper {
+      @include vp-767 {
+        min-height: unset;
       }
     }
   }

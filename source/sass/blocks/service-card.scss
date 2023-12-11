@@ -83,10 +83,6 @@
 
     padding: 38px 32px 25px;
 
-    @include vp-1023 {
-      min-height: 287px;
-    }
-
     @include vp-374 {
       padding: 30px 25px 25px;
     }
