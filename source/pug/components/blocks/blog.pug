@@ -1,0 +1,98 @@
+mixin blog()
+  .blog&attributes(attributes)
+    .container
+      .grid.grid--aside
+        .blog__wrapper
+          +hashtags(["VR Architecture"])
+          +title({tag: "h1", text: "Bringing designs to life: how VR is changing architecture"})
+          +publication-info(
+            {
+              name: "Nasyiya Ulfa",
+              date: "25 Nov 2022",
+              dataTime: "2022-11-25",
+            }
+          )
+          +text-content()
+            p Architecture is&nbsp;an&nbsp;art and science that is&nbsp;constantly evolving with technology. The industry has gone through various transformations over the years, from pencil and paper sketches to&nbsp;computer-aided design (CAD) software. However, one technology that is&nbsp;revolutionizing architecture is&nbsp;virtual reality (VR) design.
+            p With VR&nbsp;design, architects can bring their designs to&nbsp;life and offer clients an&nbsp;immersive experience that was previously impossible. The technology enables architects to&nbsp;create a&nbsp;virtual representation of&nbsp;their designs, allowing clients to&nbsp;step into the building and explore its features and spaces before it&nbsp;is&nbsp;built.
+            p VR&nbsp;design is&nbsp;a&nbsp;game-changer for architects and clients alike. It&nbsp;enables architects to&nbsp;design with a&nbsp;greater level of&nbsp;detail and precision, allowing them to&nbsp;identify design flaws and make necessary modifications before construction begins. This not only saves time and money but also ensures that the final product meets the client&rsquo;s expectations.
+            p Clients can also benefit from&nbsp;VR design by&nbsp;having a&nbsp;better understanding of&nbsp;the design and how it&nbsp;will look and feel in&nbsp;real life. It&nbsp;allows them to&nbsp;experience the design in&nbsp;a&nbsp;more realistic way, helping them make informed decisions and providing valuable feedback to&nbsp;the architects.
+            p Moreover, VR&nbsp;design is&nbsp;not only limited to&nbsp;the design phase. It&nbsp;can also be&nbsp;used in&nbsp;the construction process to&nbsp;visualize the project&rsquo;s progress and identify any issues that may arise.
+
+            p The benefits of&nbsp;VR design in&nbsp;architecture are clear, and the technology is&nbsp;becoming increasingly accessible and affordable. More and more architects and firms are incorporating&nbsp;VR design into their workflows, and the industry is&nbsp;poised for a&nbsp;major transformation.
+            p In&nbsp;conclusion, VR&nbsp;design is&nbsp;changing the way architects design and bring their projects to&nbsp;life. It&nbsp;is&nbsp;a&nbsp;powerful tool that offers a&nbsp;range of&nbsp;benefits, from increased precision and efficiency in&nbsp;the design phase to&nbsp;better communication and understanding with clients. As&nbsp;the technology becomes more advanced and widespread, we&nbsp;can expect to&nbsp;see more innovative designs and better-designed buildings in&nbsp;the future.
+          +title({tag: "h2", text: "Post Tags :"}).title--h3
+          +hashtags(["VRDesign", "ArchitectureInnovation", "VirtualRealityArchitecture", "BringingDesignsToLife", "DesignVisualization", "ArchitecturalVisualization", "RevolutionizingArchitecture", "BuildingInVR", "DesignThinking", "VRInArchitecture",]).hashtags--custom
+          +title({tag: "h2", text: "Share :"}).title--h3
+          +social-list(
+            [
+              {
+                href: "#",
+                icon: "icon-instagram",
+                width: 22,
+                height: 22,
+              },
+              {
+                href: "#",
+                icon: "icon-fb",
+                width: 10,
+                height: 20,
+              },
+              {
+                href: "#",
+                icon: "icon-twitter",
+                width: 18,
+                height: 14,
+              },
+            ]
+          )
+        .grid__aside
+          +title({tag: "h2", text: "Recent article"}).title--h3
+          +articles(
+            [{
+              href: "#",
+              text: "The future of education: how VR is revolutionizing the classroom",
+              img: {
+                name: "article-1",
+                format: "jpg",
+              },
+              hashtags: [
+                "VR Education",
+              ]
+            },
+            {
+              href: "#",
+              text: "Bringing designs to life: how VR is changing architecture",
+              img: {
+                name: "article-2",
+                format: "jpg",
+              },
+              hashtags: [
+                "VR Architecture",
+              ]
+            },
+            {
+              href: "#",
+              text: "Making events memorable: the power of VR for corporate and special occasions",
+              img: {
+                name: "article-3",
+                format: "jpg",
+              },
+              hashtags: [
+                "VR Entertainment",
+              ]
+            },
+            {
+              href: "#",
+              text: "Exploring new worlds: the benefits of VR travel",
+              img: {
+                name: "article-4",
+                format: "jpg",
+              },
+              hashtags: [
+                "VR Event",
+              ]
+            },
+            ]
+          )
+

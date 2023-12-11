@@ -1,0 +1,5 @@
+mixin publication-info(data = {})
+  .publication-info&attributes(attributes)
+    p.publication-info__name!= data.name
+    span.publication-info__decoration |
+    time.publication-info__date(datetime=data.dataTime)!= data.date

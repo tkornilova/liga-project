@@ -1,0 +1,7 @@
+mixin img-set(data = {})
+  .img-set&attributes(attributes)
+    .img-set__main
+      +picture(data.main.path, data.main.image, data.main.format, 500, 574, data.main.alt)
+    if (data.additional)
+      .img-set__additional(data-parallax-mouse, data-movement='8', data-duration="1.5")
+        +picture(data.additional.path, data.additional.image, data.additional.format, 196, 128, data.additional.alt)

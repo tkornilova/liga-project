@@ -1,0 +1,38 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Блог - VRNas"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "blog.html"
+  -
+    const breadcrumbs = [
+      {
+        href: "index.html",
+        text: "Home",
+      },
+      {
+        href: "blog.html",
+        text: "Blog",
+      },
+      {
+        text: "Bringing designs to life: how VR is changing architecture",
+        isCurrent: true,
+      },
+    ]
+
+block main
+  main
+    +page-content()
+      +breadcrumbs(breadcrumbs)(data-animation-fade)
+      +page-section().page-section--no-padding-top(data-animation-fade)
+        +blog
+      +page-section()(data-animation-fade)
+        .container
+          +subscription()
+
+
+block modals

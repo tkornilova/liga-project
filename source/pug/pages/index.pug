@@ -1,13 +1,13 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "VRNas"
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
   - const hasFooter = true
   - const footerMods = ""
-  - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const currentUrl = "index.html"
   -
     const priceCardData = {
       items: [
@@ -103,20 +103,113 @@ block variables
         format: "png",
       },
     ]
+  -
+    const imgBlock1 = {
+      pictures: {
+        main: {
+          path: "content",
+          image: "imgBlock1-1",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+        additional: {
+          path: "content",
+          image: "imgBlock1-2",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+      },
+      text: {
+        customText: {
+          text: "About us",
+        },
+        title: {
+          tag: "h2",
+          text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
+        }
+      }
+    }
+  -
+    const imgBlock2 = {
+      isReverse: true,
+      pictures: {
+        main: {
+          path: "content",
+          image: "imgBlock2-1",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+        additional: {
+          path: "content",
+          image: "imgBlock2-2",
+          format: "png",
+          alt: "VR очки",
+        },
+      },
+      text: {
+        customText: {
+          text: "Why choose us",
+        },
+        title: {
+          tag: "h2",
+          text: "Why choose us for your VR needs",
+        }
+      }
+    }
+  -
+    const accordion = [
+      {
+        isActive: true,
+        title: "Passionate and experienced team",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+      {
+        title: "Customized solutions",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+      {
+        title: "Exceptional сustomer service",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+    ]
 
 block main
   main
     +page-content()
-      +page-section().page-section--no-padding-top
+      +page-section().page-section--no-padding-top(data-animation-fade)
         +intro(users)
-      +page-section().page-section--no-padding-top
+      +page-section().page-section--no-padding-top(data-animation-fade)
         .container
           +service-list(serviceCustomCards).service-list--catalog
-      +page-section()(id="service")
+      +page-section()(data-animation-fade)
+        +img-block(imgBlock1)
+          +text-content()
+            p VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light.
+            ul
+              li
+                p Cutting-edge technology
+              li
+                p Versatile applications
+              li
+                p Affordable and accessible
+          +btn({text: "Read more"})
+      +page-section()(id="service", data-animation-fade)
         +service(serviceCards)
-      +page-section()(id="price")
+      +page-section()(data-animation-fade)
+        +img-block(imgBlock2)
+          +accordion(accordion)
+      +page-section()(id="price", data-animation-fade)
        +price(priceCardData)
-      +page-section()
+      +page-section()(data-animation-fade)
         .container
           +subscription()
 

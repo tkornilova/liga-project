@@ -1,0 +1,10 @@
+mixin breadcrumbs(links = {})
+  .breadcrumbs&attributes(attributes)
+    .container
+      ul.breadcrumbs__list
+        each link in links
+          li.breadcrumbs__item
+            if (link.isCurrent)
+              span.breadcrumbs__link!= link.text
+            else
+              +link({href: link.href, text: link.text})

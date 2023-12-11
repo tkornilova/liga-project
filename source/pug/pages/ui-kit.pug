@@ -152,6 +152,64 @@ block variables
         format: "png",
       },
     ]
+  -
+    const breadcrumbs = [
+      {
+        href: "#",
+        text: "Home",
+      },
+      {
+        href: "#",
+        text: "Blog",
+      },
+      {
+        text: "Bringing designs to life: how VR is changing architecture",
+        isCurrent: true,
+      },
+    ]
+  -
+    const hashtags = [
+      "VRDesign",
+      "ArchitectureInnovation",
+      "DesignThinking",
+      "VirtualRealityArchitecture",
+      "BringingDesignsToLife",
+      "DesignVisualization",
+      "ArchitecturalVisualization",
+      "RevolutionizingArchitecture",
+      "BuildingInVR",
+    ]
+  -
+    const articleCards = [
+      {
+        href: "#",
+        text: "The future of education: how VR is revolutionizing the classroom",
+        img: {
+          name: "article-1",
+          format: "jpg",
+        },
+        hashtags: [
+          "VR Education",
+        ]
+      },
+      {
+        href: "#",
+        text: "Bringing designs to life: how VR is changing architecture",
+        img: {
+          name: "article-2",
+          format: "jpg",
+        },
+        hashtags: [
+          "VR Architecture",
+        ]
+      },
+    ]
+  -
+    const publicationInfo = {
+      name: "Nasyiya Ulfa",
+      date: "25 Nov 2022",
+      dataTime: "2022-11-25",
+    }
 
 block main
   style
@@ -160,15 +218,13 @@ block main
 
   main
     .uikit
-      //----------------------- Разделы с компонентами
+      //- Разделы с компонентами
       .uikit__sections(data-scroll-lock-fill-gap)
         label(for="section-burger")
           span Разделы&nbsp;компонентов
-        input.visually-hidden(type="checkbox", checked, id="section-burger")
+        input.visually-hidden(type="checkbox", id="section-burger")
         div
           ul
-            li
-              a(href="#modals") Модальные окна
             li
               a(href="#buttons") Кнопки
             li
@@ -199,40 +255,20 @@ block main
               a(href="#social-list") Social list
             li
               a(href="#users") Users
+            li
+              a(href="#breadcrumbs") Breadcrumbs
+            li
+              a(href="#hashtags") Hashtags
+            li
+              a(href="#articles") Article list
+            li
+              a(href="#publication-info") Publication info
 
       //----------------------------------------------
       .container
         a.uikit__header-link(href="sitemap.html")
-          img(src="../../img/sprite/icon-logo.svg", width="300", alt="Логотип проекта")
+          +icon("icon-logo", 300, "auto", true)
         h1.uikit__h1 Компоненты, используемые на проекте
-
-        section.uikit__section
-          h2.uikit__h2 Название компонента или группы компонентов
-          p.uikit__text Информация о компоненте (подсказки \ предупреждение \ важная информация)
-          .uikit__component
-            p.uikit__text  Класс компонента \ модификаторы
-            pre
-              |
-              code(class="language-pug").
-                p Пример кода
-
-        //- Модальные окна
-        section.uikit__section(id="modals")
-          h2.uikit__h2 Модальные окна
-          .uikit__component
-            p.uikit__text.uikit__text--class .modal \ .modal--feedback
-            +btn({text: "modal-feedback"})(data-open-modal="feedback")
-            pre
-              |
-              code(class="language-pug").
-                +btn({text: "modal-feedback"})(data-open-modal="feedback")
-          .uikit__component
-            p.uikit__text.uikit__text--class .modal \ .modal--success
-            +btn({text: "modal-success"})(data-open-modal="success")
-            pre
-              |
-              code(class="language-pug").
-                +btn({text: "modal-success"})(data-open-modal="success")
 
         //- Кнопки
         section.uikit__section(id="buttons")
@@ -720,11 +756,113 @@ block main
                   },
                 )
 
+        //- Breadcrumbs
+        section.uikit__section(id="breadcrumbs")
+          h2.uikit__h2 Breadcrumbs
+          .uikit__component
+            p.uikit__text.uikit__text--class .breadcrumbs
+            +breadcrumbs(breadcrumbs)
+            pre
+              |
+              code(class="language-pug").
+                +breadcrumbs(
+                  {
+                    href: "#",
+                    text: "Home",
+                  },
+                  {
+                    href: "#",
+                    text: "Blog",
+                  },
+                  {
+                    text: "Bringing designs to life: how VR is changing architecture",
+                    isCurrent: true,
+                  },
+                )
+
+        //- Hashtags
+        section.uikit__section(id="hashtags")
+          h2.uikit__h2 Hashtags
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtags
+            +hashtags(hashtags)
+            pre
+              |
+              code(class="language-pug").
+                +pagination(
+                  {
+                    href: "#",
+                    text: "Home",
+                  },
+                  {
+                    href: "#",
+                    text: "Blog",
+                  },
+                  {
+                    text: "Bringing designs to life: how VR is changing architecture",
+                    isCurrent: true,
+                  },
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtags--custom
+            +hashtags(hashtags).hashtags--custom
+            pre
+              |
+              code(class="language-pug").
+                +pagination(
+                  {
+                    href: "#",
+                    text: "Home",
+                  },
+                  {
+                    href: "#",
+                    text: "Blog",
+                  },
+                  {
+                    text: "Bringing designs to life: how VR is changing architecture",
+                    isCurrent: true,
+                  },
+                ).hashtags--custom
+
+        //- Articles
+        section.uikit__section(id="articles")
+          h2.uikit__h2 Article list
+          .uikit__component
+            p.uikit__text.uikit__text--class .articles
+            +articles(articleCards)(style="max-width: 406px;")
+            pre
+              |
+              code(class="language-pug").
+                +articles(
+                  {
+                    href: "#",
+                    text: "The future of education: how VR is revolutionizing the classroom",
+                    img: {
+                      name: "article-1",
+                      format: "jpg",
+                    },
+                    hashtags: [
+                      "VR Education",
+                    ]
+                  },
+                )
+
+        //- Publication info
+        section.uikit__section(id="publication-info")
+          h2.uikit__h2 Publication info
+          .uikit__component
+            p.uikit__text.uikit__text--class .publication-info
+            +publication-info(publicationInfo)
+            pre
+              |
+              code(class="language-pug").
+                +publication-info(
+                  {
+                    name: "Nasyiya Ulfa",
+                    date: "25 Nov 2022",
+                    dataTime: "2022-11-25",
+                  }
+                )
+
   script
     include ../../js/inline/ui-kit.js
-
-block modals
-  +modal("modal--feedback")(data-modal="feedback")
-    +modal-feedback()
-  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
-    +modal-success()
