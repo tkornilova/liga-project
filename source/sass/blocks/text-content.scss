@@ -3,10 +3,6 @@
   line-height: 175%;
   font-weight: 300;
 
-  &:not(:last-child) {
-    margin: 0 0 32px;
-  }
-
   p {
     color: $color-light-grey;
 
@@ -75,7 +71,7 @@
     }
   }
 
-  &__img-wrapper {
+  &__img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 34px;
