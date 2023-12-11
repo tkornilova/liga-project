@@ -17,6 +17,17 @@
 
     padding: 2px 7px;
     margin: 0 12px 12px 0;
+
+
+  }
+
+  &--big {
+    .hashtag {
+      font-size: 14px;
+      line-height: 142.8%;
+
+      padding: 2px 10px;
+    }
   }
 
   &--custom {
