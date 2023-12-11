@@ -22,4 +22,18 @@
       grid-template-columns: 1fr 32%;
     }
   }
+
+  &--aside {
+    grid-template-columns: 1fr 334px;
+    gap: 78px;
+
+    @include vp-1279 {
+      gap: 58px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 100px;
+    }
+  }
 }
