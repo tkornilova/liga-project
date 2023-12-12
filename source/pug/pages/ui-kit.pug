@@ -874,24 +874,48 @@ block main
         section.uikit__section(id="breadcrumbs")
           h2.uikit__h2 Breadcrumbs
           .uikit__component
-            p.uikit__text.uikit__text--class .breadcrumbs
+            p.uikit__text.uikit__text--class .breadcrumbs (по умолчанию обернут в .container)
             +breadcrumbs(breadcrumbs)
             pre
               |
               code(class="language-pug").
                 +breadcrumbs(
-                  {
-                    href: "#",
-                    text: "Home",
-                  },
-                  {
-                    href: "#",
-                    text: "Blog",
-                  },
-                  {
-                    text: "Bringing designs to life: how VR is changing architecture",
-                    isCurrent: true,
-                  },
+                  [
+                    {
+                      href: "#",
+                      text: "Home",
+                    },
+                    {
+                      href: "#",
+                      text: "Blog",
+                    },
+                    {
+                      text: "Bringing designs to life: how VR is changing architecture",
+                      isCurrent: true,
+                    },
+                  ]
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .breadcrumbs (без .container)
+            +breadcrumbs(breadcrumbs, true)
+            pre
+              |
+              code(class="language-pug").
+                +breadcrumbs(
+                  [
+                    {
+                      href: "#",
+                      text: "Home",
+                    },
+                    {
+                      href: "#",
+                      text: "Blog",
+                    },
+                    {
+                      text: "Bringing designs to life: how VR is changing architecture",
+                      isCurrent: true,
+                    },
+                  ], true
                 )
 
         //- Hashtags
