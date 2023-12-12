@@ -178,7 +178,7 @@
   content: "";
   transition: opacity 0.3s ease;
   opacity: 0;
-  background-color: #000;
+  background-color: #fff;
 }
 @media (hover: hover) {
   .uikit__sections a:hover:not(.focus-visible)::before {
