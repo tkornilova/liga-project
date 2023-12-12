@@ -8,23 +8,23 @@
 <path d="M91.2047 20.8743V19.48H93.6316V20.2114L94.2438 20.8743H97.9608L98.573 20.2114V18.9771L97.939 18.3143H93.2381L91.2921 16.2571V13.6971L93.2818 11.6171H98.7698L100.781 13.7429V15.1371H98.3544V14.4057L97.7422 13.7429H94.3313L93.7191 14.4057V15.5486L94.3532 16.2114H99.0322L101 18.2914V20.92L99.0103 23H93.2162L91.2047 20.8743Z" fill="url(#paint4_linear_6401_103)"/>
 <defs>
 <linearGradient id="paint0_linear_6401_103" x1="42" y1="13.5" x2="104" y2="20.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
+<stop offset="0" stop-color="white"/>
 <stop offset="1" stop-color="white" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint1_linear_6401_103" x1="42" y1="13.5" x2="104" y2="20.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
+<stop offset="0" stop-color="white"/>
 <stop offset="1" stop-color="white" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint2_linear_6401_103" x1="42" y1="13.5" x2="104" y2="20.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
+<stop offset="0" stop-color="white"/>
 <stop offset="1" stop-color="white" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint3_linear_6401_103" x1="42" y1="13.5" x2="104" y2="20.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
+<stop offset="0" stop-color="white"/>
 <stop offset="1" stop-color="white" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint4_linear_6401_103" x1="42" y1="13.5" x2="104" y2="20.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
+<stop offset="0" stop-color="white"/>
 <stop offset="1" stop-color="white" stop-opacity="0"/>
 </linearGradient>
 </defs>
