@@ -9,6 +9,24 @@ block variables
   - const footerMods = ""
   - const currentUrl = "about-us.html"
   -
+    const titleData = {
+      title: {
+        tag: "h1",
+        text: "About us",
+      },
+      breadcrumbs: [
+        {
+          href: "#",
+          text: "Home",
+        },
+        {
+          href: "#",
+          text: "About us",
+          isCurrent: true,
+        },
+      ]
+    }
+  -
     const imgBlock3 = {
       isReverse: true,
       pictures: {
@@ -91,6 +109,9 @@ block main
   main
     +page-content()
       +page-section().page-section--no-padding-top(data-animation-fade)
+        .container
+          +main-title(titleData)
+      +page-section()
         +img-block(imgBlock3)
           +text-content()
             p VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light.<br>Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create immersive, interactive experiences that are tailored to&nbsp;your specific needs.<br>From initial consultation to&nbsp;final delivery, we&nbsp;are committed to&nbsp;providing exceptional customer service. Our goal is&nbsp;to&nbsp;ensure that you are completely satisfied with every aspect of&nbsp;your&nbsp;VR experience.

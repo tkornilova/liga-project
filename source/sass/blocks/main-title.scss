@@ -1,0 +1,60 @@
+.main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  padding: 70px 0 23px;
+
+  @include vp-767 {
+    padding: 0 0 21px;
+  }
+
+  &::before {
+    content: url("../../img/sprite/gradient/icon-decoration-1.svg");
+
+    width: 449px;
+    height: 147px;
+
+    position: absolute;
+    top: -44px;
+    left: -228px;
+    right: 0;
+    margin: 0 auto;
+
+    z-index: -1;
+
+    @include vp-767 {
+      width: 200px;
+      height: 62px;
+
+      top: -140px;
+      left: -500px;
+    }
+  }
+
+  &::after {
+    content: "";
+
+    width: 100%;
+    height: 1px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-image: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+
+    margin: 0 auto;
+  }
+
+  .title {
+    margin: 0 0 31px;
+
+    @include vp-767 {
+      margin: 0 0 24px;
+    }
+  }
+}

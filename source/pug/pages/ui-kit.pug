@@ -226,6 +226,24 @@ block variables
         src: "video-1.mp4",
       },
     }
+  -
+    const titleData = {
+      title: {
+        tag: "h1",
+        text: "About us",
+      },
+      breadcrumbs: [
+        {
+          href: "#",
+          text: "Home",
+        },
+        {
+          href: "#",
+          text: "About us",
+          isCurrent: true,
+        },
+      ]
+    }
 
 block main
   style
@@ -281,6 +299,8 @@ block main
               a(href="#publication-info") Publication info
             li
               a(href="#video") Video
+            li
+              a(href="#main-title") Main title
 
       //----------------------------------------------
       .container
@@ -967,6 +987,35 @@ block main
               |
               code(class="language-pug").
                 +video(video)
+
+        //- Main title
+        section.uikit__section(id="main-title")
+          h2.uikit__h2 Main title
+          .uikit__component
+            p.uikit__text.uikit__text--class .main-title
+            +main-title(titleData)
+            pre
+              |
+              code(class="language-pug").
+                +main-title(
+                  {
+                    title: {
+                      tag: "h1",
+                      text: "About us",
+                    },
+                    breadcrumbs: [
+                      {
+                        href: "#",
+                        text: "Home",
+                      },
+                      {
+                        href: "#",
+                        text: "About us",
+                        isCurrent: true,
+                      },
+                    ]
+                  }
+                )
 
   script
     include ../../js/inline/ui-kit.js
