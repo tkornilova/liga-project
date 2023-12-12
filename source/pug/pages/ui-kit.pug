@@ -244,6 +244,45 @@ block variables
         },
       ]
     }
+  -
+    const teamData = [
+      {
+        img: {
+          path: "content",
+          image: "team-1",
+          format: "jpg",
+        },
+        name: "Bondan Prabowo",
+        position: "CEO"
+      },
+      {
+        img: {
+          path: "content",
+          image: "team-2",
+          format: "jpg",
+        },
+        name: "Bayu Aji",
+        position: "VR Development"
+      },
+      {
+        img: {
+          path: "content",
+          image: "team-3",
+          format: "jpg",
+        },
+        name: "Agung Brandon",
+        position: "VR Artist"
+      },
+      {
+        img: {
+          path: "content",
+          image: "team-4",
+          format: "jpg",
+        },
+        name: "Aril Laso",
+        position: "UI / UX Designer"
+      },
+    ]
 
 block main
   style
@@ -301,6 +340,8 @@ block main
               a(href="#video") Video
             li
               a(href="#main-title") Main title
+            li
+              a(href="#team") Team
 
       //----------------------------------------------
       .container
@@ -1015,6 +1056,29 @@ block main
                       },
                     ]
                   }
+                )
+
+        //- Team
+        section.uikit__section(id="team")
+          h2.uikit__h2 Team
+          .uikit__component
+            p.uikit__text.uikit__text--class .team
+              +team(teamData)(style="width: 100%;")
+            pre
+              |
+              code(class="language-pug").
+                +team(
+                  [
+                    {
+                      img: {
+                        path: "content",
+                        image: "team-1",
+                        format: "jpg",
+                      },
+                      name: "Bondan Prabowo",
+                      position: "CEO"
+                    },
+                  ]
                 )
 
   script

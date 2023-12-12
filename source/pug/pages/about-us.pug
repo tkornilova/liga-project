@@ -105,6 +105,45 @@ block variables
       },
     ]
   -
+    const teamData = [
+      {
+        img: {
+          path: "content",
+          image: "team-1",
+          format: "jpg",
+        },
+        name: "Bondan Prabowo",
+        position: "CEO"
+      },
+      {
+        img: {
+          path: "content",
+          image: "team-2",
+          format: "jpg",
+        },
+        name: "Bayu Aji",
+        position: "VR Development"
+      },
+      {
+        img: {
+          path: "content",
+          image: "team-3",
+          format: "jpg",
+        },
+        name: "Agung Brandon",
+        position: "VR Artist"
+      },
+      {
+        img: {
+          path: "content",
+          image: "team-4",
+          format: "jpg",
+        },
+        name: "Aril Laso",
+        position: "UI / UX Designer"
+      },
+    ]
+  -
     const pageIntroData = {
       customText: {
         text: "Why choose us",
@@ -150,6 +189,9 @@ block main
       +page-section()(data-animation-fade)
         +img-block(imgBlock4)
           +accordion(accordion)
+      +page-section()(data-animation-fade)
+        .container
+          +team(teamData)
       +page-section()(data-animation-fade)
         .container
           +subscription()
