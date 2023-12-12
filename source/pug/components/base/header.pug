@@ -44,4 +44,4 @@ mixin header(headerMods, currentUrl)
                     span.main-nav__link.is-active= link.text
                   else
                     +link({href: link.href, text: link.text}).main-nav__link
-        +btn({text: "Contact us"}).btn--header
+        +btn({text: "Contact us", href: "#footer"}).btn--header(data-contact-us)
