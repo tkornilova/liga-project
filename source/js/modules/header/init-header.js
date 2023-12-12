@@ -13,6 +13,12 @@ const _handleScroll = () => {
 };
 
 export const initHeader = () => {
+  const header = document.querySelector('[data-header]');
+
+  if (!header) {
+    return;
+  }
+
   const burger = new Burger();
   burger.init();
 
