@@ -519,6 +519,7 @@ block main
                   p VRNas is a leading provider of VR services for education, entertainment, architecture, and events. Our mission is to bring the power of virtual reality to everyone, allowing them to explore new worlds, learn in new ways, and experience events in a whole new light.
           .uikit__component
             p.uikit__text.uikit__text--class .text-content ul > li > p
+            p.uikit__text.uikit__text--class .text-content ol > li > p
             +text-content()
               ul
                 li
@@ -538,6 +539,28 @@ block main
                       p Versatile applications
                     li
                       p Affordable and accessible
+          .uikit__component
+            p.uikit__text.uikit__text--class .text-content img
+            +text-content()
+              img(src="img/content/blog-1.jpg", width=789, height=528, alt="Картинка статьи")
+            pre
+              |
+              code(class="language-pug").
+                +text-content()
+                  img(src="img/content/blog-1.jpg", width=789, height=528, alt="Картинка статьи")
+          .uikit__component
+            p.uikit__text.uikit__text--class .text-content .text-content__img (для двух картинок)
+            +text-content()
+              .text-content__img
+                img(src="img/content/blog-2.jpg", width=377, height=252, alt="Картинка статьи")
+                img(src="img/content/blog-3.jpg", width=377, height=252, alt="Картинка статьи")
+            pre
+              |
+              code(class="language-pug").
+                +text-content()
+                  .text-content__img
+                    img(src="img/content/blog-2.jpg", width=377, height=252, alt="Картинка статьи")
+                    img(src="img/content/blog-3.jpg", width=377, height=252, alt="Картинка статьи")
 
         //- Элементы форм
         section.uikit__section(id="forms")
