@@ -1,6 +1,6 @@
-mixin breadcrumbs(links = {})
+mixin breadcrumbs(links = {}, noContainer)
   .breadcrumbs&attributes(attributes)
-    .container
+    if (noContainer)
       ul.breadcrumbs__list.no-scrollbar
         each link in links
           li.breadcrumbs__item
@@ -8,3 +8,12 @@ mixin breadcrumbs(links = {})
               span.breadcrumbs__link!= link.text
             else
               +link({href: link.href, text: link.text})
+    else
+      .container
+        ul.breadcrumbs__list.no-scrollbar
+          each link in links
+            li.breadcrumbs__item
+              if (link.isCurrent)
+                span.breadcrumbs__link!= link.text
+              else
+                +link({href: link.href, text: link.text})

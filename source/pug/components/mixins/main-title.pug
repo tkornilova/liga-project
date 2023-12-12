@@ -1,0 +1,4 @@
+mixin main-title(data = {})
+  .main-title&attributes(attributes)
+    +title({tag: data.title.tag, text: data.title.text}).title--h1
+    +breadcrumbs(data.breadcrumbs, true)
