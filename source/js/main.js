@@ -4,6 +4,7 @@ import {initHeader} from './modules/header/init-header.js';
 import {initAccordions} from './modules/accordion/init-accordion.js';
 import {showMessage} from './modules/init-subscription.js';
 import {Animations} from './modules/init-animation.js';
+import {initVideo} from './modules/init-video.js';
 
 // ---------------------------------
 
@@ -23,6 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Подключает анимацию (паралакс, проявление блоков)
   const animations = new Animations();
   animations.init();
+  // Инициализирует включение видео
+  initVideo();
 
   // Modules
   // ---------------------------------

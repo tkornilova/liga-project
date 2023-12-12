@@ -1,0 +1,9 @@
+mixin video(data = {})
+  .video&attributes(attributes)
+    .video__text
+      +hashtags(data.tags, true).hashtags--big
+      +title({tag: data.title.tag, text: data.title.text}).title--h4.title--no-capitalize
+    +picture(data.img.path, data.img.image, data.img.format, 1200, 522, "Обложка видео")
+    button(type="button", aria-label="Воспроизвести видео", data-video-btn).video__btn
+      +icon("icon-play-button", 100, 100, true)
+    video(src=`img/video/${data.video.src}`, data-src=`img/video/${data.video.src}`, controls, data-video)

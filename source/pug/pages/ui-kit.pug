@@ -210,6 +210,22 @@ block variables
       date: "25 Nov 2022",
       dataTime: "2022-11-25",
     }
+  -
+    const video = {
+      tags: ["VR Service"],
+      title: {
+        tag: "h3",
+        text: "How to get started",
+      },
+      img: {
+        path: "content",
+        image: "video-1",
+        format: "jpg",
+      },
+      video: {
+        src: "video-1.mp4",
+      },
+    }
 
 block main
   style
@@ -263,6 +279,8 @@ block main
               a(href="#articles") Article list
             li
               a(href="#publication-info") Publication info
+            li
+              a(href="#video") Video
 
       //----------------------------------------------
       .container
@@ -938,6 +956,17 @@ block main
                     dataTime: "2022-11-25",
                   }
                 )
+
+        //- Video
+        section.uikit__section(id="video")
+          h2.uikit__h2 Video
+          .uikit__component
+            p.uikit__text.uikit__text--class .video
+            +video(video)
+            pre
+              |
+              code(class="language-pug").
+                +video(video)
 
   script
     include ../../js/inline/ui-kit.js
