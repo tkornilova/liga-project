@@ -52,12 +52,13 @@
     .social-list {
       @include vp-1023 {
         justify-content: flex-end;
-        margin: 0 0px -20px auto;
+        margin: 0 0 -20px auto;
 
         &__item {
           &:first-child {
             margin: 0 0 20px 0;
           }
+
           &:not(:first-child) {
             margin: 0 0 20px 20px;
           }

@@ -21,7 +21,7 @@
     border-radius: 11.5px;
 
     padding: 2px 7px;
-    margin: 0px 12px 11px 0;
+    margin: 0 12px 11px 0;
   }
 
   &--big {
@@ -36,7 +36,7 @@
   &--custom {
     background: linear-gradient(90deg, rgba(12, 186, 241, 1) 0%, rgba(233, 92, 233, 1) 100%);
     background-clip: text;
-    -webkit-background-clip: text;
+    //-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     margin: 0;
