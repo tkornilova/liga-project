@@ -14,9 +14,19 @@
 
     padding: 0;
     margin: 0;
+
+    @include vp-767 {
+      flex-wrap: nowrap;
+
+      overflow-y: auto;
+    }
   }
 
   &__item {
+    @include vp-767 {
+      white-space: nowrap;
+    }
+
     &:not(:last-child) {
       position: relative;
 

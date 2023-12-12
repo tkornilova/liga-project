@@ -1,4 +1,6 @@
 .publication-info {
+  width: fit-content;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -7,7 +9,7 @@
 
   background: linear-gradient(90deg, rgba(12, 186, 241, 1) 0%, rgba(233, 92, 233, 1) 100%);
   background-clip: text;
-  -webkit-background-clip: text;
+  //-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   font-size: 16px;

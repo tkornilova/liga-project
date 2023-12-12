@@ -61,10 +61,16 @@
     grid-template-columns: 1fr;
     gap: 5px;
 
+    @include vp-767 {
+      width: 90%;
+    }
+
     .link {
       font-size: 12px;
       line-height: 167%;
       font-weight: 400;
+
+      text-transform: capitalize;
     }
   }
 }

@@ -210,6 +210,22 @@ block variables
       date: "25 Nov 2022",
       dataTime: "2022-11-25",
     }
+  -
+    const video = {
+      tags: ["VR Service"],
+      title: {
+        tag: "h3",
+        text: "How to get started",
+      },
+      img: {
+        path: "content",
+        image: "video-1",
+        format: "jpg",
+      },
+      video: {
+        src: "video-1.mp4",
+      },
+    }
 
 block main
   style
@@ -263,11 +279,13 @@ block main
               a(href="#articles") Article list
             li
               a(href="#publication-info") Publication info
+            li
+              a(href="#video") Video
 
       //----------------------------------------------
       .container
         a.uikit__header-link(href="sitemap.html")
-          +icon("icon-logo", 300, "auto", true)
+          +icon("icon-logo", 297, 77, true)
         h1.uikit__h1 Компоненты, используемые на проекте
 
         //- Кнопки
@@ -390,6 +408,41 @@ block main
               |
               code(class="language-pug").
                 +title({text: "Заголовок 7 уровня"}).title--h7
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h8
+            +title({text: "Заголовок 8 уровня"}).title--h8
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 8 уровня"}).title--h8
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h9
+            +title({text: "Заголовок 9 уровня"}).title--h9
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 9 уровня"}).title--h9
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h10
+            +title({text: "Заголовок 10 уровня"}).title--h10
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 10 уровня"}).title--h10
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h11
+            +title({text: "Заголовок 11 уровня"}).title--h11
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 11 уровня"}).title--h11
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h12
+            +title({text: "Заголовок 12 уровня"}).title--h12
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 12 уровня"}).title--h12
 
         //- Text-content
         section.uikit__section(id="text-content")
@@ -782,9 +835,9 @@ block main
 
         //- Hashtags
         section.uikit__section(id="hashtags")
-          h2.uikit__h2 Hashtags
+          h2.uikit__h2 Hashtags and tags
           .uikit__component
-            p.uikit__text.uikit__text--class .hashtags
+            p.uikit__text.uikit__text--class .hashtags (с #)
             +hashtags(hashtags)
             pre
               |
@@ -803,6 +856,46 @@ block main
                     isCurrent: true,
                   },
                 )
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtags (без #)
+            +hashtags(hashtags, true)
+            pre
+              |
+              code(class="language-pug").
+                +pagination([
+                  {
+                    href: "#",
+                    text: "Home",
+                  },
+                  {
+                    href: "#",
+                    text: "Blog",
+                  },
+                  {
+                    text: "Bringing designs to life: how VR is changing architecture",
+                    isCurrent: true,
+                  },
+                ], true)
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtags.hashtags--big
+            +hashtags(hashtags).hashtags--big
+            pre
+              |
+              code(class="language-pug").
+                +pagination(
+                  {
+                    href: "#",
+                    text: "Home",
+                  },
+                  {
+                    href: "#",
+                    text: "Blog",
+                  },
+                  {
+                    text: "Bringing designs to life: how VR is changing architecture",
+                    isCurrent: true,
+                  },
+                ).hashtags--big
           .uikit__component
             p.uikit__text.uikit__text--class .hashtags--custom
             +hashtags(hashtags).hashtags--custom
@@ -863,6 +956,17 @@ block main
                     dataTime: "2022-11-25",
                   }
                 )
+
+        //- Video
+        section.uikit__section(id="video")
+          h2.uikit__h2 Video
+          .uikit__component
+            p.uikit__text.uikit__text--class .video
+            +video(video)
+            pre
+              |
+              code(class="language-pug").
+                +video(video)
 
   script
     include ../../js/inline/ui-kit.js

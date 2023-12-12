@@ -1,5 +1,5 @@
 mixin footer(footerMods)
-  footer.footer(class=footerMods, data-animation-fade)
+  footer.footer(class=footerMods, id="footer", data-animation-fade)
     .container
       .footer__wrapper
         .footer__navigation
@@ -38,7 +38,7 @@ mixin footer(footerMods)
           ).social-list--custom
         .footer__links
           .footer__group
-            +title({text: "Quicklinks"}).title--h7
+            +title({text: "Quicklinks"}).title--h10
             ul.footer__links-list
               li.footer__links-item
                 +link({text: "Home", href: "#", label: "Перейти к разделу"})
@@ -64,7 +64,7 @@ mixin footer(footerMods)
               li.footer__links-item
                 +link({text: "Privacy policy", href: "#", label: "Перейти к разделу"})
         .footer__contacts
-          +title({text: "Need Help?"}).title--h7
+          +title({text: "Need Help?"}).title--h10
           ul.footer__contacts-list
             li.footer__contacts-item.footer__contacts-item--adress
               p.footer__contacts-text Tanjung Sari Street no.48, Pontianak City

@@ -1,5 +1,5 @@
-import gsap from '../utils/gsap.min';
-import ScrollTrigger from '../utils/scrollTrigger.min';
+import gsap from '../vendor/gsap.min';
+import ScrollTrigger from '../vendor/scrollTrigger.min';
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -5,5 +5,5 @@ mixin articles(cards = [])
         .articles__img-wrapper
           +picture("content", card.img.name, card.img.format, 102, 65, "Картинка статьи")
         .articles__wrapper
-          +hashtags(card.hashtags)
+          +hashtags(card.hashtags, true)
           +link({href: card.href, text: card.text})

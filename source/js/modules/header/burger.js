@@ -14,7 +14,9 @@ export class Burger {
     this._onDocumentClick = this._onDocumentClick.bind(this);
 
     this._window = window;
+    this._contacUsBtn = document.querySelector('[data-contact-us]');
     this._breakpointDesktop = this._window.matchMedia('(min-width:1024px)');
+    this._breakpointTablet = this._window.matchMedia('(max-width:1023px)');
   }
 
   init() {
@@ -22,9 +24,19 @@ export class Burger {
       return;
     }
 
+    // Открывает меню при клике на бургер
     this._burger.addEventListener('click', this._onBurgerClick);
+
+    // Закрывает меню при ресайзе
     this._window.addEventListener('resize', () => {
       if (this._breakpointDesktop.matches) {
+        this._closeMenu();
+      }
+    });
+
+    // Закрывает меню при клике на кнопку Contact Us
+    this._contacUsBtn.addEventListener('click', () => {
+      if (this._breakpointTablet.matches) {
         this._closeMenu();
       }
     });

@@ -3,7 +3,7 @@ mixin price-card(data = {})
     .price-card__wrapper
       each item in data.items
         .price-card__item
-          +title({tag: "h3", text: item.title}).title--h5
+          +title({tag: "h3", text: item.title}).title--h9
           .price-card__texts
             each text in item.texts
               p.price-card__text!= text

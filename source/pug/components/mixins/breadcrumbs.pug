@@ -1,7 +1,7 @@
 mixin breadcrumbs(links = {})
   .breadcrumbs&attributes(attributes)
     .container
-      ul.breadcrumbs__list
+      ul.breadcrumbs__list.no-scrollbar
         each link in links
           li.breadcrumbs__item
             if (link.isCurrent)

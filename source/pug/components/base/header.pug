@@ -6,19 +6,19 @@ mixin header(headerMods, currentUrl)
         text: "Home"
       },
       {
-        href: "#about-us",
+        href: "about-us.html",
         text: "About us"
       },
       {
-        href: "#service",
+        href: "#",
         text: "Service"
       },
       {
-        href: "#price",
+        href: "#",
         text: "Pricing Plan"
       },
       {
-        href: "#blog",
+        href: "blog.html",
         text: "Blog"
       },
     ]
@@ -44,4 +44,4 @@ mixin header(headerMods, currentUrl)
                     span.main-nav__link.is-active= link.text
                   else
                     +link({href: link.href, text: link.text}).main-nav__link
-        +btn({text: "Contact us"}).btn--header
+        +btn({text: "Contact us", href: "#footer"}).btn--header(data-contact-us)
