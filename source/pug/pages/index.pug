@@ -181,6 +181,33 @@ block variables
         ],
       },
     ]
+  -
+    const videoBlock = {
+      mainTitle: {
+        customText: {
+          text: "How to get started",
+        },
+        title: {
+          tag: "h2",
+          text: "Bringing your virtual reality dreams to life",
+        }
+      },
+      video: {
+        tags: ["VR Service"],
+        title: {
+          tag: "h3",
+          text: "How to get started",
+        },
+        img: {
+          path: "content",
+          image: "video-1",
+          format: "jpg",
+        },
+        video: {
+          src: "video-1.mp4",
+        },
+      },
+    }
 
 block main
   main
@@ -207,6 +234,8 @@ block main
       +page-section()(data-animation-fade)
         +img-block(imgBlock2)
           +accordion(accordion)
+      +page-section()(data-animation-fade)
+        +video-block(videoBlock)
       +page-section()(id="price", data-animation-fade)
        +price(priceCardData)
       +page-section()(data-animation-fade)

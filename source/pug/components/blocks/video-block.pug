@@ -1,0 +1,6 @@
+mixin video-block(data = {})
+  .video-block&attributes(attributes)
+    .container
+      +page-intro(data.mainTitle).page-intro--center
+      +video(data.video)
+      +btn({text: "Get started"})
