@@ -1027,7 +1027,23 @@ block main
             pre
               |
               code(class="language-pug").
-                +video(video)
+                +video(
+                  {
+                    tags: ["VR Service"],
+                    title: {
+                      tag: "h3",
+                      text: "How to get started",
+                    },
+                    img: {
+                      path: "content",
+                      image: "video-1",
+                      format: "jpg",
+                    },
+                    video: {
+                      src: "video-1.mp4",
+                    },
+                  }
+                )
 
         //- Main title
         section.uikit__section(id="main-title")
