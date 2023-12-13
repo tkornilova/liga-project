@@ -360,21 +360,21 @@ block main
               code(class="language-pug").
                 +btn({text: "Текст", href: "#"})
           .uikit__component
-            p.uikit__text.uikit__text--class .btn--transparent
+            p.uikit__text.uikit__text--class .btn.btn--transparent
             +btn({text: "Текст", href: "#", isExternal: true, label: "Просто ссылка"}).btn--transparent
             pre
               |
               code(class="language-pug").
                 +btn({text: "Текст", href: "#", isExternal: true, label: "Просто ссылка"}).btn--transparent
           .uikit__component
-            p.uikit__text.uikit__text--class .btn--header
+            p.uikit__text.uikit__text--class .btn.btn--header
             +btn({text: "Кнопка"}).btn--header
             pre
               |
               code(class="language-pug").
                 +btn({text: "Кнопка"}).btn--header
           .uikit__component
-            p.uikit__text.uikit__text--class .btn (disabled)
+            p.uikit__text.uikit__text--class .btn(disabled)
             +btn({text: "Текст"})(disabled)
             pre
               |
@@ -616,7 +616,7 @@ block main
                   }
                 )
           .uikit__component
-            p.uikit__text.uikit__text--class .page-intro--center
+            p.uikit__text.uikit__text--class .page-intro.page-intro--center
             +page-intro(intro1).page-intro--center
             pre
               |
@@ -673,7 +673,7 @@ block main
                   }
                 )
           .uikit__component
-            p.uikit__text.uikit__text--class .service-card--catalog
+            p.uikit__text.uikit__text--class .service-card.service-card--catalog
             +service-card(serviceCard).service-card--catalog
             pre
               |
@@ -708,7 +708,7 @@ block main
               code(class="language-pug").
                 +service-list(serviceCards)
           .uikit__component
-            p.uikit__text.uikit__text--class .service-list--catalog
+            p.uikit__text.uikit__text--class .service-list.service-list--catalog
             +service-list(serviceCards).service-list--catalog
             pre
               |
@@ -773,7 +773,7 @@ block main
                   }
                 )
           .uikit__component
-            p.uikit__text.uikit__text--class .social-item--custom
+            p.uikit__text.uikit__text--class .social-item.social-item--custom
             +social-item(iconCustom)
             pre
               |
@@ -969,7 +969,7 @@ block main
                   ]
                 ).hashtags--big
           .uikit__component
-            p.uikit__text.uikit__text--class .hashtags--custom
+            p.uikit__text.uikit__text--class .hashtags.hashtags--custom
             +hashtags(hashtags).hashtags--custom
             pre
               |
