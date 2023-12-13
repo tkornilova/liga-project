@@ -50,14 +50,50 @@
   }
 }
 
+@mixin vp-1149 {
+  @media (max-width: ($vp-1150 - 1px)) {
+    @content;
+  }
+}
+
 @mixin vp-1023 {
   @media (max-width: ($vp-1024 - 1px)) {
     @content;
   }
 }
 
+@mixin vp-939 {
+  @media (max-width: ($vp-940 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-859 {
+  @media (max-width: ($vp-860 - 1px)) {
+    @content;
+  }
+}
+
 @mixin vp-767 {
   @media (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-679 {
+  @media (max-width: ($vp-680 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-599 {
+  @media (max-width: ($vp-680 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-499 {
+  @media (max-width: ($vp-500 - 1px)) {
     @content;
   }
 }

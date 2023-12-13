@@ -1,0 +1,8 @@
+mixin partners(data = {})
+  .partners&attributes(attributes)
+    ul.partners__list
+      each partner in data.partners
+        li.partners__item
+          +icon(partner.name, partner.width, partner.height)
+    .partners__img
+      +picture(data.img.path, data.img.image, data.img.format, data.img.width, data.img.height, "Декоративная картинка блока")

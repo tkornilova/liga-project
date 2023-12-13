@@ -1,0 +1,266 @@
+.partners {
+  max-width: 1080px;
+
+  position: relative;
+  margin: 0 auto;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    list-style: none;
+
+    position: absolute;
+    bottom: 36%;
+    left: 1.5%;
+    right: 3.7%;
+
+    padding: 0;
+    margin: 0 auto;
+
+    @include vp-1279 {
+      width: 93%;
+
+      bottom: 38%;
+    }
+
+    @include vp-767 {
+      width: 91%;
+
+      left: -12%;
+      right: -9.3%;
+      bottom: 39%;
+    }
+
+    @include vp-499 {
+      width: 95%;
+
+      bottom: 36%;
+    }
+  }
+
+  &__item {
+    width: 102px;
+    height: 102px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    @include vp-1279 {
+      width: 96px;
+      height: 96px;
+    }
+
+    @include vp-1149 {
+      width: 90px;
+      height: 90px;
+    }
+
+    @include vp-1023 {
+      width: 82px;
+      height: 82px;
+    }
+
+    @include vp-939 {
+      width: 75px;
+      height: 75px;
+    }
+
+    @include vp-859 {
+      width: 65px;
+      height: 65px;
+    }
+
+    @include vp-767 {
+      width: 50px;
+      height: 50px;
+    }
+
+    @include vp-679 {
+      width: 45px;
+      height: 45px;
+    }
+
+    @include vp-599 {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include vp-499 {
+      width: 42px;
+      height: 42px;
+    }
+
+    @include vp-374 {
+      width: 32px;
+      height: 32px;
+    }
+
+    svg {
+      @include vp-767 {
+        width: 29px;
+      }
+    }
+
+    &::before {
+      content: url("../../img/sprite/gradient/icon-partners-bg.svg");
+
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      z-index: -1;
+
+      margin: 0;
+    }
+
+    &:first-child {
+      animation-delay: 0.2s;
+      animation: scaleAnimation 6s infinite;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      bottom: 181%;
+      left: 5.5%;
+
+      animation-delay: 0.5s;
+      animation: scaleAnimation 10s infinite;
+
+      @include vp-767 {
+        bottom: 231%;
+        left: 6.5%;
+      }
+
+      @include vp-499 {
+        bottom: 178%;
+        left: 5.1%;
+      }
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      bottom: 340%;
+      left: 22%;
+
+      animation: scaleAnimation 9s infinite;
+
+      @include vp-767 {
+        bottom: 447%;
+        left: 21%;
+      }
+
+      @include vp-499 {
+        bottom: 336%;
+        left: 21%;
+      }
+    }
+
+    &:nth-child(4) {
+      position: absolute;
+      bottom: 410%;
+      left: 45%;
+
+      animation-delay: 0.8s;
+      animation: scaleAnimation 12s infinite;
+
+      @include vp-767 {
+        bottom: 553%;
+      }
+
+      @include vp-499 {
+        bottom: 404%;
+      }
+    }
+
+    &:nth-child(5) {
+      position: absolute;
+      bottom: 340%;
+      right: 22%;
+
+      animation-delay: 1.1s;
+      animation: scaleAnimation 10s infinite;
+
+      @include vp-767 {
+        bottom: 447%;
+        right: 21%;
+      }
+
+      @include vp-499 {
+        bottom: 336%;
+        right: 21%;
+      }
+    }
+
+    &:nth-child(6) {
+      position: absolute;
+      bottom: 181%;
+      right: 5.5%;
+
+      animation: scaleAnimation 8s infinite;
+
+      @include vp-767 {
+        bottom: 231%;
+        right: 6.5%;
+      }
+
+      @include vp-499 {
+        bottom: 178%;
+        right: 5.1%;
+      }
+    }
+
+    &:last-child {
+      animation-delay: 0.3s;
+      animation: scaleAnimation 7s infinite;
+    }
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+
+    z-index: -2;
+
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 78.2%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+}
+
+// @keyframes scaleAnimation {
+//   0% {
+//     transform: scale(1);
+//   }
+//   50% {
+//     transform: scale(1.5);
+//   }
+//   100% {
+//     transform: scale(1);
+//   }
+// }
