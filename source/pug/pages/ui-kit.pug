@@ -635,7 +635,7 @@ block main
                 ).page-intro--center
           h2.uikit__h2 Page intro с гридом
           .uikit__component
-            p.uikit__text.uikit__text--class .page-intro (грид 1/1 - по умолчанию)
+            p.uikit__text.uikit__text--class .page-intro
             +page-intro(intro2)
               +text-content()
                 p We use the latest VR hardware and software to create high-quality VR experiences that are accessible and affordable. Our goal is to provide exceptional customer service and support, and our team is always available to answer any questions and address any concerns you may have.
@@ -655,26 +655,6 @@ block main
                   }
                 )
                   +Текст()
-          .uikit__component
-            p.uikit__text.uikit__text--class .page-intro (грид 3/1)
-            +page-intro(intro3).page-intro--grid-3-1
-              +btn({text: "See all"}).btn--transparent
-            pre
-              |
-              code(class="language-pug").
-                +page-intro(
-                  {
-                    grid: true,
-                    customText: {
-                      text: "Our team",
-                    },
-                    title: {
-                      tag: "h2",
-                      text: "Our professionals team",
-                    }
-                  }
-                ).page-intro--grid-3-1
-                  +Кнопка()
 
         //- Service card
         section.uikit__section(id="service-card")
