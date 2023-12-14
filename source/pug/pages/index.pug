@@ -9,36 +9,66 @@ block variables
   - const footerMods = ""
   - const currentUrl = "index.html"
   -
-    const priceCardData = {
-      items: [
-        {
-          title: "Customizable packages",
-          texts: [
-            "We&nbsp;understand that each project is&nbsp;unique, so&nbsp;we&nbsp;offer customizable packages to&nbsp;ensure that you get the services you need at&nbsp;a&nbsp;price that works for you. Our team will work with you to&nbsp;create a&nbsp;package that meets your specific goals and budget.",
-          ],
-        },
-        {
-          title: "Flexible payment options",
-          texts: [
-            "We&nbsp;offer flexible payment options to&nbsp;make it&nbsp;easy for you to&nbsp;get started with our services. We&nbsp;accept various payment methods, including credit cards, bank transfers, and PayPal, and we&nbsp;can also work with you to&nbsp;create a&nbsp;payment plan that suits your needs.",
-          ],
-        },
-        {
-          title: "Satisfaction guarantee",
-          texts: [
-            "We&nbsp;stand behind our services and are committed to&nbsp;ensuring that you are completely satisfied with the final product. If&nbsp;for any reason you are not happy with our services, we&nbsp;will work with you to&nbsp;make it&nbsp;right or&nbsp;provide a&nbsp;full refund.",
-          ],
-        },
-      ],
-      img: {
-        path: "price-card-1",
+    const usersData = [
+      {
+        image: "user-3",
         format: "png",
-        alt: "Картинка мужчины",
       },
-      price: "$99",
+      {
+        image: "user-2",
+        format: "png",
+      },
+      {
+        image: "user-1",
+        format: "png",
+      },
+    ]
+  -
+    const serviceCustomCardsData = [
+      {
+        icon: "icon-service-custom-1",
+        title: "Expertise",
+        text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
+      },
+      {
+        icon: "icon-service-custom-2",
+        title: "Customization",
+        text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
+      },
+      {
+        icon: "icon-service-custom-3",
+        title: "Service",
+        text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
+      },
+    ]
+  -
+    const imgBlock1 = {
+      pictures: {
+        main: {
+          path: "content",
+          image: "imgBlock1-1",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+        additional: {
+          path: "content",
+          image: "imgBlock1-2",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+      },
+      text: {
+        customText: {
+          text: "About us",
+        },
+        title: {
+          tag: "h2",
+          text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
+        }
+      }
     }
   -
-    const serviceCards = [
+    const serviceCardsData = [
       {
         icon: "icon-service-1",
         title: "VR Development",
@@ -71,65 +101,6 @@ block variables
       },
     ]
   -
-    const serviceCustomCards = [
-      {
-        icon: "icon-service-custom-1",
-        title: "Expertise",
-        text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
-      },
-      {
-        icon: "icon-service-custom-2",
-        title: "Customization",
-        text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
-      },
-      {
-        icon: "icon-service-custom-3",
-        title: "Service",
-        text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
-      },
-    ]
-  -
-    const users = [
-      {
-        image: "user-3",
-        format: "png",
-      },
-      {
-        image: "user-2",
-        format: "png",
-      },
-      {
-        image: "user-1",
-        format: "png",
-      },
-    ]
-  -
-    const imgBlock1 = {
-      pictures: {
-        main: {
-          path: "content",
-          image: "imgBlock1-1",
-          format: "png",
-          alt: "Человек в VR очках",
-        },
-        additional: {
-          path: "content",
-          image: "imgBlock1-2",
-          format: "png",
-          alt: "Человек в VR очках",
-        },
-      },
-      text: {
-        customText: {
-          text: "About us",
-        },
-        title: {
-          tag: "h2",
-          text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
-        }
-      }
-    }
-  -
     const imgBlock2 = {
       isReverse: true,
       pictures: {
@@ -157,7 +128,7 @@ block variables
       }
     }
   -
-    const accordion = [
+    const accordionData = [
       {
         isActive: true,
         title: "Passionate and experienced team",
@@ -182,7 +153,7 @@ block variables
       },
     ]
   -
-    const videoBlock = {
+    const videoBlockData = {
       mainTitle: {
         customText: {
           text: "How to get started",
@@ -207,6 +178,35 @@ block variables
           src: "video-1.mp4",
         },
       },
+    }
+  -
+    const priceCardData = {
+      items: [
+        {
+          title: "Customizable packages",
+          texts: [
+            "We&nbsp;understand that each project is&nbsp;unique, so&nbsp;we&nbsp;offer customizable packages to&nbsp;ensure that you get the services you need at&nbsp;a&nbsp;price that works for you. Our team will work with you to&nbsp;create a&nbsp;package that meets your specific goals and budget.",
+          ],
+        },
+        {
+          title: "Flexible payment options",
+          texts: [
+            "We&nbsp;offer flexible payment options to&nbsp;make it&nbsp;easy for you to&nbsp;get started with our services. We&nbsp;accept various payment methods, including credit cards, bank transfers, and PayPal, and we&nbsp;can also work with you to&nbsp;create a&nbsp;payment plan that suits your needs.",
+          ],
+        },
+        {
+          title: "Satisfaction guarantee",
+          texts: [
+            "We&nbsp;stand behind our services and are committed to&nbsp;ensuring that you are completely satisfied with the final product. If&nbsp;for any reason you are not happy with our services, we&nbsp;will work with you to&nbsp;make it&nbsp;right or&nbsp;provide a&nbsp;full refund.",
+          ],
+        },
+      ],
+      img: {
+        path: "price-card-1",
+        format: "png",
+        alt: "Картинка мужчины",
+      },
+      price: "$99",
     }
   -
     const partnersData = {
@@ -260,10 +260,10 @@ block main
   main
     +page-content()
       +page-section().page-section--no-padding-top(data-animation-fade)
-        +intro(users)
+        +intro(usersData)
       +page-section().page-section--no-padding-top(data-animation-fade)
         .container
-          +service-list(serviceCustomCards).service-list--catalog
+          +service-list(serviceCustomCardsData).service-list--catalog
       +page-section()(data-animation-fade)
         +img-block(imgBlock1)
           +text-content()
@@ -277,12 +277,12 @@ block main
                 p Affordable and accessible
           +btn({text: "Read more"})
       +page-section()(data-animation-fade)
-        +service(serviceCards)
+        +service(serviceCardsData)
       +page-section()(data-animation-fade)
         +img-block(imgBlock2)
-          +accordion(accordion)
+          +accordion(accordionData)
       +page-section()(data-animation-fade)
-        +video-block(videoBlock)
+        +video-block(videoBlockData)
       +page-section()(data-animation-fade)
         +price(priceCardData)
       +page-section()(data-animation-fade)

@@ -53,6 +53,34 @@ block variables
       }
     }
   -
+    const pageIntroData = {
+      customText: {
+        text: "Why choose us",
+      },
+      title: {
+        tag: "h2",
+        text: "Empowering your virtual reality experience",
+      }
+    }
+  -
+    const serviceCustomCardsData = [
+      {
+        icon: "icon-service-custom-1",
+        title: "Expertise",
+        text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
+      },
+      {
+        icon: "icon-service-custom-2",
+        title: "Customization",
+        text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
+      },
+      {
+        icon: "icon-service-custom-3",
+        title: "Service",
+        text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
+      },
+    ]
+  -
     const imgBlock4 = {
       pictures: {
         main: {
@@ -79,7 +107,7 @@ block variables
       }
     }
   -
-    const accordion = [
+    const accordionData = [
       {
         isActive: true,
         title: "Passionate and experienced team",
@@ -143,34 +171,6 @@ block variables
       },
     ]
   -
-    const pageIntroData = {
-      customText: {
-        text: "Why choose us",
-      },
-      title: {
-        tag: "h2",
-        text: "Empowering your virtual reality experience",
-      }
-    }
-  -
-    const serviceCustomCards = [
-      {
-        icon: "icon-service-custom-1",
-        title: "Expertise",
-        text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
-      },
-      {
-        icon: "icon-service-custom-2",
-        title: "Customization",
-        text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
-      },
-      {
-        icon: "icon-service-custom-3",
-        title: "Service",
-        text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
-      },
-    ]
-  -
     const partnersData = {
       img: {
         path: "content",
@@ -231,10 +231,10 @@ block main
       +page-section()(data-animation-fade)
         .container
           +page-intro(pageIntroData).page-intro--center
-            +service-list(serviceCustomCards).service-list--catalog
+            +service-list(serviceCustomCardsData).service-list--catalog
       +page-section()(data-animation-fade)
         +img-block(imgBlock4)
-          +accordion(accordion)
+          +accordion(accordionData)
       +page-section()(data-animation-fade)
         +team-block(teamData)
       +page-section()(data-animation-fade)
