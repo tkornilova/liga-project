@@ -27,7 +27,7 @@
 
       z-index: -1;
 
-      background-image: linear-gradient(99deg, rgba(28, 196, 249, 0.80) 0.72%, rgba(254, 105, 254, 0.80) 90.69%);
+      background-image: $intro-gradient;
       filter: blur(105px);
 
       @include vp-1279 {
