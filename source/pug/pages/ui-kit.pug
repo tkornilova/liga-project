@@ -27,6 +27,60 @@ block variables
       },
     ]
   -
+    const imgBlock1 = {
+      pictures: {
+        main: {
+          path: "content",
+          image: "imgBlock1-1",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+        additional: {
+          path: "content",
+          image: "imgBlock1-2",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+      },
+      text: {
+        customText: {
+          text: "About us",
+        },
+        title: {
+          tag: "h2",
+          text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
+        }
+      }
+    }
+  -
+    const imgBlock2 = {
+      isReverse: true,
+      pictures: {
+        main: {
+          path: "content",
+          image: "imgBlock1-1",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+        additional: {
+          path: "content",
+          image: "imgBlock1-2",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+      },
+      text: {
+        customText: {
+          text: "About us",
+        },
+        title: {
+          tag: "h2",
+          text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
+        }
+      }
+    }
+  -
+  -
     const intro1 = {
       customText: {
         text: "Why choose us",
@@ -318,6 +372,8 @@ block main
               a(href="#service-card") Service card
             li
               a(href="#service-list") Service list
+            li
+              a(href="#img-block") Img block
             li
               a(href="#subscription") Subscription
             li
@@ -714,6 +770,77 @@ block main
               |
               code(class="language-pug").
                 +service-list(serviceCards).service-list--catalog
+
+        //- Img block
+        section.uikit__section(id="img-block")
+          h2.uikit__h2 Img block
+          .uikit__component
+            p.uikit__text.uikit__text--class .img-block
+            p.uikit__text.uikit__text--class В данный компонент можно вложить любой другой, который окажется под заголовком.
+            p.uikit__text.uikit__text--class По умолчанию в мобильной версии сначала идет картинка, а потом текст. Если нужен обратный порядок, то добавляется модификатор .img-block--mobile-img-last
+            +img-block(imgBlock1)(style="margin: 0 0 40px;")
+              p Another block
+            pre
+              |
+              code(class="language-pug").
+                +img-block(
+                  pictures: {
+                    main: {
+                      path: "content",
+                      image: "imgBlock1-1",
+                      format: "png",
+                      alt: "Человек в VR очках",
+                    },
+                    additional: {
+                      path: "content",
+                      image: "imgBlock1-2",
+                      format: "png",
+                      alt: "Человек в VR очках",
+                    },
+                  },
+                  text: {
+                    customText: {
+                      text: "About us",
+                    },
+                    title: {
+                      tag: "h2",
+                      text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
+                    }
+                  })
+                    +another-block()
+          .uikit__component
+            p.uikit__text.uikit__text--class .img-block (в обратном порядке)
+            +img-block(imgBlock2)(style="margin: 0 0 40px;")
+              p Another block
+            pre
+              |
+              code(class="language-pug").
+                +img-block(
+                  isReverse: true,
+                  pictures: {
+                    main: {
+                      path: "content",
+                      image: "imgBlock1-1",
+                      format: "png",
+                      alt: "Человек в VR очках",
+                    },
+                    additional: {
+                      path: "content",
+                      image: "imgBlock1-2",
+                      format: "png",
+                      alt: "Человек в VR очках",
+                    },
+                  },
+                  text: {
+                    customText: {
+                      text: "About us",
+                    },
+                    title: {
+                      tag: "h2",
+                      text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
+                    }
+                  })
+                    +another-block()
 
         //- Subscription
         section.uikit__section(id="subscription")
