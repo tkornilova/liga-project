@@ -1,5 +1,5 @@
 mixin social-item(data = {})
   - const customClass = data.isCustom ? "social-item--custom" : "";
 
-  a.social-item&attributes(attributes)(href=data.href, aria-label="Переход на социальные сети", class=customClass)
+  a.social-item&attributes(attributes)(href=data.href, aria-label="Переход на социальные сети", class=customClass, target="_blank", rel="nofollow noopener")
     +icon(data.icon, data.width, data.height, data.gradient)
