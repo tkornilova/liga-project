@@ -2,7 +2,11 @@
   max-width: 1080px;
 
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto -100px;
+
+  @include vp-767 {
+    margin: 0 auto -40px;
+  }
 
   &__list {
     display: flex;
@@ -253,14 +257,14 @@
   }
 }
 
-// @keyframes scaleAnimation {
-//   0% {
-//     transform: scale(1);
-//   }
-//   50% {
-//     transform: scale(1.5);
-//   }
-//   100% {
-//     transform: scale(1);
-//   }
-// }
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

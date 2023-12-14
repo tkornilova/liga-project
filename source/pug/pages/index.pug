@@ -208,6 +208,53 @@ block variables
         },
       },
     }
+  -
+    const partnersData = {
+      img: {
+        path: "content",
+        image: "partners-1",
+        format: "png",
+        width: 1055,
+        height: 741,
+      },
+      partners: [
+        {
+          name: "icon-partner-1",
+          width: "79",
+          height: "20",
+        },
+        {
+          name: "icon-partner-2",
+          width: "72",
+          height: "18",
+        },
+        {
+          name: "icon-partner-3",
+          width: "72",
+          height: "15",
+        },
+        {
+          name: "icon-partner-4",
+          width: "72",
+          height: "20",
+        },
+        {
+          name: "icon-partner-5",
+          width: "72",
+          height: "18",
+        },
+        {
+          name: "icon-partner-6",
+          width: "72",
+          height: "19",
+        },
+        {
+          name: "icon-partner-7",
+          width: "72",
+          height: "19",
+        },
+      ]
+    }
 
 block main
   main
@@ -238,6 +285,8 @@ block main
         +video-block(videoBlock)
       +page-section()(data-animation-fade)
         +price(priceCardData)
+      +page-section()(data-animation-fade)
+        +partners-block(partnersData)
       +page-section()(data-animation-fade)
         .container
           +subscription()
