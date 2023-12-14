@@ -7,7 +7,7 @@ $color-default-black:               #000000;
 $color-default-white:               #ffffff;
 $color-default-white-6:             rgba(255, 255, 255, 0.06);
 $color-default-white-7:             rgba(255, 255, 255, 0.07);
-$color-default-white-15:             rgba(255, 255, 255, 0.15);
+$color-default-white-15:            rgba(255, 255, 255, 0.15);
 $color-default-white-21:            rgba(255, 255, 255, 0.21);
 $color-default-white-30:            rgba(255, 255, 255, 0.3);
 $color-default-white-35:            rgba(255, 255, 255, 0.35);
@@ -37,9 +37,7 @@ $gray-gradient:                     linear-gradient(180deg, rgba(37, 37, 50, 0) 
 // Typography
 // ---------------------------------
 
-// переменная используемая в html для подключения скейлинга
 $fz-default:                        16px;
-
 $ff-chakra-petch:                    "ChakraPetch", "Arial", sans-serif;
 
 // Animation
@@ -47,11 +45,6 @@ $ff-chakra-petch:                    "ChakraPetch", "Arial", sans-serif;
 
 $tf-default:                        ease;
 $trans-default:                     0.3s $tf-default;
-
-// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
-$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
-
-$trans-600:                         0.6s $tf-default;
 
 // Viewports
 // ---------------------------------
@@ -67,9 +60,3 @@ $vp-1024:                           1024px;
 $vp-1150:                           1150px;
 $vp-1280:                           1280px;
 $vp-1440:                           1440px;
-
-// Retina
-// ---------------------------------
-
-$retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx;
