@@ -1,0 +1,31 @@
+.team-block {
+  .page-intro {
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .team {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    @include vp-1023 {
+      grid-column-start: unset;
+      grid-column-end: unset;
+    }
+  }
+
+  .btn {
+    min-width: 140px;
+    max-width: 300px;
+    height: fit-content;
+
+    @include vp-1023 {
+      min-width: 35%;
+      max-width: 60%;
+      order: 1;
+    }
+  }
+}

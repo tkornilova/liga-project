@@ -6,11 +6,41 @@
     grid-template-columns: 48.5% 44%;
     gap: 90px;
 
-    overflow: hidden;
+    position: relative;
 
     @include vp-1279 {
       grid-template-columns: 1fr;
       gap: 0;
+    }
+
+    &::after {
+      content: "";
+
+      width: 24%;
+      height: 91%;
+
+      transform: rotate(-90deg);
+
+      position: absolute;
+      bottom: -4%;
+      right: 13%;
+
+      z-index: -1;
+
+      background-image: $intro-gradient;
+      filter: blur(105px);
+
+      @include vp-1279 {
+        width: 22%;
+        height: 71%;
+
+        bottom: -9%;
+        right: 26%;
+      }
+
+      @include vp-767 {
+        width: 37%;
+      }
     }
   }
 

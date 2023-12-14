@@ -16,11 +16,10 @@ block variables
       },
       breadcrumbs: [
         {
-          href: "#",
+          href: "index.html",
           text: "Home",
         },
         {
-          href: "#",
           text: "About us",
           isCurrent: true,
         },
@@ -54,6 +53,34 @@ block variables
       }
     }
   -
+    const pageIntroData = {
+      customText: {
+        text: "Why choose us",
+      },
+      title: {
+        tag: "h2",
+        text: "Empowering your virtual reality experience",
+      }
+    }
+  -
+    const serviceCustomCardsData = [
+      {
+        icon: "icon-service-custom-1",
+        title: "Expertise",
+        text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
+      },
+      {
+        icon: "icon-service-custom-2",
+        title: "Customization",
+        text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
+      },
+      {
+        icon: "icon-service-custom-3",
+        title: "Service",
+        text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
+      },
+    ]
+  -
     const imgBlock4 = {
       pictures: {
         main: {
@@ -80,7 +107,7 @@ block variables
       }
     }
   -
-    const accordion = [
+    const accordionData = [
       {
         isActive: true,
         title: "Passionate and experienced team",
@@ -105,37 +132,95 @@ block variables
       },
     ]
   -
-    const pageIntroData = {
-      customText: {
-        text: "Why choose us",
-      },
-      title: {
-        tag: "h2",
-        text: "Empowering your virtual reality experience",
-      }
-    }
-  -
-    const serviceCustomCards = [
+    const teamData = [
       {
-        icon: "icon-service-custom-1",
-        title: "Expertise",
-        text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
+        img: {
+          path: "content",
+          image: "team-1",
+          format: "jpg",
+        },
+        name: "Bondan Prabowo",
+        position: "CEO"
       },
       {
-        icon: "icon-service-custom-2",
-        title: "Customization",
-        text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
+        img: {
+          path: "content",
+          image: "team-2",
+          format: "jpg",
+        },
+        name: "Bayu Aji",
+        position: "VR Development"
       },
       {
-        icon: "icon-service-custom-3",
-        title: "Service",
-        text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
+        img: {
+          path: "content",
+          image: "team-3",
+          format: "jpg",
+        },
+        name: "Agung Brandon",
+        position: "VR Artist"
+      },
+      {
+        img: {
+          path: "content",
+          image: "team-4",
+          format: "jpg",
+        },
+        name: "Aril Laso",
+        position: "UI / UX Designer"
       },
     ]
+  -
+    const partnersData = {
+      img: {
+        path: "content",
+        image: "partners-1",
+        format: "png",
+        width: 1055,
+        height: 741,
+      },
+      partners: [
+        {
+          name: "icon-partner-1",
+          width: "79",
+          height: "20",
+        },
+        {
+          name: "icon-partner-2",
+          width: "72",
+          height: "18",
+        },
+        {
+          name: "icon-partner-3",
+          width: "72",
+          height: "15",
+        },
+        {
+          name: "icon-partner-4",
+          width: "72",
+          height: "20",
+        },
+        {
+          name: "icon-partner-5",
+          width: "72",
+          height: "18",
+        },
+        {
+          name: "icon-partner-6",
+          width: "72",
+          height: "19",
+        },
+        {
+          name: "icon-partner-7",
+          width: "72",
+          height: "19",
+        },
+      ]
+    }
 
 block main
   main
-    +page-content()
+    +page-content().page-content--decoration.page-content--decoration-low
       +page-section().page-section--no-padding-top(data-animation-fade)
         .container
           +main-title(titleData)
@@ -146,10 +231,14 @@ block main
       +page-section()(data-animation-fade)
         .container
           +page-intro(pageIntroData).page-intro--center
-            +service-list(serviceCustomCards).service-list--catalog
+            +service-list(serviceCustomCardsData).service-list--catalog
       +page-section()(data-animation-fade)
         +img-block(imgBlock4)
-          +accordion(accordion)
+          +accordion(accordionData)
+      +page-section()(data-animation-fade)
+        +team-block(teamData)
+      +page-section()(data-animation-fade)
+        +partners-block(partnersData)
       +page-section()(data-animation-fade)
         .container
           +subscription()

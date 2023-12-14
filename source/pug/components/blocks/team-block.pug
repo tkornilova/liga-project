@@ -1,0 +1,17 @@
+mixin team-block(teamData)
+  .team-block&attributes(attributes)
+    .container
+      .grid.grid--team
+        +page-intro(
+          {
+            customText: {
+              text: "Our team",
+            },
+            title: {
+              tag: "h2",
+              text: "Our professionals team",
+            }
+          }
+        )
+        +btn({text: "See all"}).btn--transparent
+        +team(teamData)

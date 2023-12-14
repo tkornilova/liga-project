@@ -1,0 +1,15 @@
+mixin partners-block(partnersData)
+  .partners-block&attributes(attributes)
+    .container
+      +page-intro(
+        {
+          customText: {
+            text: "Our trusted partners",
+          },
+          title: {
+            tag: "h2",
+            text: "Discover the companies we work with",
+          }
+        }
+      ).page-intro--center
+      +partners(partnersData)
