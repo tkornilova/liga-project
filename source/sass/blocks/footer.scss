@@ -112,15 +112,15 @@
     }
 
     &--adress::before {
-      content: url("img/sprite/icon-location.svg");
+      content: url("../img/sprite/icon-location.svg");
     }
 
     &--email::before {
-      content: url("img/sprite/icon-email.svg");
+      content: url("../img/sprite/icon-email.svg");
     }
 
     &--phone::before {
-      content: url("img/sprite/icon-phone.svg");
+      content: url("../img/sprite/icon-phone.svg");
     }
   }
 
