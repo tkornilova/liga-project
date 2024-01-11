@@ -584,13 +584,13 @@ button,
 }
 
 .wrapper::before {
-  content: url("../../img/content/main-bg-top.png");
+  content: url("../img/content/main-bg-top.png");
   top: 0;
   right: 0;
 }
 
 .wrapper::after {
-  content: url("../../img/content/main-bg-bottom.png");
+  content: url("img/content/main-bg-bottom.png");
   bottom: -6px;
   left: 0;
 }
