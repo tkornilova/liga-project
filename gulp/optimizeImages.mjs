@@ -15,13 +15,6 @@ const sprite = () =>
       .pipe(rename('sprite.svg'))
       .pipe(gulp.dest('build/img'));
 
-const spriteGradient = () =>
-  gulp
-      .src('source/img/sprite/gradient/*.svg')
-      .pipe(svgstore({inlineSvg: true}))
-      .pipe(rename('sprite-gradient.svg'))
-      .pipe(gulp.dest('build/img'));
-
 const optimizeSvg = () =>
   gulp
       .src(['build/img/**/*.svg', '!build/img/sprite.svg'])
@@ -45,6 +38,13 @@ const optimizePng = () =>
               dithering: 1,
               quality: [0.8, 0.9],
             })]))
+      .pipe(gulp.dest('build/img'));
+
+const spriteGradient = () =>
+  gulp
+      .src('source/img/sprite/gradient/*.svg')
+      .pipe(svgstore({inlineSvg: true}))
+      .pipe(rename('sprite-gradient.svg'))
       .pipe(gulp.dest('build/img'));
 
 /*
