@@ -1,0 +1,9 @@
+mixin accordion(items = [])
+  ul.accordion&attributes(attributes)(data-accordion="parent", data-single)
+    each item in items
+      - const activeClass = item.isActive ? "is-active" : "";
+      li.accordion__item(data-accordion="element", class=activeClass)
+        +title({tag: item.titleTag, text: item.title}).title--h8(data-accordion="button")
+        +text-content()(data-accordion="content")
+          each text in item.texts
+            p!= text

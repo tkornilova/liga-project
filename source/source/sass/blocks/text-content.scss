@@ -1,0 +1,99 @@
+.text-content {
+  font-size: 16px;
+  line-height: 175%;
+  font-weight: 300;
+
+  p {
+    color: $color-light-grey;
+
+    margin: 0;
+
+    &:not(:last-child) {
+      margin: 0 0 24px;
+    }
+  }
+
+  ul,
+  ol {
+    padding: 0 0 0 28px;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin: 0 0 24px;
+    }
+
+    li {
+      position: relative;
+
+      list-style: none;
+
+      &:not(:last-child) {
+        margin: 0 0 14px;
+      }
+
+      &::before {
+        content: url("../../img/sprite/gradient/icon-check-box.svg");
+
+        width: 16px;
+        height: 16px;
+
+        position: absolute;
+        top: 2px;
+        left: -28px;
+      }
+    }
+
+    p {
+      color: $color-default-white;
+    }
+  }
+
+  img {
+    width: 100%;
+    max-height: 528px;
+    height: 100%;
+
+    object-position: center;
+    object-fit: cover;
+
+    overflow: hidden;
+
+    margin: 0 0 30px;
+
+    @include vp-1023 {
+      max-height: 400px;
+    }
+
+    @include vp-767 {
+      max-height: 266px;
+
+      margin: 0 0 23px;
+    }
+  }
+
+  &__img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+
+    margin: 84px 0 77px;
+
+    @include vp-1023 {
+      gap: 25px;
+    }
+
+    @include vp-767 {
+      gap: 17px;
+
+      margin: 34px 0 27px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 252px;
+      height: 100%;
+
+      margin: 0;
+    }
+  }
+}

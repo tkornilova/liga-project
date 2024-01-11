@@ -1,0 +1,58 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  text-transform: uppercase;
+  color: $color-default-white;
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  background-image: $main-gradient;
+  border: none;
+
+  cursor: pointer;
+  transition: opacity $trans-default;
+  outline: none;
+  user-select: none;
+
+  padding: 18px 20px;
+
+  &--transparent {
+    background-image: none;
+    background-color: $color-default-white-6;
+
+    border: 1px solid $color-transparent;
+    border-image: $main-gradient;
+    border-image-slice: 1;
+  }
+
+  &--header {
+    text-transform: initial;
+    font-size: 16px;
+    line-height: 175%;
+    font-weight: 300;
+    letter-spacing: initial;
+
+    background-image: none;
+    background-color: $color-transparent;
+
+    border: 1px solid $color-transparent;
+    border-image: $main-gradient;
+    border-image-slice: 1;
+
+    padding: 12px 24px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,17 @@
+mixin page-intro(data = {})
+  if (data.grid)
+    .page-intro&attributes(attributes).page-intro--grid
+      .page-intro__left
+        if (data.customText)
+          +title({text: data.customText.text}).title--custom
+        if (data.title)
+          +title({tag: data.title.tag, text: data.title.text}).page-intro__title(class=data.title.class)
+      .page-intro__right
+        block
+  else
+    .page-intro&attributes(attributes)
+      if (data.customText)
+        +title({text: data.customText.text}).title--custom
+      if (data.title)
+        +title({tag: data.title.tag, text: data.title.text}).page-intro__title(class=data.title.class)
+      block

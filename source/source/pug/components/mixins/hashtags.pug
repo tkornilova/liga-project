@@ -1,0 +1,7 @@
+mixin hashtags(list = [], isTag)
+  .hashtags&attributes(attributes)
+    each hashtag in list
+      if (isTag)
+        p.hashtag!= hashtag
+      else
+        p.hashtag!= `#${hashtag}`

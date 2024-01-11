@@ -1,0 +1,56 @@
+.social-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  outline: none;
+  opacity: 1;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &--custom {
+    width: 45px;
+    height: 45px;
+
+    position: relative;
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      border-radius: 50%;
+
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+
+      margin: auto;
+    }
+
+    &::before {
+      width: 46px;
+      height: 46px;
+
+      left: 0;
+
+      background-image: $main-gradient;
+
+      z-index: -2;
+    }
+
+    &::after {
+      width: 44px;
+      height: 44px;
+
+      left: 1px;
+
+      background-color: $color-black-russian;
+
+      z-index: -1;
+    }
+  }
+}

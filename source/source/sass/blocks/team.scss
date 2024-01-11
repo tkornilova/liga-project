@@ -1,0 +1,169 @@
+.team {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0 -9px -9px 0;
+
+  @include vp-1023 {
+    margin: 0 0 -24px;
+  }
+
+  &__item {
+    width: calc((100% - (9px * 3)) / 4);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    margin-bottom: 9px;
+
+    @include vp-1023 {
+      width: calc((100% - (24px * 1)) / 2);
+      margin-bottom: 24px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+
+      margin: 0 57px 24px;
+    }
+
+    @include hover-focus {
+      outline: none;
+
+      &::before {
+        opacity: 0;
+      }
+    }
+
+    &:not(:nth-child(4n)) {
+      margin-right: 9px;
+
+      @include vp-1023 {
+        margin-right: unset;
+      }
+
+      @include vp-767 {
+        margin: 0 57px 24px;
+      }
+    }
+
+    &:not(:nth-child(2n)) {
+      @include vp-1023 {
+        margin-right: 24px;
+      }
+
+      @include vp-767 {
+        margin: 0 57px 24px;
+      }
+    }
+
+    &::before,
+    &::after {
+      width: 100%;
+      height: 100%;
+
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &::before {
+      border: 1px solid $color-default-white;
+
+      opacity: 1;
+      transition: opacity $trans-default;
+
+      z-index: -1;
+    }
+
+    &::after {
+      background-color: transparent;
+      border: 1px solid $color-transparent;
+      border-image: $main-gradient;
+      border-image-slice: 1;
+
+      z-index: -2;
+    }
+  }
+
+  &__wrapper {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+
+    position: relative;
+
+    background-color: $color-aguar-60;
+    padding: 9px;
+
+    margin: 1px 0;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(370 / 274 * 100%);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: $team-gradient;
+
+    text-align: center;
+
+    padding: 20px;
+
+    @include vp-1023 {
+      padding: 16px;
+    }
+
+    .team__position {
+      font-size: 12px;
+      line-height: 166.6%;
+      font-weight: 400;
+      color: $color-spun-pearl;
+
+      margin: 0;
+    }
+  }
+}

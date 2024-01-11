@@ -1,0 +1,58 @@
+// Vendor
+// ---------------------------------
+
+@import "vendor/normalize";
+
+// Global
+// ---------------------------------
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+// Blocks
+// ---------------------------------
+
+@import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/footer";
+@import "blocks/btn";
+@import "blocks/custom-input";
+@import "blocks/link";
+@import "blocks/logo";
+@import "blocks/title";
+@import "blocks/service-card";
+@import "blocks/service-list";
+@import "blocks/page-intro";
+@import "blocks/text-content";
+@import "blocks/form";
+@import "blocks/subscription";
+@import "blocks/accordion";
+@import "blocks/social-item";
+@import "blocks/social-list";
+@import "blocks/page-content";
+@import "blocks/page-section";
+@import "blocks/price-card";
+@import "blocks/price";
+@import "blocks/service";
+@import "blocks/users";
+@import "blocks/intro";
+@import "blocks/animations";
+@import "blocks/grid";
+@import "blocks/img-set";
+@import "blocks/img-block";
+@import "blocks/breadcrumbs";
+@import "blocks/hashtags";
+@import "blocks/articles";
+@import "blocks/publication-info";
+@import "blocks/blog";
+@import "blocks/video";
+@import "blocks/video-block";
+@import "blocks/main-title";
+@import "blocks/team";
+@import "blocks/team-block";
+@import "blocks/partners";
+@import "blocks/partners-block";

@@ -1,0 +1,9 @@
+.service {
+  .page-intro {
+    margin: 0 0 50px;
+
+    @include vp-1023 {
+      margin: 0 0 27px;
+    }
+  }
+}

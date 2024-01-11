@@ -1,0 +1,144 @@
+.img-set {
+  height: fit-content;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1023 {
+    width: 100%;
+
+    margin: 0 0 40px;
+  }
+
+  &::before {
+    content: "";
+
+    width: 72%;
+    height: 106%;
+
+    background-image: $img-set-gradient;
+    transform: rotate(-90deg);
+    filter: blur(105px);
+
+    position: absolute;
+    left: 8%;
+    bottom: -5%;
+
+    z-index: -1;
+
+    @include vp-1023 {
+      width: 36%;
+
+      left: 0;
+      right: 0;
+
+      margin: 0 auto;
+    }
+
+    @include vp-767 {
+      width: 67%;
+      height: 100%;
+
+      left: 9%;
+      right: unset;
+    }
+  }
+
+  &::after {
+    content: "";
+
+    width: 79%;
+    height: 87%;
+
+    background-color: $color-jaguar-80;
+
+    position: absolute;
+    left: 4%;
+    bottom: 0;
+
+    z-index: -2;
+
+    @include vp-1023 {
+      width: 46%;
+
+      left: 0;
+      right: 0;
+
+      margin: 0 auto;
+    }
+
+    @include vp-767 {
+      width: 80%;
+
+      left: 3%;
+      right: unset;
+
+      margin: unset;
+    }
+  }
+
+  &__main {
+    width: 100%;
+
+    position: relative;
+    overflow: hidden;
+
+    margin: auto 0 0;
+
+    @include vp-1023 {
+      max-width: 50%;
+
+      margin: 0 auto;
+    }
+
+    @include vp-767 {
+      max-width: 100%;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 118%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  &__additional {
+    position: absolute;
+    bottom: -50px;
+    right: 14px;
+
+    @include vp-1279 {
+      width: 43%;
+      height: 25.5%;
+    }
+
+    @include vp-1023 {
+      width: 19%;
+      height: 22.5%;
+
+      bottom: 0;
+      right: 135px;
+    }
+
+    @include vp-767 {
+      width: 39%;
+
+      bottom: -43px;
+      right: 14px;
+    }
+  }
+}

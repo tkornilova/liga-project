@@ -1,0 +1,23 @@
+mixin intro(users)
+  .intro
+    .container
+      .intro__wrapper
+        +page-intro({
+          title: {
+            tag: "h1",
+            text: "Immerse yourself in virtual reality",
+            class: "title--h1"
+          }
+        })
+          +text-content()
+            p Experience Unforgettable Events in&nbsp;VR. Bring your events to&nbsp;life like never before with our&nbsp;VR services
+        +btn({href: "#", text: "Discover more"})
+        .intro__clients
+          +users(users)
+          .intro__caption
+            span.intro__amount 32k+
+            p.intro__text Happy Clients
+      .intro__img
+        +picture("content", "intro-1", "png", 526, 626, "Картинка человека в VR очках")
+        .intro__additionalImg
+          +picture("content", "intro-2", "png", 123, 123, "Картинка человека в VR очках")

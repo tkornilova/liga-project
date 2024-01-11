@@ -1,0 +1,15 @@
+mixin img-block(data = {})
+  .img-block&attributes(attributes)
+    .container
+      if (data.isReverse)
+        .grid.grid--reverse
+          .img-block__wrapper
+            +page-intro(data.text)
+            block
+          +img-set(data.pictures)
+      else
+        .grid
+          +img-set(data.pictures)
+          .img-block__wrapper
+            +page-intro(data.text)
+            block

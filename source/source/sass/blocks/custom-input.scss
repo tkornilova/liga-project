@@ -1,0 +1,73 @@
+.custom-input {
+  width: 100%;
+
+  position: relative;
+
+  opacity: 1;
+  transition: opacity $trans-default;
+
+  &:focus-within {
+    opacity: 0.8;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &::before {
+    content: url("../../img/sprite/icon-input.svg");
+
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 14px;
+
+    margin: auto 0;
+  }
+
+  input {
+    width: 100%;
+
+    font-size: 16px;
+    line-height: 175%;
+    font-weight: 400;
+    color: $color-default-white;
+
+    background-color: $color-default-white-7;
+    border: 2px solid $color-transparent;
+
+    outline: none;
+
+    padding: 14px 61px 14px 46px;
+
+    @include vp-374 {
+      font-size: 12px;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 175%;
+      font-weight: 400;
+      color: $color-default-white;
+
+      @include vp-374 {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &.is-invalid {
+    input {
+      border: 2px solid $color-coral-red;
+    }
+  }
+
+  &.is-valid {
+    input {
+      border: 2px solid $color-jade;
+    }
+  }
+}

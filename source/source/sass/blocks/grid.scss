@@ -1,0 +1,55 @@
+.grid {
+  display: grid;
+  grid-template-columns: 43.5% 1fr;
+  gap: 102px;
+
+  @include vp-1279 {
+    grid-template-columns: 32% 1fr;
+    gap: 40px;
+  }
+
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+  }
+
+  &--team {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    gap: 44px;
+
+    align-items: flex-end;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 32px;
+
+      align-items: center;
+    }
+  }
+
+  &--reverse {
+    grid-template-columns: 1fr 43.5%;
+
+    @include vp-1279 {
+      grid-template-columns: 1fr 32%;
+    }
+  }
+
+  &--aside {
+    grid-template-columns: 1fr 334px;
+    gap: 78px;
+
+    @include vp-1279 {
+      gap: 58px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 97px;
+    }
+  }
+}

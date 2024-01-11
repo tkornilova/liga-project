@@ -1,0 +1,47 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "index.html",
+        text: "Home"
+      },
+      {
+        href: "about-us.html",
+        text: "About us"
+      },
+      {
+        href: "#",
+        text: "Service"
+      },
+      {
+        href: "#",
+        text: "Pricing Plan"
+      },
+      {
+        href: "blog.html",
+        text: "Blog"
+      },
+    ]
+
+  header.header(class=headerMods, data-header)
+    .container
+      if(currentUrl === "index.html")
+        +logo({isIndex: true})
+      else
+        +logo()
+      button.header__toggle(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-burger)
+        span
+        span
+        span
+      .header__wrapper
+        nav.main-nav
+          .main-nav__wrapper
+            ul.main-nav__list
+              each link in headerLinks
+                - const activeState = currentUrl === link.href
+                li.main-nav__item
+                  if(activeState)
+                    span.main-nav__link.is-active= link.text
+                  else
+                    +link({href: link.href, text: link.text}).main-nav__link
+        +btn({text: "Contact us", href: "#footer"}).btn--header(data-contact-us)

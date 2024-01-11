@@ -1,0 +1,29 @@
+.page-content {
+  padding: 127px 0 184px;
+
+  @include vp-1023 {
+    padding: 154px 0 92px;
+  }
+
+  &--decoration {
+    position: relative;
+
+    &::before {
+      content: url("../../img/sprite/gradient/icon-decoration-grid.svg");
+
+      width: 2682px;
+      height: 721px;
+
+      position: absolute;
+      top: 290px;
+      left: -5px;
+    }
+  }
+
+  &--decoration-low {
+    &::before {
+      top: 820px;
+      left: -375px;
+    }
+  }
+}

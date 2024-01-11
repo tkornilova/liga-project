@@ -1,0 +1,5 @@
+mixin users(items = [])
+  ul.users&attributes(attributes)
+    each item in items
+      li.users__item
+        +picture("content", item.image, item.format, 50, 50, "Изоображение пользователя")

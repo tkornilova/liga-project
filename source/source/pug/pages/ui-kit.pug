@@ -1,0 +1,1233 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "UI-kit"
+  -
+    const serviceCard = {
+      icon: "icon-service-1",
+      title: "VR Development",
+      text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+    }
+  -
+    const serviceCards = [
+      {
+        icon: "icon-service-1",
+        title: "VR Development",
+        text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+      },
+      {
+        icon: "icon-service-2",
+        title: "VR Design",
+        text: "Our talented&nbsp;VR designers will create immersive and engaging environments that will captivate your audience.",
+      },
+      {
+        icon: "icon-service-3",
+        title: "VR Consulting",
+        text: "Our VR&nbsp;consultants will work with you to&nbsp;ensure that your&nbsp;VR experience meets your goals and exceeds your expectations.",
+      },
+    ]
+  -
+    const imgBlock1 = {
+      pictures: {
+        main: {
+          path: "content",
+          image: "imgBlock1-1",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+        additional: {
+          path: "content",
+          image: "imgBlock1-2",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+      },
+      text: {
+        customText: {
+          text: "About us",
+        },
+        title: {
+          tag: "h2",
+          text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
+        }
+      }
+    }
+  -
+    const imgBlock2 = {
+      isReverse: true,
+      pictures: {
+        main: {
+          path: "content",
+          image: "imgBlock1-1",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+        additional: {
+          path: "content",
+          image: "imgBlock1-2",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+      },
+      text: {
+        customText: {
+          text: "About us",
+        },
+        title: {
+          tag: "h2",
+          text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
+        }
+      }
+    }
+  -
+  -
+    const intro1 = {
+      customText: {
+        text: "Why choose us",
+      },
+      title: {
+        tag: "h2",
+        text: "Why choose us for your VR needs",
+        class: "title--h3",
+      }
+    }
+  -
+    const intro2 = {
+      grid: true,
+      customText: {
+        text: "Our service",
+      },
+      title: {
+        tag: "h2",
+        text: "Our service",
+      }
+    }
+  -
+    const intro3 = {
+      grid: true,
+      customText: {
+        text: "Our team",
+      },
+      title: {
+        tag: "h2",
+        text: "Our professionals team",
+      }
+    }
+  -
+    const accordionData = [
+      {
+        isActive: true,
+        title: "Passionate and experienced team",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+      {
+        title: "Customized solutions",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+    ]
+  -
+    const icon = {
+      href: "#",
+      icon: "icon-instagram",
+      width: 22,
+      height: 22,
+    }
+  -
+    const iconCustom = {
+      href: "#",
+      icon: "icon-instagram",
+      width: 22,
+      height: 22,
+      isCustom: true,
+    }
+  -
+    const icons = [
+      {
+        href: "#",
+        icon: "icon-instagram",
+        width: 22,
+        height: 22,
+      },
+      {
+        href: "#",
+        icon: "icon-fb",
+        width: 10,
+        height: 20,
+      },
+      {
+        href: "#",
+        icon: "icon-twitter",
+        width: 18,
+        height: 14,
+      },
+    ]
+  -
+    const iconsCustom = [
+      {
+        href: "#",
+        icon: "icon-instagram",
+        width: 22,
+        height: 22,
+        isCustom: true,
+      },
+      {
+        href: "#",
+        icon: "icon-fb",
+        width: 10,
+        height: 20,
+        isCustom: true,
+      },
+      {
+        href: "#",
+        icon: "icon-twitter",
+        width: 18,
+        height: 14,
+        isCustom: true,
+      },
+    ]
+  -
+    const users = [
+      {
+        image: "user-3",
+        format: "png",
+      },
+      {
+        image: "user-2",
+        format: "png",
+      },
+      {
+        image: "user-1",
+        format: "png",
+      },
+    ]
+  -
+    const breadcrumbs = [
+      {
+        href: "index.html",
+        text: "Home",
+      },
+      {
+        href: "blog.html",
+        text: "Blog",
+      },
+      {
+        text: "Bringing designs to life: how VR is changing architecture",
+        isCurrent: true,
+      },
+    ]
+  -
+    const hashtags = [
+      "VRDesign",
+      "ArchitectureInnovation",
+      "DesignThinking",
+      "VirtualRealityArchitecture",
+      "BringingDesignsToLife",
+      "DesignVisualization",
+      "ArchitecturalVisualization",
+      "RevolutionizingArchitecture",
+      "BuildingInVR",
+    ]
+  -
+    const articleCards = [
+      {
+        href: "#",
+        text: "The future of education: how VR is revolutionizing the classroom",
+        img: {
+          name: "article-1",
+          format: "jpg",
+        },
+        hashtags: [
+          "VR Education",
+        ]
+      },
+      {
+        href: "#",
+        text: "Bringing designs to life: how VR is changing architecture",
+        img: {
+          name: "article-2",
+          format: "jpg",
+        },
+        hashtags: [
+          "VR Architecture",
+        ]
+      },
+    ]
+  -
+    const publicationInfo = {
+      name: "Nasyiya Ulfa",
+      date: "25 Nov 2022",
+      dataTime: "2022-11-25",
+    }
+  -
+    const video = {
+      tags: ["VR Service"],
+      title: {
+        tag: "h3",
+        text: "How to get started",
+      },
+      img: {
+        path: "content",
+        image: "video-1",
+        format: "jpg",
+      },
+      video: {
+        src: "video-1.mp4",
+      },
+    }
+  -
+    const titleData = {
+      title: {
+        tag: "h1",
+        text: "About us",
+      },
+      breadcrumbs: [
+        {
+          href: "#",
+          text: "Home",
+        },
+        {
+          href: "#",
+          text: "About us",
+          isCurrent: true,
+        },
+      ]
+    }
+  -
+    const teamData = [
+      {
+        img: {
+          path: "content",
+          image: "team-1",
+          format: "jpg",
+        },
+        name: "Bondan Prabowo",
+        position: "CEO"
+      },
+      {
+        img: {
+          path: "content",
+          image: "team-2",
+          format: "jpg",
+        },
+        name: "Bayu Aji",
+        position: "VR Development"
+      },
+      {
+        img: {
+          path: "content",
+          image: "team-3",
+          format: "jpg",
+        },
+        name: "Agung Brandon",
+        position: "VR Artist"
+      },
+      {
+        img: {
+          path: "content",
+          image: "team-4",
+          format: "jpg",
+        },
+        name: "Aril Laso",
+        position: "UI / UX Designer"
+      },
+    ]
+
+block main
+  style
+    include ../../sass/inline/uikit.css
+    include ../../sass/inline/prism.css
+
+  main
+    .uikit
+      //- Разделы с компонентами
+      .uikit__sections(data-scroll-lock-fill-gap)
+        label(for="section-burger")
+          span Разделы&nbsp;компонентов
+        input.visually-hidden(type="checkbox", id="section-burger")
+        div
+          ul
+            li
+              a(href="#buttons") Кнопки
+            li
+              a(href="#links") Ссылки
+            li
+              a(href="#titles") Заголовки
+            li
+              a(href="#logo") Логотип
+            li
+              a(href="#text-content") Text-content
+            li
+              a(href="#forms") Элементы форм
+            li
+              a(href="#form") Форма
+            li
+              a(href="#page-intro") Page intro
+            li
+              a(href="#service-card") Service card
+            li
+              a(href="#service-list") Service list
+            li
+              a(href="#img-block") Img block
+            li
+              a(href="#subscription") Subscription
+            li
+              a(href="#accordion") Accordion
+            li
+              a(href="#social-item") Social item
+            li
+              a(href="#social-list") Social list
+            li
+              a(href="#users") Users
+            li
+              a(href="#breadcrumbs") Breadcrumbs
+            li
+              a(href="#hashtags") Hashtags
+            li
+              a(href="#articles") Article list
+            li
+              a(href="#publication-info") Publication info
+            li
+              a(href="#video") Video
+            li
+              a(href="#main-title") Main title
+            li
+              a(href="#team") Team
+
+      //----------------------------------------------
+      .container
+        a.uikit__header-link(href="sitemap.html")
+          +icon("icon-logo", 297, 77, true)
+        h1.uikit__h1 Компоненты, используемые на проекте
+
+        //- Кнопки
+        section.uikit__section(id="buttons")
+          h2.uikit__h2 Кнопки
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn
+            +btn({text: "Кнопка"})
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст", href: "#"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn.btn--transparent
+            +btn({text: "Текст", href: "#", isExternal: true, label: "Просто ссылка"}).btn--transparent
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст", href: "#", isExternal: true, label: "Просто ссылка"}).btn--transparent
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn.btn--header
+            +btn({text: "Кнопка"}).btn--header
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Кнопка"}).btn--header
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn(disabled)
+            +btn({text: "Текст"})(disabled)
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст"})(disabled)
+
+        //- Ссылки
+        section.uikit__section(id="links")
+          h2.uikit__h2 Ссылки
+          .uikit__component
+            p.uikit__text.uikit__text--class .link
+            +link({text: "Ссылка", href: "#", label: "Обычная ссылка"})
+            pre
+              |
+              code(class="language-pug").
+                +link({text: "Ссылка", href: "#", label: "Обычная ссылка"})
+
+        //- Логотип
+        section.uikit__section(id="logo")
+          h2.uikit__h2 Логотип
+          .uikit__component
+            p.uikit__text.uikit__text--class .logo (на главной странице)
+            +logo({isIndex: true})
+            pre
+              |
+              code(class="language-pug").
+                +logo({isIndex: true})
+          .uikit__component
+            p.uikit__text.uikit__text--class .logo (на любой другой странице)
+            +logo()
+            pre
+              |
+              code(class="language-pug").
+                +logo()
+
+        //- Заголовки
+        section.uikit__section(id="titles")
+          h2.uikit__h2 Заголовки
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--custom
+            +title({text: "Кастомизированный заголовок"}).title--custom
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Кастомизированный заголовок"}).title--custom
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h1
+            +title({text: "Заголовок 1 уровня"}).title--h1
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 1 уровня"}).title--h1
+          .uikit__component
+            p.uikit__text.uikit__text--class .title
+            +title({text: "Заголовок 2 уровня"})
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 2 уровня"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h3
+            +title({text: "Заголовок 3 уровня"}).title--h3
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 3 уровня"}).title--h3
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h4
+            +title({text: "Заголовок 4 уровня"}).title--h4
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 4 уровня"}).title--h4
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h5
+            +title({text: "Заголовок 5 уровня"}).title--h5
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 5 уровня"}).title--h5
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h6
+            +title({text: "Заголовок 6 уровня"}).title--h6
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 6 уровня"}).title--h6
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h7
+            +title({text: "Заголовок 7 уровня"}).title--h7
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 7 уровня"}).title--h7
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h8
+            +title({text: "Заголовок 8 уровня"}).title--h8
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 8 уровня"}).title--h8
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h9
+            +title({text: "Заголовок 9 уровня"}).title--h9
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 9 уровня"}).title--h9
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h10
+            +title({text: "Заголовок 10 уровня"}).title--h10
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 10 уровня"}).title--h10
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h11
+            +title({text: "Заголовок 11 уровня"}).title--h11
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 11 уровня"}).title--h11
+          .uikit__component
+            p.uikit__text.uikit__text--class .title.title--h12
+            +title({text: "Заголовок 12 уровня"}).title--h12
+            pre
+              |
+              code(class="language-pug").
+                +title({text: "Заголовок 12 уровня"}).title--h12
+
+        //- Text-content
+        section.uikit__section(id="text-content")
+          h2.uikit__h2 Text-content
+          .uikit__component
+            p.uikit__text.uikit__text--class .text-content p
+            +text-content()
+              p VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light.
+              p VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light.
+            pre
+              |
+              code(class="language-pug").
+                +text-content()
+                  p VRNas is a leading provider of VR services for education, entertainment, architecture, and events. Our mission is to bring the power of virtual reality to everyone, allowing them to explore new worlds, learn in new ways, and experience events in a whole new light.
+                  p VRNas is a leading provider of VR services for education, entertainment, architecture, and events. Our mission is to bring the power of virtual reality to everyone, allowing them to explore new worlds, learn in new ways, and experience events in a whole new light.
+          .uikit__component
+            p.uikit__text.uikit__text--class .text-content ul > li > p
+            p.uikit__text.uikit__text--class .text-content ol > li > p
+            +text-content()
+              ul
+                li
+                  p Cutting-edge technology
+                li
+                  p Versatile applications
+                li
+                  p Affordable and accessible
+            pre
+              |
+              code(class="language-pug").
+                +text-content()
+                  ul
+                    li
+                      p Cutting-edge technology
+                    li
+                      p Versatile applications
+                    li
+                      p Affordable and accessible
+          .uikit__component
+            p.uikit__text.uikit__text--class .text-content img
+            +text-content()
+              img(src="img/content/blog-1.jpg", width=789, height=528, alt="Картинка статьи")
+            pre
+              |
+              code(class="language-pug").
+                +text-content()
+                  img(src="img/content/blog-1.jpg", width=789, height=528, alt="Картинка статьи")
+          .uikit__component
+            p.uikit__text.uikit__text--class .text-content .text-content__img (для двух картинок)
+            +text-content()
+              .text-content__img
+                img(src="img/content/blog-2.jpg", width=377, height=252, alt="Картинка статьи")
+                img(src="img/content/blog-3.jpg", width=377, height=252, alt="Картинка статьи")
+            pre
+              |
+              code(class="language-pug").
+                +text-content()
+                  .text-content__img
+                    img(src="img/content/blog-2.jpg", width=377, height=252, alt="Картинка статьи")
+                    img(src="img/content/blog-3.jpg", width=377, height=252, alt="Картинка статьи")
+
+        //- Элементы форм
+        section.uikit__section(id="forms")
+          h2.uikit__h2 Элементы форм
+          .uikit__component
+            p.uikit__text.uikit__text--class .custom-input \ type="email"
+            +custom-input({
+              inputType: "email",
+              inputPlaceholder: "Enter your email address",
+              inputName: "user-email",
+            })
+            pre
+              |
+              code(class="language-pug").
+                +custom-input({
+                  inputType: "email",
+                  inputPlaceholder: "Enter your email address",
+                  inputName: "user-email",
+                })
+
+        //- Форма
+        section.uikit__section(id="form")
+          h2.uikit__h2 Форма
+          .uikit__component
+            p.uikit__text.uikit__text--class .form
+            +form()
+            pre
+              |
+              code(class="language-pug").
+                +form()
+
+        //- Page intro
+        section.uikit__section(id="page-intro")
+          h2.uikit__h2 Page intro
+          .uikit__component
+            p.uikit__text.uikit__text--class .page-intro
+            +page-intro(intro1)
+            pre
+              |
+              code(class="language-pug").
+                +page-intro(
+                  {
+                    customText: {
+                      text: "Why choose us",
+                    },
+                    title: {
+                      tag: "h2",
+                      text: "Why choose us for your VR needs",
+                      class: "title--h3"
+                    }
+                  }
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .page-intro.page-intro--center
+            +page-intro(intro1).page-intro--center
+            pre
+              |
+              code(class="language-pug").
+                +page-intro(
+                  {
+                    customText: {
+                      text: "Why choose us",
+                    },
+                    title: {
+                      tag: "h2",
+                      text: "Why choose us for your VR needs",
+                      class: "title--h3"
+                    }
+                  }
+                ).page-intro--center
+          h2.uikit__h2 Page intro с гридом
+          .uikit__component
+            p.uikit__text.uikit__text--class .page-intro
+            +page-intro(intro2)
+              +text-content()
+                p We use the latest VR hardware and software to create high-quality VR experiences that are accessible and affordable. Our goal is to provide exceptional customer service and support, and our team is always available to answer any questions and address any concerns you may have.
+            pre
+              |
+              code(class="language-pug").
+                +page-intro(
+                  {
+                    grid: true,
+                    customText: {
+                      text: "Our service",
+                    },
+                    title: {
+                      tag: "h2",
+                      text: "Our service",
+                    }
+                  }
+                )
+                  +Текст()
+
+        //- Service card
+        section.uikit__section(id="service-card")
+          h2.uikit__h2 Service card
+          .uikit__component
+            p.uikit__text.uikit__text--class .service-card
+            +service-card(serviceCard)
+            pre
+              |
+              code(class="language-pug").
+                +service-card(
+                  {
+                    icon: "service-card-1",
+                    title: "VR Development",
+                    text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+                  }
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .service-card.service-card--catalog
+            +service-card(serviceCard).service-card--catalog
+            pre
+              |
+              code(class="language-pug").
+                +service-card(
+                  {
+                    icon: "service-card-1",
+                    title: "VR Development",
+                    text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+                  }
+                ).service-card--catalog
+            p.uikit__text.uikit__text--class Или вложить .service-card в .service-list--catalog:
+            pre
+              |
+              code(class="language-pug").
+                +service-list(
+                  {
+                    icon: "service-card-1",
+                    title: "VR Development",
+                    text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+                  }
+                ).service-list--catalog
+
+        //- Service list
+        section.uikit__section(id="service-list")
+          h2.uikit__h2 Service list
+          .uikit__component
+            p.uikit__text.uikit__text--class .service-list
+            +service-list(serviceCards)
+            pre
+              |
+              code(class="language-pug").
+                +service-list(serviceCards)
+          .uikit__component
+            p.uikit__text.uikit__text--class .service-list.service-list--catalog
+            +service-list(serviceCards).service-list--catalog
+            pre
+              |
+              code(class="language-pug").
+                +service-list(serviceCards).service-list--catalog
+
+        //- Img block
+        section.uikit__section(id="img-block")
+          h2.uikit__h2 Img block
+          .uikit__component
+            p.uikit__text.uikit__text--class .img-block
+            p.uikit__text.uikit__text--class В данный компонент можно вложить любой другой, который окажется под заголовком.
+            p.uikit__text.uikit__text--class По умолчанию в мобильной версии сначала идет картинка, а потом текст. Если нужен обратный порядок, то добавляется модификатор .img-block--mobile-img-last
+            +img-block(imgBlock1)(style="margin: 0 0 40px;")
+              p Another block
+            pre
+              |
+              code(class="language-pug").
+                +img-block(
+                  pictures: {
+                    main: {
+                      path: "content",
+                      image: "imgBlock1-1",
+                      format: "png",
+                      alt: "Человек в VR очках",
+                    },
+                    additional: {
+                      path: "content",
+                      image: "imgBlock1-2",
+                      format: "png",
+                      alt: "Человек в VR очках",
+                    },
+                  },
+                  text: {
+                    customText: {
+                      text: "About us",
+                    },
+                    title: {
+                      tag: "h2",
+                      text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
+                    }
+                  })
+                    +another-block()
+          .uikit__component
+            p.uikit__text.uikit__text--class .img-block (в обратном порядке)
+            +img-block(imgBlock2)(style="margin: 0 0 40px;")
+              p Another block
+            pre
+              |
+              code(class="language-pug").
+                +img-block(
+                  isReverse: true,
+                  pictures: {
+                    main: {
+                      path: "content",
+                      image: "imgBlock1-1",
+                      format: "png",
+                      alt: "Человек в VR очках",
+                    },
+                    additional: {
+                      path: "content",
+                      image: "imgBlock1-2",
+                      format: "png",
+                      alt: "Человек в VR очках",
+                    },
+                  },
+                  text: {
+                    customText: {
+                      text: "About us",
+                    },
+                    title: {
+                      tag: "h2",
+                      text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
+                    }
+                  })
+                    +another-block()
+
+        //- Subscription
+        section.uikit__section(id="subscription")
+          h2.uikit__h2 Subscription
+          .uikit__component
+            p.uikit__text.uikit__text--class .subscription
+            +subscription()
+            pre
+              |
+              code(class="language-pug").
+                +subscription()
+
+        //- Accordion
+        section.uikit__section(id="accordion")
+          h2.uikit__h2 Accordion
+          .uikit__component
+            p.uikit__text.uikit__text--class .accordion
+            +accordion(accordionData)
+            pre
+              |
+              code(class="language-pug").
+                +accordion(
+                  [
+                    {
+                      isActive: true,
+                      title: "Passionate and experienced team",
+                      titleTag: "h3",
+                      texts: [
+                        "We are proud of our team of VR experts who are passionate about VR and dedicated to delivering the highest quality work. Our team consists of experienced VR developers, designers, and technicians who have a proven track record of creating immersive and engaging VR experiences.",
+                      ],
+                    },
+                    {
+                      title: "Customized solutions",
+                      titleTag: "h3",
+                      texts: [
+                        "We are proud of our team of VR experts who are passionate about VR and dedicated to delivering the highest quality work. Our team consists of experienced VR developers, designers, and technicians who have a proven track record of creating immersive and engaging VR experiences.",
+                      ],
+                    },
+                  ]
+                )
+
+        //- Social item
+        section.uikit__section(id="social-item")
+          h2.uikit__h2 Social item
+          .uikit__component
+            p.uikit__text.uikit__text--class .social-item
+            +social-item(icon)
+            pre
+              |
+              code(class="language-pug").
+                +social-item(
+                  {
+                    href: "#",
+                    icon: "icon-instagram",
+                    width: 22,
+                    height: 22,
+                  }
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .social-item.social-item--custom
+            +social-item(iconCustom)
+            pre
+              |
+              code(class="language-pug").
+                +social-item(
+                  {
+                    href: "#",
+                    icon: "icon-instagram",
+                    width: 22,
+                    height: 22,
+                    isCustom: true,
+                  }
+                )
+
+        //- Social list
+        section.uikit__section(id="social-list")
+          h2.uikit__h2 Social list
+          .uikit__component
+            p.uikit__text.uikit__text--class .social-list
+            +social-list(icons)
+            pre
+              |
+              code(class="language-pug").
+                +social-item(
+                  [
+                    {
+                      href: "#",
+                      icon: "icon-instagram",
+                      width: 22,
+                      height: 22,
+                    },
+                    {
+                      href: "#",
+                      icon: "icon-fb",
+                      width: 10,
+                      height: 20,
+                    },
+                    {
+                      href: "#",
+                      icon: "icon-twitter",
+                      width: 18,
+                      height: 14,
+                    },
+                  ]
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .social-list--custom
+            +social-list(iconsCustom).social-list--custom
+            pre
+              |
+              code(class="language-pug").
+                +social-item(
+                  [
+                    {
+                      href: "#",
+                      icon: "icon-instagram",
+                      width: 22,
+                      height: 22,
+                      isCustom: true,
+                    },
+                    {
+                      href: "#",
+                      icon: "icon-fb",
+                      width: 10,
+                      height: 20,
+                      isCustom: true,
+                    },
+                    {
+                      href: "#",
+                      icon: "icon-twitter",
+                      width: 18,
+                      height: 14,
+                      isCustom: true,
+                    },
+                  ]
+                ).social-list--custom
+
+        //- Users
+        section.uikit__section(id="users")
+          h2.uikit__h2 Users
+          .uikit__component
+            p.uikit__text.uikit__text--class .users
+            +users(users)(style="max-width: 300px")
+            pre
+              |
+              code(class="language-pug").
+                +users(
+                  {
+                    image: "user-1",
+                    format: "png",
+                  },
+                  {
+                    image: "user-2",
+                    format: "png",
+                  },
+                  {
+                    image: "user-3",
+                    format: "png",
+                  },
+                )
+
+        //- Breadcrumbs
+        section.uikit__section(id="breadcrumbs")
+          h2.uikit__h2 Breadcrumbs
+          .uikit__component
+            p.uikit__text.uikit__text--class .breadcrumbs (по умолчанию обернут в .container)
+            +breadcrumbs(breadcrumbs)
+            pre
+              |
+              code(class="language-pug").
+                +breadcrumbs(
+                  [
+                    {
+                      href: "#",
+                      text: "Home",
+                    },
+                    {
+                      href: "#",
+                      text: "Blog",
+                    },
+                    {
+                      text: "Bringing designs to life: how VR is changing architecture",
+                      isCurrent: true,
+                    },
+                  ]
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .breadcrumbs (без .container)
+            +breadcrumbs(breadcrumbs, true)
+            pre
+              |
+              code(class="language-pug").
+                +breadcrumbs(
+                  [
+                    {
+                      href: "#",
+                      text: "Home",
+                    },
+                    {
+                      href: "#",
+                      text: "Blog",
+                    },
+                    {
+                      text: "Bringing designs to life: how VR is changing architecture",
+                      isCurrent: true,
+                    },
+                  ], true
+                )
+
+        //- Hashtags
+        section.uikit__section(id="hashtags")
+          h2.uikit__h2 Hashtags and tags
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtags (с #)
+            +hashtags(hashtags)
+            pre
+              |
+              code(class="language-pug").
+                +hashtags(
+                  [
+                    "VRDesign",
+                    "ArchitectureInnovation",
+                    "DesignThinking",
+                    "VirtualRealityArchitecture",
+                  ]
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtags (без #)
+            +hashtags(hashtags, true)
+            pre
+              |
+              code(class="language-pug").
+                +hashtags(
+                  [
+                    "VRDesign",
+                    "ArchitectureInnovation",
+                    "DesignThinking",
+                    "VirtualRealityArchitecture",
+                  ], true
+                )
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtags.hashtags--big
+            +hashtags(hashtags).hashtags--big
+            pre
+              |
+              code(class="language-pug").
+                +hashtags(
+                  [
+                    "VRDesign",
+                    "ArchitectureInnovation",
+                    "DesignThinking",
+                    "VirtualRealityArchitecture",
+                  ]
+                ).hashtags--big
+          .uikit__component
+            p.uikit__text.uikit__text--class .hashtags.hashtags--custom
+            +hashtags(hashtags).hashtags--custom
+            pre
+              |
+              code(class="language-pug").
+                +hashtags(
+                  [
+                    "VRDesign",
+                    "ArchitectureInnovation",
+                    "DesignThinking",
+                    "VirtualRealityArchitecture",
+                  ]
+                ).hashtags--custom
+
+        //- Articles
+        section.uikit__section(id="articles")
+          h2.uikit__h2 Article list
+          .uikit__component
+            p.uikit__text.uikit__text--class .articles
+            +articles(articleCards)(style="max-width: 406px;")
+            pre
+              |
+              code(class="language-pug").
+                +articles(
+                  {
+                    href: "#",
+                    text: "The future of education: how VR is revolutionizing the classroom",
+                    img: {
+                      name: "article-1",
+                      format: "jpg",
+                    },
+                    hashtags: [
+                      "VR Education",
+                    ]
+                  },
+                )
+
+        //- Publication info
+        section.uikit__section(id="publication-info")
+          h2.uikit__h2 Publication info
+          .uikit__component
+            p.uikit__text.uikit__text--class .publication-info
+            +publication-info(publicationInfo)
+            pre
+              |
+              code(class="language-pug").
+                +publication-info(
+                  {
+                    name: "Nasyiya Ulfa",
+                    date: "25 Nov 2022",
+                    dataTime: "2022-11-25",
+                  }
+                )
+
+        //- Video
+        section.uikit__section(id="video")
+          h2.uikit__h2 Video
+          .uikit__component
+            p.uikit__text.uikit__text--class .video
+            +video(video)
+            pre
+              |
+              code(class="language-pug").
+                +video(
+                  {
+                    tags: ["VR Service"],
+                    title: {
+                      tag: "h3",
+                      text: "How to get started",
+                    },
+                    img: {
+                      path: "content",
+                      image: "video-1",
+                      format: "jpg",
+                    },
+                    video: {
+                      src: "video-1.mp4",
+                    },
+                  }
+                )
+
+        //- Main title
+        section.uikit__section(id="main-title")
+          h2.uikit__h2 Main title
+          .uikit__component
+            p.uikit__text.uikit__text--class .main-title
+            +main-title(titleData)
+            pre
+              |
+              code(class="language-pug").
+                +main-title(
+                  {
+                    title: {
+                      tag: "h1",
+                      text: "About us",
+                    },
+                    breadcrumbs: [
+                      {
+                        href: "#",
+                        text: "Home",
+                      },
+                      {
+                        href: "#",
+                        text: "About us",
+                        isCurrent: true,
+                      },
+                    ]
+                  }
+                )
+
+        //- Team
+        section.uikit__section(id="team")
+          h2.uikit__h2 Team
+          .uikit__component
+            p.uikit__text.uikit__text--class .team
+              +team(teamData)(style="width: 100%;")
+            pre
+              |
+              code(class="language-pug").
+                +team(
+                  [
+                    {
+                      img: {
+                        path: "content",
+                        image: "team-1",
+                        format: "jpg",
+                      },
+                      name: "Bondan Prabowo",
+                      position: "CEO"
+                    },
+                  ]
+                )
+
+  script
+    include ../../js/inline/ui-kit.js

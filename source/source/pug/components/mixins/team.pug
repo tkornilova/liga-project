@@ -1,0 +1,10 @@
+mixin team(data = [])
+  ul.team&attributes(attributes)
+    each item in data
+      li.team__item(tabindex=1)
+        .team__wrapper
+          .team__img-wrapper
+            +picture(item.img.path, item.img.image, item.img.format, 274, 370, "Фото участника команды")
+          .team__text
+            +title({text: item.name}).title--h10
+            p.team__position!= item.position

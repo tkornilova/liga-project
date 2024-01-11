@@ -1,0 +1,171 @@
+.header {
+  width: 100%;
+
+  z-index: 20;
+
+  position: fixed;
+  top: 0;
+
+  background-color: $color-transparent;
+  backdrop-filter: blur(0);
+
+  transition: background-colot $trans-default, backdrop-filter $trans-default;
+
+  padding: 31px 0;
+  margin: 0 auto;
+
+  &--scroll {
+    background-color: $color-black-russian-50;
+    backdrop-filter: blur(5px);
+  }
+
+  .container {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+
+    @include vp-1279 {
+      gap: 20px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: auto auto;
+      gap: 30px;
+    }
+  }
+
+  .logo {
+    z-index: 5;
+
+    margin: 10px 0 0;
+  }
+
+  &__toggle {
+    display: none;
+
+    width: 32px;
+    height: 32px;
+
+    background-color: $color-transparent;
+    border: 1px solid $color-transparent;
+    border-image: $main-gradient;
+    border-image-slice: 1;
+
+    cursor: pointer;
+
+    outline: none;
+    transform: rotate(0deg);
+    transition: opacity $trans-default, transform $trans-default;
+
+    padding: 10px;
+    margin: 0 0 0 auto;
+
+    span {
+      width: calc(100% / 3 * 2);
+      height: 2px;
+
+      background-color: $color-default-white;
+
+      &:first-child {
+        width: calc(100% / 3 * 3);
+      }
+
+      &:last-child {
+        width: calc(100% / 3 * 1);
+      }
+    }
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__wrapper {
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+
+    align-items: flex-start;
+
+    margin: 0 0 0 auto;
+
+    @include vp-1279 {
+      width: 95%;
+
+      gap: 20px;
+    }
+
+    @include vp-1023 {
+      width: 100%;
+
+      min-height: 0;
+      height: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      background-color: $color-black-russian;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+
+      overflow: hidden;
+      transition: top $trans-default, min-height $trans-default, height $trans-default, padding $trans-default, background-color $trans-default;
+
+      padding: 0;
+    }
+  }
+
+  .main-nav {
+    max-width: 90%;
+
+    margin: 10px auto 0;
+  }
+
+  &.is-open {
+    background-color: $color-black-russian;
+
+    .container {
+      @include vp-1023 {
+        position: relative;
+      }
+    }
+
+    .header__toggle {
+      transform: rotate(90deg);
+    }
+
+    .header__wrapper {
+      @include vp-1023 {
+        min-height: calc(100vh - 92px);
+        height: 100%;
+
+        top: 62px;
+
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        padding: 20px 40px;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+}

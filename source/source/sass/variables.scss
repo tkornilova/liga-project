@@ -1,0 +1,67 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-default-white-6:             rgba(255, 255, 255, 0.06);
+$color-default-white-7:             rgba(255, 255, 255, 0.07);
+$color-default-white-15:            rgba(255, 255, 255, 0.15);
+$color-default-white-21:            rgba(255, 255, 255, 0.21);
+$color-default-white-30:            rgba(255, 255, 255, 0.3);
+$color-default-white-35:            rgba(255, 255, 255, 0.35);
+$color-transparent:                 rgba(255, 255, 255, 0);
+
+// Project palette
+
+$color-free-speech-magenta:         #e95ce9;
+$color-deep-sky-blue:               #0cbaf1;
+$color-jade:                        #00c566;
+$color-coral-red:                   #ff4747;
+$color-black-russian:               #18181b;
+$color-black-russian-2:             #21232e;
+$color-black-russian-50:            rgba(24, 24, 27, 0.5);
+$color-light-grey:                  #d1d1d1;
+$color-spun-pearl:                  #b0b0b2;
+$color-jaguar:                      #252532;
+$color-jaguar-80:                   rgba(37, 37, 50, 0.8);
+$color-aguar-60:                    rgba(37, 37, 50, 0.6);
+$color-aguar-81:                    rgba(37, 37, 50, 0.81);
+
+// Gradient
+
+$main-gradient:                     linear-gradient(90deg, rgba(12, 186, 241, 1) 0%, rgba(233, 92, 233, 1) 100%);
+$gray-gradient:                     linear-gradient(180deg, rgba(37, 37, 50, 0) 0%, rgba(37, 37, 50, 0.91) 53.06%, #252532 100%);
+$img-set-gradient:                  linear-gradient(99deg, rgba(28, 196, 249, 0.5) 0.72%, rgba(254, 105, 254, 0.5) 90.69%);
+$intro-gradient:                    linear-gradient(99deg, rgba(28, 196, 249, 0.8) 0.72%, rgba(254, 105, 254, 0.8) 90.69%);
+$team-gradient:                     linear-gradient(180deg, rgba(50, 70, 188, 0) 0%, #192883 100%);
+$title-gradient:                    linear-gradient(90deg, #0cbaf1 0%, #e95ce9 100%);
+$price-gradient:                    linear-gradient(99deg, rgba(28, 196, 249, 0.8) 0.72%, rgba(254, 105, 254, 0.8) 90.69%);
+
+// Typography
+// ---------------------------------
+
+$fz-default:                        16px;
+$ff-chakra-petch:                    "ChakraPetch", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-375:                            375px;
+$vp-500:                            500px;
+$vp-600:                            600px;
+$vp-680:                            680px;
+$vp-768:                            768px;
+$vp-860:                            860px;
+$vp-940:                            940px;
+$vp-1024:                           1024px;
+$vp-1150:                           1150px;
+$vp-1280:                           1280px;
+$vp-1440:                           1440px;

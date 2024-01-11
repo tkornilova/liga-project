@@ -1,0 +1,49 @@
+.blog {
+  &__wrapper {
+    > .hashtags {
+      margin-bottom: 2px;
+
+      @include vp-767 {
+        margin-bottom: 7px;
+      }
+    }
+
+    > .title {
+      margin: 0 0 12px;
+    }
+
+    .publication-info {
+      margin: 0 0 22px;
+    }
+
+    .text-content {
+      margin: 0 0 24px;
+    }
+  }
+
+  &__hashtags,
+  &__socials {
+    .title {
+      margin: 0 0 11px;
+    }
+  }
+
+  &__hashtags {
+    margin: 0 0 17px;
+
+    @include vp-767 {
+      margin: 0 0 27px;
+    }
+  }
+
+  &__articles,
+  &__tags {
+    .title {
+      margin: 0 0 23px;
+    }
+  }
+
+  &__articles {
+    margin: 0 0 75px;
+  }
+}

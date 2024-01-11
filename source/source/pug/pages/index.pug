@@ -1,0 +1,294 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "VRNas"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html"
+  -
+    const usersData = [
+      {
+        image: "user-3",
+        format: "png",
+      },
+      {
+        image: "user-2",
+        format: "png",
+      },
+      {
+        image: "user-1",
+        format: "png",
+      },
+    ]
+  -
+    const serviceCustomCardsData = [
+      {
+        icon: "icon-service-custom-1",
+        title: "Expertise",
+        text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
+      },
+      {
+        icon: "icon-service-custom-2",
+        title: "Customization",
+        text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
+      },
+      {
+        icon: "icon-service-custom-3",
+        title: "Service",
+        text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
+      },
+    ]
+  -
+    const imgBlock1 = {
+      pictures: {
+        main: {
+          path: "content",
+          image: "imgBlock1-1",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+        additional: {
+          path: "content",
+          image: "imgBlock1-2",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+      },
+      text: {
+        customText: {
+          text: "About us",
+        },
+        title: {
+          tag: "h2",
+          text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.",
+        }
+      }
+    }
+  -
+    const serviceCardsData = [
+      {
+        icon: "icon-service-1",
+        title: "VR Development",
+        text: "From concept to&nbsp;creation, our team of&nbsp;VR developers will bring your vision to&nbsp;life.",
+      },
+      {
+        icon: "icon-service-2",
+        title: "VR Design",
+        text: "Our talented&nbsp;VR designers will create immersive and engaging environments that will captivate your audience.",
+      },
+      {
+        icon: "icon-service-3",
+        title: "VR Consulting",
+        text: "Our VR&nbsp;consultants will work with you to&nbsp;ensure that your&nbsp;VR experience meets your goals and exceeds your expectations.",
+      },
+      {
+        icon: "icon-service-4",
+        title: "VR Games",
+        text: "We&nbsp;offer a&nbsp;wide selection of&nbsp;VR games that are suitable for players of&nbsp;all ages and skill levels.",
+      },
+      {
+        icon: "icon-service-5",
+        title: "VR Events",
+        text: "Make your next event unforgettable with our&nbsp;VR event services.",
+      },
+      {
+        icon: "icon-service-6",
+        title: "VR Entertainment",
+        text: "Create a&nbsp;VR escape room, or&nbsp;offer&nbsp;VR experiences at&nbsp;a&nbsp;theme park, we&nbsp;have the expertise and experience to&nbsp;make it&nbsp;happen.",
+      },
+    ]
+  -
+    const imgBlock2 = {
+      isReverse: true,
+      pictures: {
+        main: {
+          path: "content",
+          image: "imgBlock2-1",
+          format: "png",
+          alt: "Человек в VR очках",
+        },
+        additional: {
+          path: "content",
+          image: "imgBlock2-2",
+          format: "png",
+          alt: "VR очки",
+        },
+      },
+      text: {
+        customText: {
+          text: "Why choose us",
+        },
+        title: {
+          tag: "h2",
+          text: "Why choose us for your VR needs",
+        }
+      }
+    }
+  -
+    const accordionData = [
+      {
+        isActive: true,
+        title: "Passionate and experienced team",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+      {
+        title: "Customized solutions",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+      {
+        title: "Exceptional сustomer service",
+        titleTag: "h3",
+        texts: [
+          "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
+        ],
+      },
+    ]
+  -
+    const videoBlockData = {
+      mainTitle: {
+        customText: {
+          text: "How to get started",
+        },
+        title: {
+          tag: "h2",
+          text: "Bringing your virtual reality dreams to life",
+        }
+      },
+      video: {
+        tags: ["VR Service"],
+        title: {
+          tag: "h3",
+          text: "How to get started",
+        },
+        img: {
+          path: "content",
+          image: "video-1",
+          format: "jpg",
+        },
+        video: {
+          src: "video-1.mp4",
+        },
+      },
+    }
+  -
+    const priceCardData = {
+      items: [
+        {
+          title: "Customizable packages",
+          texts: [
+            "We&nbsp;understand that each project is&nbsp;unique, so&nbsp;we&nbsp;offer customizable packages to&nbsp;ensure that you get the services you need at&nbsp;a&nbsp;price that works for you. Our team will work with you to&nbsp;create a&nbsp;package that meets your specific goals and budget.",
+          ],
+        },
+        {
+          title: "Flexible payment options",
+          texts: [
+            "We&nbsp;offer flexible payment options to&nbsp;make it&nbsp;easy for you to&nbsp;get started with our services. We&nbsp;accept various payment methods, including credit cards, bank transfers, and PayPal, and we&nbsp;can also work with you to&nbsp;create a&nbsp;payment plan that suits your needs.",
+          ],
+        },
+        {
+          title: "Satisfaction guarantee",
+          texts: [
+            "We&nbsp;stand behind our services and are committed to&nbsp;ensuring that you are completely satisfied with the final product. If&nbsp;for any reason you are not happy with our services, we&nbsp;will work with you to&nbsp;make it&nbsp;right or&nbsp;provide a&nbsp;full refund.",
+          ],
+        },
+      ],
+      img: {
+        path: "price-card-1",
+        format: "png",
+        alt: "Картинка мужчины",
+      },
+      price: "$99",
+    }
+  -
+    const partnersData = {
+      img: {
+        path: "content",
+        image: "partners-1",
+        format: "png",
+        width: 1055,
+        height: 741,
+      },
+      partners: [
+        {
+          name: "icon-partner-1",
+          width: "79",
+          height: "20",
+        },
+        {
+          name: "icon-partner-2",
+          width: "72",
+          height: "18",
+        },
+        {
+          name: "icon-partner-3",
+          width: "72",
+          height: "15",
+        },
+        {
+          name: "icon-partner-4",
+          width: "72",
+          height: "20",
+        },
+        {
+          name: "icon-partner-5",
+          width: "72",
+          height: "18",
+        },
+        {
+          name: "icon-partner-6",
+          width: "72",
+          height: "19",
+        },
+        {
+          name: "icon-partner-7",
+          width: "72",
+          height: "19",
+        },
+      ]
+    }
+
+block main
+  main
+    +page-content().page-content--decoration
+      +page-section().page-section--no-padding-top(data-animation-fade)
+        +intro(usersData)
+      +page-section().page-section--no-padding-top(data-animation-fade)
+        .container
+          +service-list(serviceCustomCardsData).service-list--catalog
+      +page-section()(data-animation-fade)
+        +img-block(imgBlock1)
+          +text-content()
+            p VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light.
+            ul
+              li
+                p Cutting-edge technology
+              li
+                p Versatile applications
+              li
+                p Affordable and accessible
+          +btn({text: "Read more"})
+      +page-section()(data-animation-fade)
+        +service(serviceCardsData)
+      +page-section()(data-animation-fade)
+        +img-block(imgBlock2)
+          +accordion(accordionData)
+      +page-section()(data-animation-fade)
+        +video-block(videoBlockData)
+      +page-section()(data-animation-fade)
+        +price(priceCardData)
+      +page-section()(data-animation-fade)
+        +partners-block(partnersData)
+      +page-section()(data-animation-fade)
+        .container
+          +subscription()
+
+block modals

@@ -1,0 +1,44 @@
+.page-intro {
+  width: 100%;
+
+  &--center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    > .title {
+      max-width: 55%;
+
+      @include vp-1279 {
+        max-width: 70%;
+      }
+
+      @include vp-1023 {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &--grid {
+    display: grid;
+    grid-template-columns: 42% 55%;
+    gap: 30px;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin: 0 0 32px;
+    }
+  }
+
+  .title.title--custom {
+    margin: 0 0 12px;
+  }
+}
