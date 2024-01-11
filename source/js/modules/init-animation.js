@@ -60,11 +60,11 @@ export class Animations {
     this._blocks.forEach((block) => {
       gsap.to(block, {
         opacity: 1,
-        duration: 0.5,
+        duration: 0.3,
         translateY: 0,
         scrollTrigger: {
           trigger: block,
-          start: 'top 80%',
+          start: 'top 100%',
           end: 'bottom 20%',
           toggleActions: 'play none none none',
         },
