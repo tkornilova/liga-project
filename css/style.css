@@ -584,7 +584,7 @@ button,
 }
 
 .wrapper::before {
-  content: url("../img/content/main-bg-top.png");
+  content: url("img/content/main-bg-top.png");
   top: 0;
   right: 0;
 }
@@ -871,15 +871,15 @@ button,
 }
 
 .footer__contacts-item--adress::before {
-  content: url("../../img/sprite/icon-location.svg");
+  content: url("img/sprite/icon-location.svg");
 }
 
 .footer__contacts-item--email::before {
-  content: url("../../img/sprite/icon-email.svg");
+  content: url("img/sprite/icon-email.svg");
 }
 
 .footer__contacts-item--phone::before {
-  content: url("../../img/sprite/icon-phone.svg");
+  content: url("img/sprite/icon-phone.svg");
 }
 
 .footer__links-list,
@@ -984,7 +984,7 @@ button,
 }
 
 .custom-input::before {
-  content: url("../../img/sprite/icon-input.svg");
+  content: url("img/sprite/icon-input.svg");
   width: 24px;
   height: 24px;
   position: absolute;
@@ -1485,7 +1485,7 @@ button,
 
 .text-content ul li::before,
 .text-content ol li::before {
-  content: url("../../img/sprite/gradient/icon-check-box.svg");
+  content: url("img/sprite/gradient/icon-check-box.svg");
   width: 16px;
   height: 16px;
   position: absolute;
@@ -1676,7 +1676,7 @@ button,
 }
 
 .accordion .title::after {
-  content: url("../../img/sprite/icon-accordion.svg");
+  content: url("img/sprite/icon-accordion.svg");
   width: 12px;
   height: 12px;
   display: -webkit-box;
@@ -1798,7 +1798,7 @@ button,
 }
 
 .page-content--decoration::before {
-  content: url("../../img/sprite/gradient/icon-decoration-grid.svg");
+  content: url("img/sprite/gradient/icon-decoration-grid.svg");
   width: 2682px;
   height: 721px;
   position: absolute;
@@ -1898,7 +1898,7 @@ button,
 }
 
 .price-card__item::after {
-  content: url("../../img/sprite/icon-cloud.svg");
+  content: url("img/sprite/icon-cloud.svg");
   width: 40px;
   height: 40px;
   top: 1px;
@@ -2133,7 +2133,7 @@ button,
 }
 
 .intro__caption .intro__amount::before {
-  content: url("../../img/sprite/gradient/icon-decoration.svg");
+  content: url("img/sprite/gradient/icon-decoration.svg");
   width: 47px;
   height: 7px;
   position: absolute;
@@ -2356,7 +2356,7 @@ button,
 }
 
 .breadcrumbs__item:not(:last-child)::after {
-  content: url("../../img/sprite/icon-pagination.svg");
+  content: url("img/sprite/icon-pagination.svg");
   width: 18px;
   height: 18px;
   position: absolute;
@@ -2712,7 +2712,7 @@ button,
 }
 
 .main-title::before {
-  content: url("../../img/sprite/gradient/icon-decoration-1.svg");
+  content: url("img/sprite/gradient/icon-decoration-1.svg");
   width: 449px;
   height: 147px;
   position: absolute;
@@ -2938,7 +2938,7 @@ button,
 }
 
 .partners__item::before {
-  content: url("../../img/sprite/gradient/icon-partners-bg.svg");
+  content: url("img/sprite/gradient/icon-partners-bg.svg");
   width: 100%;
   height: 100%;
   position: absolute;
