@@ -6,9 +6,9 @@
 <clipPath id="clip0_6634_205">
 <rect width="72" height="17.8935" fill="white"/>
 </clipPath>
-</defs><symbol id="icon-accordion" viewBox="0 0 13 12"><g fill="none">
-<path d="M6.01685 7.68789L3.01685 4.68789L3.55435 4.15039L6.01685 6.62539L8.47935 4.16289L9.01685 4.70039L6.01685 7.68789Z" fill="white"/>
-</g></symbol><symbol id="icon-close" viewBox="0 0 24 24"><g fill="none">
+</defs><symbol id="icon-accordion" viewBox="0 0 13 12">
+<path d="M6.01685 7.68789L3.01685 4.68789L3.55435 4.15039L6.01685 6.62539L8.47935 4.16289L9.01685 4.70039L6.01685 7.68789Z"/>
+</symbol><symbol id="icon-close" viewBox="0 0 24 24"><g fill="none">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="currentColor"/>
 </g></symbol><symbol id="icon-cloud" viewBox="0 0 19 19"><g fill="none">
