@@ -1,8 +1,4 @@
 .title {
-  font-size: 48px;
-  line-height: 120.8%;
-  font-weight: 600;
-  letter-spacing: -0.24px;
   color: $color-default-white;
 
   word-break: break-word;
@@ -27,6 +23,14 @@
     background: $main-gradient;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @include vp-1023 {
+      font-size: 16px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+    }
   }
 
   &--h1 {
@@ -48,6 +52,10 @@
     font-size: 40px;
     line-height: 145%;
     letter-spacing: -0.2px;
+
+    @include vp-1023 {
+      font-size: 40px;
+    }
 
     @include vp-767 {
       font-size: 28px;
@@ -73,41 +81,110 @@
   &--h5 {
     font-size: 32px;
     letter-spacing: -0.16px;
+
+    @include vp-1023 {
+      font-size: 32px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+    }
   }
 
   &--h6 {
     font-size: 28px;
     letter-spacing: -0.14px;
+
+    @include vp-1023 {
+      font-size: 28px;
+    }
+
+    @include vp-767 {
+      font-size: 28px;
+    }
   }
 
   &--h7 {
     font-size: 20px;
     font-weight: 400;
+
+    @include vp-1023 {
+      font-size: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+    }
   }
 
   &--h8 {
     font-size: 20px;
     font-weight: 500;
+
+    @include vp-1023 {
+      font-size: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+    }
   }
 
   &--h9 {
     font-size: 18px;
     font-weight: 400;
+
+    @include vp-1023 {
+      font-size: 18px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+    }
   }
 
   &--h10 {
     font-size: 16px;
     line-height: 175%;
+
+    @include vp-1023 {
+      font-size: 16px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+    }
   }
 
   &--h11 {
     font-size: 16px;
+
+    @include vp-1023 {
+      font-size: 16px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+    }
   }
 
   &--h12 {
     font-size: 14px;
     font-weight: 400;
+
+    @include vp-1023 {
+      font-size: 14px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+    }
   }
+
+  font-size: 48px;
+  line-height: 120.8%;
+  font-weight: 600;
+  letter-spacing: -0.24px;
 
   @include vp-1023 {
     font-size: 40px;
