@@ -809,9 +809,9 @@ button,
 .footer__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 32.6% 35.3% 26.5%;
-  grid-template-columns: 32.6% 35.3% 26.5%;
-  gap: 30px;
+  -ms-grid-columns: 32.6% 35.3% 27.5%;
+  grid-template-columns: 32.6% 35.3% 27.5%;
+  gap: 29px;
   position: relative;
   padding: 0 0 33px;
   margin: 0 0 32px;
@@ -855,7 +855,7 @@ button,
 }
 
 .footer__contacts-list {
-  padding: 0 0 0 29px;
+  padding: 0 0 0 27px;
 }
 
 .footer__contacts-item {
@@ -1252,10 +1252,13 @@ button,
   padding: 38px 32px 25px;
 }
 
-.service-card svg {
+.service-card__icon-wrapper {
+  margin: 0 0 56px;
+}
+
+.service-card__icon-wrapper svg {
   width: 48px;
   height: 48px;
-  margin: 0 0 60px;
 }
 
 .service-card .title {
@@ -1311,10 +1314,13 @@ button,
   padding: 0;
 }
 
-.service-card--catalog svg {
+.service-card--catalog .service-card__icon-wrapper {
+  margin: 0 0 36px;
+}
+
+.service-card--catalog .service-card__icon-wrapper svg {
   width: 70px;
   height: 70px;
-  margin: 0 0 42px;
 }
 
 .service-card--catalog .service-card__btn-wrapper {
@@ -1335,10 +1341,13 @@ button,
   padding: 0;
 }
 
-.service-list--catalog .service-card svg {
+.service-list--catalog .service-card__icon-wrapper {
+  margin: 0 0 36px;
+}
+
+.service-list--catalog .service-card__icon-wrapper svg {
   width: 70px;
   height: 70px;
-  margin: 0 0 42px;
 }
 
 .service-list--catalog .service-card .service-card__btn-wrapper {
@@ -2038,7 +2047,7 @@ button,
 }
 
 .users__item:not(:last-child) {
-  margin: 0 -12px 0 0;
+  margin: 0 -14px 0 0;
 }
 
 .intro {
@@ -2106,7 +2115,7 @@ button,
 
 .intro .users {
   max-width: 135px;
-  margin: 0 15px 0 0;
+  margin: 0 11px 0 0;
 }
 
 .intro__caption {
@@ -2129,7 +2138,7 @@ button,
 .intro__caption .intro__amount {
   font-weight: 600;
   position: relative;
-  margin: 0 3px 0 0;
+  margin: 0 4px 0 0;
 }
 
 .intro__caption .intro__amount::before {
@@ -3137,6 +3146,11 @@ button,
     padding: 38px 40px 31px;
   }
 
+  .page-content--decoration::before {
+    top: 282px;
+    left: 0px;
+  }
+
   .price-card {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -3203,7 +3217,7 @@ button,
   }
 
   .intro__wrapper .btn {
-    min-width: 50.5%;
+    min-width: 52%;
     margin: 0 0 33px;
   }
 
@@ -3278,10 +3292,18 @@ button,
     padding: 0 40px;
   }
 
+  .header {
+    padding: 42px 0 31px;
+  }
+
   .header .container {
     -ms-grid-columns: auto auto;
     grid-template-columns: auto auto;
     gap: 30px;
+  }
+
+  .header .logo {
+    margin: 0;
   }
 
   .header__toggle {
