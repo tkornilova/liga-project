@@ -3653,12 +3653,40 @@ button,
     letter-spacing: -0.3px;
   }
 
+  .title--h3 {
+    font-size: 40px;
+  }
+
   .title--h4 {
+    font-size: 28px;
+  }
+
+  .title--h5 {
+    font-size: 32px;
+  }
+
+  .title--h6 {
     font-size: 28px;
   }
 
   .title--h7 {
     font-size: 20px;
+  }
+
+  .title--h8 {
+    font-size: 20px;
+  }
+
+  .title--h9 {
+    font-size: 18px;
+  }
+
+  .title--h11 {
+    font-size: 16px;
+  }
+
+  .title--h12 {
+    font-size: 14px;
   }
 }
 
@@ -3924,6 +3952,34 @@ button,
 
   .title--h4 {
     font-size: 20px;
+  }
+
+  .title--h5 {
+    font-size: 32px;
+  }
+
+  .title--h6 {
+    font-size: 28px;
+  }
+
+  .title--h7 {
+    font-size: 20px;
+  }
+
+  .title--h8 {
+    font-size: 20px;
+  }
+
+  .title--h9 {
+    font-size: 18px;
+  }
+
+  .title--h11 {
+    font-size: 16px;
+  }
+
+  .title--h12 {
+    font-size: 14px;
   }
 }
 
