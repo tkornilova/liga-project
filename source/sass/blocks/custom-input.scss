@@ -28,7 +28,8 @@
     margin: auto 0;
   }
 
-  input {
+  input,
+  input:autofill {
     width: 100%;
 
     font-size: 16px;
