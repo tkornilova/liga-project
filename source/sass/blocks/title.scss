@@ -1,8 +1,4 @@
 .title {
-  font-size: 48px;
-  line-height: 120.8%;
-  font-weight: 600;
-  letter-spacing: -0.24px;
   color: $color-default-white;
 
   word-break: break-word;
@@ -108,6 +104,11 @@
     font-size: 14px;
     font-weight: 400;
   }
+
+  font-size: 48px;
+  line-height: 120.8%;
+  font-weight: 600;
+  letter-spacing: -0.24px;
 
   @include vp-1023 {
     font-size: 40px;
