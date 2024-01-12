@@ -994,7 +994,7 @@ button,
   margin: auto 0;
 }
 
-.custom-input input {
+.custom-input input:-webkit-autofill {
   width: 100%;
   font-size: 16px;
   line-height: 175%;
@@ -1006,28 +1006,52 @@ button,
   padding: 14px 61px 14px 46px;
 }
 
-.custom-input input::-webkit-input-placeholder {
+.custom-input input,
+.custom-input input:autofill {
+  width: 100%;
+  font-size: 16px;
+  line-height: 175%;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(255, 255, 255, 0);
+  outline: none;
+  padding: 14px 61px 14px 46px;
+}
+
+.custom-input input::-webkit-input-placeholder,
+.custom-input input:autofill::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 175%;
   font-weight: 400;
   color: #ffffff;
 }
 
-.custom-input input::-moz-placeholder {
+.custom-input input::-moz-placeholder,
+.custom-input input:autofill::-moz-placeholder {
   font-size: 16px;
   line-height: 175%;
   font-weight: 400;
   color: #ffffff;
 }
 
-.custom-input input::-ms-input-placeholder {
+.custom-input input::-ms-input-placeholder,
+.custom-input input:autofill::-ms-input-placeholder {
   font-size: 16px;
   line-height: 175%;
   font-weight: 400;
   color: #ffffff;
 }
 
-.custom-input input::placeholder {
+.custom-input input:-webkit-autofill::placeholder {
+  font-size: 16px;
+  line-height: 175%;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.custom-input input::placeholder,
+.custom-input input:autofill::placeholder {
   font-size: 16px;
   line-height: 175%;
   font-weight: 400;
@@ -2173,7 +2197,11 @@ button,
   flex-direction: column;
 }
 
-.img-set::before {
+.img-set__main {
+  position: relative;
+}
+
+.img-set__main::before {
   content: "";
   width: 72%;
   height: 106%;
@@ -2188,7 +2216,7 @@ button,
   z-index: -1;
 }
 
-.img-set::after {
+.img-set__main::after {
   content: "";
   width: 79%;
   height: 87%;
@@ -2199,20 +2227,20 @@ button,
   z-index: -2;
 }
 
-.img-set__main {
+.img-set__img-wrapper {
   width: 100%;
   position: relative;
   overflow: hidden;
   margin: auto 0 0;
 }
 
-.img-set__main::before {
+.img-set__img-wrapper::before {
   content: "";
   display: block;
   padding-bottom: 118%;
 }
 
-.img-set__main img {
+.img-set__img-wrapper img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -2989,15 +3017,15 @@ button,
 }
 
 .title {
+  font-size: 48px;
+  line-height: 120.8%;
+  font-weight: 600;
+  letter-spacing: -0.24px;
   color: #ffffff;
   word-break: break-word;
   text-transform: capitalize;
   padding: 0;
   margin: 0;
-  font-size: 48px;
-  line-height: 120.8%;
-  font-weight: 600;
-  letter-spacing: -0.24px;
 }
 
 .title.title--no-capitalize {
@@ -3520,21 +3548,21 @@ button,
     margin: 0 0 40px;
   }
 
-  .img-set::before {
+  .img-set__main::before {
     width: 36%;
     left: 0;
     right: 0;
     margin: 0 auto;
   }
 
-  .img-set::after {
+  .img-set__main::after {
     width: 46%;
     left: 0;
     right: 0;
     margin: 0 auto;
   }
 
-  .img-set__main {
+  .img-set__img-wrapper {
     max-width: 50%;
     margin: 0 auto;
   }
@@ -3758,21 +3786,21 @@ button,
     left: unset;
   }
 
-  .img-set::before {
+  .img-set__main::before {
     width: 67%;
     height: 100%;
     left: 9%;
     right: unset;
   }
 
-  .img-set::after {
+  .img-set__main::after {
     width: 80%;
     left: 3%;
     right: unset;
     margin: unset;
   }
 
-  .img-set__main {
+  .img-set__img-wrapper {
     max-width: 100%;
   }
 
@@ -3923,7 +3951,7 @@ button,
   }
 
   .title.title--h4 {
-    font-size: 20px;
+    font-size: 21px;
   }
 
   .title.title--h7 {
@@ -3980,23 +4008,36 @@ button,
 }
 
 @media (max-width: 374px) {
-  .custom-input input {
+  .custom-input input:-webkit-autofill {
     font-size: 12px;
   }
 
-  .custom-input input::-webkit-input-placeholder {
+  .custom-input input,
+  .custom-input input:autofill {
     font-size: 12px;
   }
 
-  .custom-input input::-moz-placeholder {
+  .custom-input input::-webkit-input-placeholder,
+  .custom-input input:autofill::-webkit-input-placeholder {
     font-size: 12px;
   }
 
-  .custom-input input::-ms-input-placeholder {
+  .custom-input input::-moz-placeholder,
+  .custom-input input:autofill::-moz-placeholder {
     font-size: 12px;
   }
 
-  .custom-input input::placeholder {
+  .custom-input input::-ms-input-placeholder,
+  .custom-input input:autofill::-ms-input-placeholder {
+    font-size: 12px;
+  }
+
+  .custom-input input:-webkit-autofill::placeholder {
+    font-size: 12px;
+  }
+
+  .custom-input input::placeholder,
+  .custom-input input:autofill::placeholder {
     font-size: 12px;
   }
 
