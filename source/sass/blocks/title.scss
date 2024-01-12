@@ -39,7 +39,7 @@
     -webkit-text-fill-color: transparent;
   }
 
-  &.title--h1 {
+  &--h1 {
     font-size: 64px;
     letter-spacing: -0.32px;
 
@@ -54,7 +54,7 @@
     }
   }
 
-  &.title--h3 {
+  &--h3 {
     font-size: 40px;
     line-height: 145%;
     letter-spacing: -0.2px;
@@ -65,7 +65,7 @@
     }
   }
 
-  &.title--h4 {
+  &--h4 {
     font-size: 36px;
     line-height: 122.2%;
     font-weight: 500;
@@ -80,17 +80,17 @@
     }
   }
 
-  &.title--h5 {
+  &--h5 {
     font-size: 32px;
     letter-spacing: -0.16px;
   }
 
-  &.title--h6 {
+  &--h6 {
     font-size: 28px;
     letter-spacing: -0.14px;
   }
 
-  &.title--h7 {
+  &--h7 {
     font-size: 20px;
     font-weight: 400;
 
@@ -99,26 +99,26 @@
     }
   }
 
-  &.title--h8 {
+  &--h8 {
     font-size: 20px;
     font-weight: 500;
   }
 
-  &.title--h9 {
+  &--h9 {
     font-size: 18px;
     font-weight: 400;
   }
 
-  &.title--h10 {
+  &--h10 {
     font-size: 16px;
     line-height: 175%;
   }
 
-  &.title--h11 {
+  &--h11 {
     font-size: 16px;
   }
 
-  &.title--h12 {
+  &--h12 {
     font-size: 14px;
     font-weight: 400;
   }
