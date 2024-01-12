@@ -2989,22 +2989,22 @@ button,
 }
 
 .title {
-  font-size: 48px;
-  line-height: 120.8%;
-  font-weight: 600;
-  letter-spacing: -0.24px;
   color: #ffffff;
   word-break: break-word;
   text-transform: capitalize;
   padding: 0;
   margin: 0;
+  font-size: 48px;
+  line-height: 120.8%;
+  font-weight: 600;
+  letter-spacing: -0.24px;
 }
 
-.title--no-capitalize {
+.title.title--no-capitalize {
   text-transform: none;
 }
 
-.title--custom {
+.title.title--custom {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -3019,59 +3019,59 @@ button,
   -webkit-text-fill-color: transparent;
 }
 
-.title--h1 {
+.title.title--h1 {
   font-size: 64px;
   letter-spacing: -0.32px;
 }
 
-.title--h3 {
+.title.title--h3 {
   font-size: 40px;
   line-height: 145%;
   letter-spacing: -0.2px;
 }
 
-.title--h4 {
+.title.title--h4 {
   font-size: 36px;
   line-height: 122.2%;
   font-weight: 500;
   letter-spacing: -0.72px;
 }
 
-.title--h5 {
+.title.title--h5 {
   font-size: 32px;
   letter-spacing: -0.16px;
 }
 
-.title--h6 {
+.title.title--h6 {
   font-size: 28px;
   letter-spacing: -0.14px;
 }
 
-.title--h7 {
+.title.title--h7 {
   font-size: 20px;
   font-weight: 400;
 }
 
-.title--h8 {
+.title.title--h8 {
   font-size: 20px;
   font-weight: 500;
 }
 
-.title--h9 {
+.title.title--h9 {
   font-size: 18px;
   font-weight: 400;
 }
 
-.title--h10 {
+.title.title--h10 {
   font-size: 16px;
   line-height: 175%;
 }
 
-.title--h11 {
+.title.title--h11 {
   font-size: 16px;
 }
 
-.title--h12 {
+.title.title--h12 {
   font-size: 14px;
   font-weight: 400;
 }
@@ -3648,53 +3648,17 @@ button,
     letter-spacing: -0.2px;
   }
 
-  .title--custom {
-    font-size: 16px;
-  }
-
-  .title--h1 {
+  .title.title--h1 {
     font-size: 52px;
     letter-spacing: -0.3px;
   }
 
-  .title--h3 {
-    font-size: 40px;
-  }
-
-  .title--h4 {
+  .title.title--h4 {
     font-size: 28px;
   }
 
-  .title--h5 {
-    font-size: 32px;
-  }
-
-  .title--h6 {
-    font-size: 28px;
-  }
-
-  .title--h7 {
+  .title.title--h7 {
     font-size: 20px;
-  }
-
-  .title--h8 {
-    font-size: 20px;
-  }
-
-  .title--h9 {
-    font-size: 18px;
-  }
-
-  .title--h10 {
-    font-size: 16px;
-  }
-
-  .title--h11 {
-    font-size: 16px;
-  }
-
-  .title--h12 {
-    font-size: 14px;
   }
 }
 
@@ -3948,54 +3912,22 @@ button,
     letter-spacing: -0.16px;
   }
 
-  .title--custom {
-    font-size: 16px;
-  }
-
-  .title--h1 {
+  .title.title--h1 {
     font-size: 48px;
     letter-spacing: -0.24px;
   }
 
-  .title--h3 {
+  .title.title--h3 {
     font-size: 28px;
     letter-spacing: -0.14px;
   }
 
-  .title--h4 {
+  .title.title--h4 {
     font-size: 20px;
   }
 
-  .title--h5 {
-    font-size: 32px;
-  }
-
-  .title--h6 {
-    font-size: 28px;
-  }
-
-  .title--h7 {
+  .title.title--h7 {
     font-size: 20px;
-  }
-
-  .title--h8 {
-    font-size: 20px;
-  }
-
-  .title--h9 {
-    font-size: 18px;
-  }
-
-  .title--h10 {
-    font-size: 16px;
-  }
-
-  .title--h11 {
-    font-size: 16px;
-  }
-
-  .title--h12 {
-    font-size: 14px;
   }
 }
 
