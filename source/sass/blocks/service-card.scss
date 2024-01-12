@@ -88,11 +88,13 @@
     }
   }
 
-  svg {
-    width: 48px;
-    height: 48px;
+  &__icon-wrapper {
+    margin: 0 0 56px;
 
-    margin: 0 0 60px;
+    svg {
+      width: 48px;
+      height: 48px;
+    }
   }
 
   .title {
@@ -157,11 +159,13 @@
       }
     }
 
-    svg {
-      width: 70px;
-      height: 70px;
+    .service-card__icon-wrapper {
+      margin: 0 0 36px;
 
-      margin: 0 0 42px;
+      svg {
+        width: 70px;
+        height: 70px;
+      }
     }
 
     .service-card__btn-wrapper {
@@ -189,11 +193,13 @@
       }
     }
 
-    svg {
-      width: 70px;
-      height: 70px;
+    &__icon-wrapper {
+      margin: 0 0 36px;
 
-      margin: 0 0 42px;
+      svg {
+        width: 70px;
+        height: 70px;
+      }
     }
 
     .service-card__btn-wrapper {
