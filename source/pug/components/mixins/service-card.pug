@@ -1,7 +1,8 @@
 mixin service-card(data = {})
   .service-card&attributes(attributes)
     .service-card__wrapper
-      +icon(data.icon, 48, 48, true)
+      .service-card__icon-wrapper
+        +icon(data.icon, 48, 48, true)
       +title({tag: "h3", text: data.title}).title--h7
       p.service-card__text!= data.text
     .service-card__btn-wrapper
