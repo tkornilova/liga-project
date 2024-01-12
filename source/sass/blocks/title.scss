@@ -1,13 +1,4 @@
 .title {
-  font-size: 48px;
-  line-height: 120.8%;
-  font-weight: 600;
-  letter-spacing: -0.24px;
-  color: $color-default-white;
-
-  word-break: break-word;
-  text-transform: capitalize;
-
   padding: 0;
   margin: 0;
 
@@ -113,14 +104,6 @@
   &--h7 {
     font-size: 20px;
     font-weight: 400;
-
-    @include vp-1023 {
-      font-size: 20px;
-    }
-
-    @include vp-767 {
-      font-size: 20px;
-    }
   }
 
   &--h8 {
@@ -178,4 +161,14 @@
       font-size: 14px;
     }
   }
+
+  font-size: 48px;
+  line-height: 120.8%;
+  font-weight: 600;
+  letter-spacing: -0.24px;
+  color: $color-default-white;
+
+  word-break: break-word;
+  text-transform: capitalize;
+
 }
