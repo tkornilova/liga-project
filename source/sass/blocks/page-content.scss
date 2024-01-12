@@ -17,6 +17,11 @@
       position: absolute;
       top: 290px;
       left: -5px;
+
+      @include vp-1279 {
+        top: 282px;
+        left: 0px;
+      }
     }
   }
 
